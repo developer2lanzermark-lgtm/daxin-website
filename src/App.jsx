@@ -1,22 +1,42 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import FeaturedProducts from "./components/FeaturedProducts";
+import Products from "./pages/Products";
 import heroBackground from "./assets/images/hero-background.webp";
 import "./App.css";
 
+function Home() {
+  return (
+    <main>
+      <div
+        className="home-hero-wrap"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      >
+        <Hero />
+        <FeaturedProducts />
+      </div>
+    </main>
+  );
+}
+
 export default function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <main>
-        <div
-          className="home-hero-wrap"
-          style={{ backgroundImage: `url(${heroBackground})` }}
-        >
-          <Hero />
-          <FeaturedProducts />
-        </div>
-      </main>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <Home />
+              </>
+            }
+          />
+          <Route path="/products" element={<Products />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }

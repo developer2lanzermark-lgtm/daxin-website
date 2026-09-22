@@ -1,0 +1,295 @@
+.products-page {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #d9d9d9;
+  overflow-x: hidden;
+}
+
+/* gPro image banner */
+.image-background-section {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-background {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 1;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* gPro description */
+.description-section {
+  background: #ffffff;
+  padding: 40px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.description-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.description-content {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-subtitle {
+  font-weight: 400;
+  font-size: 40px;
+  color: #2c3e50;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+
+.product-subtitle span {
+  font-size: 27px;
+}
+
+.product-description {
+  font-size: 22px;
+  color: #000000;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-custom,
+.explore-btn {
+  font-family: inherit;
+  font-weight: 500;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 240px;
+  height: 51px;
+}
+
+.btn-primary-custom {
+  background: #626a66;
+  color: #fff;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px #626a66;
+}
+
+.explore-btn {
+  background: #017c8b;
+  color: #fff;
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px #93edf9;
+}
+
+/* Demander / Voice Bill split sections */
+.demander-section {
+  background: #e2f6f7;
+  padding: 40px 0;
+  position: relative;
+  z-index: 10;
+  min-height: 70vh;
+}
+
+.demander-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.demander-left {
+  flex: 1;
+  padding-right: 40px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demander-right {
+  flex: 1;
+  padding-left: 40px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.demander-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.demander-logo {
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  height: 80px;
+  width: auto;
+}
+
+.demander-content {
+  flex-grow: 1;
+}
+
+.demander-title {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.2;
+  color: #017c8b;
+  margin: 0 0 15px;
+}
+
+.demander-subtitle {
+  font-size: 20px;
+  color: #000000;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 0 15px;
+}
+
+.Explore-button-wrapper {
+  margin-top: 15px;
+}
+
+/* Voice Bill variant */
+.voicebill-section {
+  background: #f7f7f7;
+}
+
+.voicebill-section .demander-container {
+  flex-direction: row-reverse;
+}
+
+.voicebill-image {
+  max-width: 100%;
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.voicebill-logo-image {
+  height: 70px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+.voicebill-section .demander-title {
+  font-weight: 400;
+  font-size: 36px;
+  color: #1e3a5f;
+  margin-bottom: 10px;
+}
+
+.voicebill-section .demander-subtitle {
+  color: #4a6178;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.voicebill-section .voicebill-highlight {
+  display: block;
+  color: #1e3a5f;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.voicebill-section .explore-btn {
+  background: #e67e22;
+  color: #ffffff;
+}
+
+.voicebill-section .explore-btn:hover {
+  box-shadow: 0 3px 10px #e67e22;
+}
+
+@media (max-width: 900px) {
+  .demander-container,
+  .voicebill-section .demander-container {
+    flex-direction: column;
+    padding: 0 24px;
+  }
+
+  .demander-left,
+  .demander-right {
+    padding: 0;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .demander-right {
+    margin-top: 24px;
+  }
+
+  .product-subtitle {
+    font-size: 28px;
+  }
+
+  .product-subtitle span {
+    font-size: 20px;
+  }
+
+  .product-description {
+    font-size: 18px;
+  }
+
+  .demander-title,
+  .voicebill-section .demander-title {
+    font-size: 26px;
+    white-space: normal;
+  }
+
+  .demander-subtitle,
+  .voicebill-section .demander-subtitle {
+    font-size: 17px;
+  }
+
+  .voicebill-section .voicebill-highlight {
+    font-size: 19px;
+  }
+}
