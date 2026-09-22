@@ -1,0 +1,39 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #eceef2;
+}
+
+.navbar__inner {
+  width: 100%;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 24px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar__logo img {
+  height: 68px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .navbar__inner {
+    padding: 0 16px;
+    height: 72px;
+  }
+
+  .navbar__logo img {
+    height: 52px;
+  }
+}
