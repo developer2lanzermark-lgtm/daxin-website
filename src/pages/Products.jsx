@@ -30,9 +30,7 @@ export default function Products() {
 
           <div className="button-container">
             <a
-              href="https://gpro.co.in/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://gprosoftware.com/"
               className="btn-custom btn-primary-custom"
             >
               Explore it
@@ -70,9 +68,7 @@ export default function Products() {
             </div>
             <div className="Explore-button-wrapper">
               <a
-                href="https://demander.app/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://demander.app/aptadmin/src/app/login.php"
                 className="explore-btn"
               >
                 Explore it
