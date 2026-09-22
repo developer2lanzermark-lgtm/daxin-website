@@ -81,9 +81,9 @@
 }
 
 .featured__item-desc {
-  font-size: 13.5px;
+  font-size: 14.5px;
   line-height: 1.45;
-  color: #6b6b6b;
+  color: #4a4a4a;
   margin: 0;
 }
 
@@ -92,7 +92,7 @@
   justify-self: end;
   align-self: end;
   color: #d6272e;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-decoration: none;
