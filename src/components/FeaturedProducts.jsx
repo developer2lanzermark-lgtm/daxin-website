@@ -62,7 +62,7 @@ export default function FeaturedProducts() {
         <div className="featured__cta">
           <Link to="/products" className="featured__explore">
             <span>Explore Products</span>
-            <span className="featured__explore-arrow" aria-hidden="true">&rarr;</span>
+            <span className="featured__explore-arrow" aria-hidden="true">&gt;</span>
           </Link>
         </div>
       </div>
