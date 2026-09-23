@@ -11,15 +11,10 @@ const SLIDES = [
   {
     id: "slide-1",
     theme: "dark-executive",
-    title: "Built with patience.",
-    titleLine2: "Guided by purpose.",
+    title: "Built with responsibility.",
+    titleLine2: "Trusted by businesses across industries.",
     description:
-      "We've spent years building business software with focus and intent.",
-    ctaLabel: "READ THE STORY",
-    ctaArrow: "↗",
-    ctaHref: "/products",
-    ctaStyle: "text-link",
-    ctaColor: "#e59a3a",
+      "Intuitive software. Dedicated support. A relationship you can trust.",
     sideImage: { src: storySlide1, alt: "Daxin leadership vision" },
   },
   {
@@ -104,16 +99,12 @@ export default function Story() {
                       style={{ backgroundImage: `url(${slide.sideImage.src})` }}
                     >
                       <div className="story-content story-content--solo">
-                        <h2 className="story-title story-title--serif">
+                        <h2 className="story-title story-title--inter">
                           {slide.title}
                           <br />
                           {slide.titleLine2}
                         </h2>
-                        <p className="story-description">{slide.description}</p>
-                        <a href={slide.ctaHref} className="story-cta-link" style={{ color: slide.ctaColor }}>
-                          <span>{slide.ctaLabel}</span>
-                          <span className="story-cta-arrow">{slide.ctaArrow}</span>
-                        </a>
+                        <p className="story-description story-description--inter">{slide.description}</p>
                       </div>
                     </div>
                   )}
