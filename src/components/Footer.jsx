@@ -1,4 +1,4 @@
-import daxinLogoWhite from "../assets/images/daxin-logo-white.png";
+import daxinLogoWhite from "../assets/images/daxin-logo-footer.png";
 import "../styles/Footer.css";
 
 export default function Footer() {
