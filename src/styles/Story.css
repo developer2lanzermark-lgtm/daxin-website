@@ -114,11 +114,11 @@
    background image's own dark side instead of letting it fill 100% */
 .story-content--solo {
   flex: 0 1 auto;
-  max-width: 660px;
+  max-width: 820px;
 }
 
 .story-content--center {
-  margin: 0 auto;
+  margin: 0 auto 0 200px;
   align-items: center;
   text-align: center;
 }
@@ -189,7 +189,7 @@
 .story-description--slate {
   color: #64748b;
   white-space: normal;
-  max-width: 480px;
+  max-width: 760px;
 }
 
 .story-description--dark {

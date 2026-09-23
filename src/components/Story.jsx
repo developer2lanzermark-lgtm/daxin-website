@@ -123,7 +123,11 @@ export default function Story() {
                         <h2 className="story-title story-title--inter story-title--navy">
                           {slide.title}
                         </h2>
-                        <p className="story-description story-description--inter story-description--slate">{slide.description}</p>
+                        <p className="story-description story-description--inter story-description--slate">
+                          We keep exploring new technologies and ideas, looking for meaningful ways to
+                          <br />
+                          bring them into the products we build.
+                        </p>
                       </div>
                     </div>
                   )}
