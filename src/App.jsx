@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import FeaturedProducts from "./components/FeaturedProducts";
 import Industries from "./components/Industries";
+import Story from "./components/Story";
 import Products from "./pages/Products";
 import heroBackground from "./assets/images/hero-background.webp";
 import "./App.css";
@@ -18,6 +19,7 @@ function Home() {
         <FeaturedProducts />
       </div>
       <Industries />
+      <Story />
     </main>
   );
 }

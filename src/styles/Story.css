@@ -1,0 +1,408 @@
+/* Section Container */
+.story-section {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #f7f8fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-container {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* Outer White Card Frame with Signature Zoho Double Border / Outline Effect */
+.story-outer-card {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 22px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.story-outer-card:hover {
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.09);
+}
+
+.story-viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000000;
+}
+
+.story-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.story-slide {
+  flex-shrink: 0;
+}
+
+/* Base Card Style */
+.story-card {
+  display: flex;
+  align-items: stretch;
+  min-height: 140px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* Slide 1: Dark Executive (User's 1st image) */
+.story-card--dark-exec {
+  background-color: #050608;
+}
+
+.story-card-overlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 140px;
+  background: linear-gradient(
+    90deg,
+    #050608 0%,
+    #050608 42%,
+    rgba(5, 6, 8, 0.82) 64%,
+    rgba(5, 6, 8, 0.15) 100%
+  );
+}
+
+/* Slide 2: Light Beige (Zoho Screenshot 3 Style) */
+.story-card--light-beige {
+  background-color: #faf4eb;
+  color: #18181b;
+}
+
+/* Slide 3: Dark Navy Enterprise */
+.story-card--dark-navy {
+  background-color: #0b132b;
+}
+
+.story-card-overlay--navy {
+  background: linear-gradient(
+    90deg,
+    #0b132b 0%,
+    #0b132b 45%,
+    rgba(11, 19, 43, 0.85) 68%,
+    rgba(11, 19, 43, 0.2) 100%
+  );
+}
+
+/* Typography & Content Layout */
+.story-content {
+  flex: 1 1 54%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 54px;
+  z-index: 2;
+}
+
+.story-title {
+  font-size: 24px;
+  line-height: 1.22;
+  margin: 0 0 10px;
+}
+
+.story-title--serif {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  color: #fcfaf7;
+  letter-spacing: -0.01em;
+}
+
+.story-title--sans {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #18181b;
+  letter-spacing: -0.02em;
+}
+
+.story-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #c4bdab;
+  max-width: 380px;
+  margin: 0 0 14px;
+}
+
+.story-description--dark {
+  color: #52525b;
+}
+
+/* CTA Styles */
+/* Standard Text Link CTA */
+.story-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 0.2s ease;
+}
+
+.story-cta-link:hover .story-cta-arrow {
+  transform: translate(3px, -3px);
+}
+
+.story-cta-arrow {
+  display: inline-block;
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+/* Gradient Border Pill Button (Exact Zoho Screenshot 3 style) */
+.story-cta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #18181b;
+  padding: 10px 24px;
+  border-radius: 50px;
+  width: fit-content;
+  border: 2px solid transparent;
+  background: linear-gradient(#faf4eb, #faf4eb) padding-box,
+              linear-gradient(135deg, #ef4444, #fb923c, #facc15, #10b981, #3b82f6) border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.story-cta-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.story-cta-pill:hover .story-cta-arrow {
+  transform: translateX(3px);
+}
+
+/* Slide 2: Single Image Side */
+.story-grid-side {
+  flex: 1 1 46%;
+  min-width: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.story-single-image {
+  width: 100%;
+  height: 100%;
+  min-height: 140px;
+  overflow: hidden;
+}
+
+.story-single-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.story-single-image:hover img {
+  transform: scale(1.04);
+}
+
+/* Slide 3: Side Illustration */
+.story-side-illustration {
+  flex: 1 1 46%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  z-index: 2;
+}
+
+.story-side-illustration img {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
+  transition: transform 0.3s ease;
+}
+
+.story-side-illustration:hover img {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Navigation Buttons (Circular Prev/Next) */
+.story-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #dcdfe6;
+  color: #1e293b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.story-nav:hover {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.16);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.story-nav--prev {
+  left: 14px;
+}
+
+.story-nav--next {
+  right: 14px;
+}
+
+/* Pagination Dots */
+.story-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.story-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.story-dot--active {
+  width: 24px;
+  border-radius: 12px;
+  background: #18181b;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .story-container {
+    padding: 0 36px;
+  }
+
+  .story-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .story-card-overlay {
+    flex-direction: column;
+  }
+
+  .story-content {
+    width: 100%;
+    padding: 36px 32px;
+  }
+
+  .story-title {
+    font-size: 28px;
+  }
+
+  .story-description {
+    max-width: 100%;
+  }
+
+  .story-grid-side {
+    width: 100%;
+    height: 240px;
+    padding: 0 32px 32px;
+  }
+
+  .story-side-illustration {
+    width: 100%;
+    padding: 0 32px 32px;
+  }
+
+  .story-side-illustration img {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .story-section {
+    padding: 24px 0;
+  }
+
+  .story-container {
+    padding: 0 12px;
+  }
+
+  .story-outer-card {
+    padding: 6px;
+    border-radius: 16px;
+  }
+
+  .story-viewport {
+    border-radius: 10px;
+  }
+
+  .story-nav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .story-nav--prev {
+    left: 4px;
+  }
+
+  .story-nav--next {
+    right: 4px;
+  }
+
+  .story-content {
+    padding: 24px 20px;
+  }
+
+  .story-title {
+    font-size: 22px;
+  }
+
+  .story-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .story-grid-side {
+    height: 180px;
+    padding: 0 20px 20px;
+  }
+}
