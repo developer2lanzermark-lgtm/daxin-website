@@ -16,13 +16,13 @@ const PRODUCTS = [
     name: "Demander",
     slug: "demander",
     logo: demanderLogo,
-    description: "Connecting Businesses for orders beyond expectations",
+    description: "Connecting Businesses for orders beyond expectations.",
   },
   {
     name: "Voice Bill",
     slug: "voicebill",
     logo: voicebillLogo,
-    description: "Simply Speak, Simply Bill.\nAn Innovative Solution for Faster Retail Billing",
+    description: "Simply Speak, Simply Bill.\nAn innovative solution for faster retail billing.",
   },
 ];
 
