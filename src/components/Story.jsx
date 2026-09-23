@@ -174,6 +174,19 @@ export default function Story() {
               ))}
             </div>
           </div>
+
+          {/* Pagination Dots (overlaid inside the card, not extra section space) */}
+          <div className="story-dots">
+            {SLIDES.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={`story-dot ${i === index ? "story-dot--active" : ""}`}
+                onClick={() => setIndex(i)}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         <button
@@ -186,19 +199,6 @@ export default function Story() {
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
-      </div>
-
-      {/* Pagination Dots */}
-      <div className="story-dots">
-        {SLIDES.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            className={`story-dot ${i === index ? "story-dot--active" : ""}`}
-            onClick={() => setIndex(i)}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
       </div>
     </section>
   );
