@@ -1,6 +1,6 @@
 .industries {
   width: 100%;
-  padding: 0 0 0 32px;
+  padding: 0;
   background-color: #fefaf6;
 }
 
@@ -14,23 +14,23 @@
   background-position: right center;
   background-repeat: no-repeat;
   overflow: hidden;
-  padding: 64px 40px;
+  padding: 64px 40px 64px 120px;
 }
 
 .industries__inner {
   max-width: 1150px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .industries__title {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 44px;
+  font-size: 50px;
   line-height: 1.2;
   font-weight: 400;
   color: #1c1c1c;
   max-width: 520px;
-  margin: 0 0 24px;
+  margin: 0 0 40px;
 }
 
 .industries__title-line {
@@ -50,12 +50,12 @@
 
 @media (max-width: 960px) {
   .industries {
-    padding: 0 0 0 16px;
+    padding: 0;
   }
 
   .industries__bg {
     background-position: center 70%;
-    padding: 48px 24px;
+    padding: 48px 24px 48px 40px;
   }
 
   .industries__title {
@@ -69,14 +69,14 @@
 
 @media (max-width: 600px) {
   .industries {
-    padding: 0 0 0 12px;
+    padding: 0;
   }
 
   .industries__bg {
     min-height: auto;
     background-color: rgba(254, 250, 246, 0.94);
     background-blend-mode: lighten;
-    padding: 40px 16px;
+    padding: 40px 16px 40px 24px;
   }
 
   .industries__inner {
