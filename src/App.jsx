@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import FeaturedProducts from "./components/FeaturedProducts";
 import Industries from "./components/Industries";
 import Story from "./components/Story";
+import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import heroBackground from "./assets/images/hero-background.webp";
 import "./App.css";
@@ -28,18 +29,12 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="app">
+        <Navbar />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar />
-                <Home />
-              </>
-            }
-          />
+          <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
