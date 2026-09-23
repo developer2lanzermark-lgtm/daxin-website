@@ -6,3 +6,9 @@
   padding-bottom: 80px;
   overflow: hidden;
 }
+
+@media (max-width: 768px) {
+  .home-hero-wrap {
+    padding-bottom: 40px;
+  }
+}

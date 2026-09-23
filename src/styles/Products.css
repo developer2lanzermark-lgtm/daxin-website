@@ -246,10 +246,29 @@
 }
 
 @media (max-width: 900px) {
+  .image-background-section {
+    aspect-ratio: 16 / 9;
+    min-height: 240px;
+  }
+
+  .image-background {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .description-section {
+    padding: 32px 0;
+  }
+
+  .demander-section {
+    padding: 36px 0;
+    min-height: auto;
+  }
+
   .demander-container,
   .voicebill-section .demander-container {
     flex-direction: column;
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
   .demander-left,
@@ -264,29 +283,104 @@
   }
 
   .product-subtitle {
-    font-size: 28px;
+    font-size: clamp(22px, 5.5vw, 30px);
+    margin-bottom: 12px;
   }
 
   .product-subtitle span {
-    font-size: 20px;
+    font-size: clamp(17px, 4.5vw, 22px);
+    display: block;
+    margin-top: 4px;
+  }
+
+  .product-subtitle br {
+    display: none;
   }
 
   .product-description {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .logo-image {
+    height: 52px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+
+  .voicebill-logo-image {
+    height: 48px;
+    max-width: 180px;
+    object-fit: contain;
+  }
+
+  .demander-logo {
+    margin-bottom: 14px;
   }
 
   .demander-title,
   .voicebill-section .demander-title {
-    font-size: 26px;
+    font-size: clamp(22px, 5.5vw, 28px);
+    line-height: 1.25;
     white-space: normal;
+    margin-bottom: 12px;
+  }
+
+  .demander-title br {
+    display: none;
   }
 
   .demander-subtitle,
   .voicebill-section .demander-subtitle {
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 1.55;
   }
 
   .voicebill-section .voicebill-highlight {
-    font-size: 19px;
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .demander-image {
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.08));
+  }
+
+  .voicebill-image {
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 16px;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.1));
+  }
+
+  .btn-custom,
+  .explore-btn {
+    width: 210px;
+    height: 48px;
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .Explore-button-wrapper {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-background-section {
+    min-height: 200px;
+  }
+
+  .demander-container,
+  .voicebill-section .demander-container {
+    padding: 0 16px;
+  }
+
+  .Explore-button-wrapper,
+  .button-container {
+    display: flex;
+    justify-content: center;
   }
 }

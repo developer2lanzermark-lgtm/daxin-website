@@ -333,15 +333,30 @@
 
   .story-card-overlay {
     flex-direction: column;
+    background: linear-gradient(
+      180deg,
+      #050608 0%,
+      rgba(5, 6, 8, 0.85) 60%,
+      rgba(5, 6, 8, 0.35) 100%
+    );
+  }
+
+  .story-card-overlay--navy {
+    background: linear-gradient(
+      180deg,
+      #0b132b 0%,
+      rgba(11, 19, 43, 0.88) 60%,
+      rgba(11, 19, 43, 0.4) 100%
+    );
   }
 
   .story-content {
     width: 100%;
-    padding: 36px 32px;
+    padding: 32px 28px 20px;
   }
 
   .story-title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .story-description {
@@ -350,14 +365,16 @@
 
   .story-grid-side {
     width: 100%;
-    height: 240px;
-    padding: 0 32px 32px;
+    height: auto;
+    min-height: 180px;
+    padding: 0 28px 28px;
   }
 
   .story-side-illustration {
     width: 100%;
-    height: 240px;
-    padding: 0 32px 32px;
+    height: auto;
+    min-height: 160px;
+    padding: 0 28px 28px;
   }
 
   .story-side-illustration img {
@@ -380,43 +397,65 @@
   }
 
   .story-viewport {
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   .story-nav {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
+    top: auto;
+    bottom: 10px;
+    transform: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .story-nav:hover {
+    transform: scale(1.05);
   }
 
   .story-nav--prev {
-    left: 4px;
+    left: 12px;
   }
 
   .story-nav--next {
-    right: 4px;
+    right: 12px;
+  }
+
+  .story-dots {
+    bottom: 20px;
   }
 
   .story-content {
-    padding: 24px 20px;
+    padding: 22px 18px 16px;
   }
 
   .story-title {
-    font-size: 22px;
+    font-size: clamp(20px, 5.5vw, 24px);
+    line-height: 1.25;
   }
 
   .story-description {
     font-size: 14px;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 16px;
   }
 
   .story-grid-side {
-    height: 180px;
-    padding: 0 20px 20px;
+    height: auto;
+    min-height: 150px;
+    padding: 0 18px 44px;
+  }
+
+  .story-single-image img {
+    border-radius: 8px;
+    max-height: 180px;
   }
 
   .story-side-illustration {
-    height: 180px;
-    padding: 0 20px 20px;
+    height: auto;
+    min-height: 140px;
+    padding: 0 18px 44px;
   }
 
   .story-side-illustration img {
