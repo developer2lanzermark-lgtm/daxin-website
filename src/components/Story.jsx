@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import storySlide1 from "../assets/images/story-slide1.webp";
+import storySlide1 from "../assets/images/story-slide1-bright.webp";
 import industriesHero from "../assets/images/industries-hero.webp";
 import devicesIllustration from "../assets/images/devices-illustration.webp";
 import heroBackground from "../assets/images/hero-background.webp";
@@ -20,7 +20,7 @@ const SLIDES = [
     ctaHref: "/products",
     ctaStyle: "text-link",
     ctaColor: "#e59a3a",
-    bgImage: storySlide1,
+    sideImage: { src: storySlide1, alt: "Daxin leadership vision" },
   },
   {
     id: "slide-2",
@@ -97,25 +97,23 @@ export default function Story() {
                   key={slide.id}
                   style={{ width: `${100 / total}%` }}
                 >
-                  {/* Slide 1: Dark Executive background style */}
+                  {/* Slide 1: Full-bleed background image, text over its natural dark side */}
                   {slide.theme === "dark-executive" && (
                     <div
                       className="story-card story-card--dark-exec"
-                      style={{ backgroundImage: `url(${slide.bgImage})` }}
+                      style={{ backgroundImage: `url(${slide.sideImage.src})` }}
                     >
-                      <div className="story-card-overlay">
-                        <div className="story-content">
-                          <h2 className="story-title story-title--serif">
-                            {slide.title}
-                            <br />
-                            {slide.titleLine2}
-                          </h2>
-                          <p className="story-description">{slide.description}</p>
-                          <a href={slide.ctaHref} className="story-cta-link" style={{ color: slide.ctaColor }}>
-                            <span>{slide.ctaLabel}</span>
-                            <span className="story-cta-arrow">{slide.ctaArrow}</span>
-                          </a>
-                        </div>
+                      <div className="story-content story-content--solo">
+                        <h2 className="story-title story-title--serif">
+                          {slide.title}
+                          <br />
+                          {slide.titleLine2}
+                        </h2>
+                        <p className="story-description">{slide.description}</p>
+                        <a href={slide.ctaHref} className="story-cta-link" style={{ color: slide.ctaColor }}>
+                          <span>{slide.ctaLabel}</span>
+                          <span className="story-cta-arrow">{slide.ctaArrow}</span>
+                        </a>
                       </div>
                     </div>
                   )}
@@ -173,19 +171,6 @@ export default function Story() {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Pagination Dots (overlaid inside the card, not extra section space) */}
-          <div className="story-dots">
-            {SLIDES.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                className={`story-dot ${i === index ? "story-dot--active" : ""}`}
-                onClick={() => setIndex(i)}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
           </div>
         </div>
 
