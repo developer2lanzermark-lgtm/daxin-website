@@ -1,0 +1,62 @@
+.zoho-footer {
+  width: 100%;
+  background-color: #0b0e14;
+  padding: 42px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.zoho-footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.zoho-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.zoho-footer__logo:hover {
+  opacity: 0.88;
+}
+
+.zoho-footer__logo img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.zoho-footer__copyright {
+  margin: 0;
+  color: #b5bac7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 600px) {
+  .zoho-footer {
+    padding: 32px 16px;
+  }
+
+  .zoho-footer__logo img {
+    height: 32px;
+  }
+
+  .zoho-footer__copyright {
+    font-size: 12.5px;
+  }
+}
