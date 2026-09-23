@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import storySlide1 from "../assets/images/story-slide1-bright.webp";
-import industriesHero from "../assets/images/industries-hero.webp";
-import devicesIllustration from "../assets/images/devices-illustration.webp";
-import heroBackground from "../assets/images/hero-background.webp";
+import storySlide2 from "../assets/images/story-slide2-growth.webp";
+import storySlide3 from "../assets/images/story-slide3-curious.webp";
 import "../styles/Story.css";
 
 const AUTOPLAY_MS = 7000;
@@ -20,30 +19,20 @@ const SLIDES = [
   {
     id: "slide-2",
     theme: "light-beige",
-    title: "Daxin keeps your business",
-    titleLine2: "moving forward.",
+    title: "We Build for the Long Term.",
+    titleLine2: "",
     description:
-      "Empowering enterprises worldwide with intelligent, unified software solutions.",
-    ctaLabel: "EXPLORE VIDEO STORIES",
-    ctaArrow: "›",
-    ctaHref: "/products",
-    ctaStyle: "pill-gradient",
-    sideImage: { src: industriesHero, alt: "Daxin business software in action" },
+      "Our products are continuously developed over time, adding new capabilities and adapting to changing business and technology needs.",
+    sideImage: { src: storySlide2, alt: "Daxin product growth and innovation" },
   },
   {
     id: "slide-3",
     theme: "dark-navy",
-    title: "Your trust is our single",
-    titleLine2: "metric of success.",
+    title: "Curious About What's Next.",
+    titleLine2: "",
     description:
-      "Every product we build starts with a real problem our customers face every day.",
-    ctaLabel: "DISCOVER OUR VISION",
-    ctaArrow: "↗",
-    ctaHref: "/products",
-    ctaStyle: "text-link",
-    ctaColor: "#38bdf8",
-    bgImage: heroBackground,
-    sideImage: devicesIllustration,
+      "We keep exploring new technologies and ideas, looking for meaningful ways to bring them into the products we build.",
+    sideImage: { src: storySlide3, alt: "Daxin team exploring emerging technology" },
   },
 ];
 
@@ -99,63 +88,46 @@ export default function Story() {
                       style={{ backgroundImage: `url(${slide.sideImage.src})` }}
                     >
                       <div className="story-content story-content--solo">
-                        <h2 className="story-title story-title--inter">
+                        <h2 className="story-title story-title--inter story-title--gold">
                           {slide.title}
                           <br />
                           {slide.titleLine2}
                         </h2>
-                        <p className="story-description story-description--inter">{slide.description}</p>
+                        <p className="story-description story-description--inter story-description--gold">{slide.description}</p>
                       </div>
                     </div>
                   )}
 
                   {/* Slide 2: Light Beige with Multi-Photo Grid (Matching Zoho Screenshot 3) */}
                   {slide.theme === "light-beige" && (
-                    <div className="story-card story-card--light-beige">
-                      <div className="story-content">
+                    <div
+                      className="story-card story-card--light-beige"
+                      style={{ backgroundImage: `url(${slide.sideImage.src})` }}
+                    >
+                      <div className="story-content story-content--solo">
                         <h2 className="story-title story-title--sans">
                           {slide.title}
-                          <br />
-                          {slide.titleLine2}
                         </h2>
                         <p className="story-description story-description--dark">{slide.description}</p>
-                        <a href={slide.ctaHref} className="story-cta-pill">
-                          <span>{slide.ctaLabel}</span>
-                          <span className="story-cta-arrow">{slide.ctaArrow}</span>
-                        </a>
-                      </div>
-
-                      <div className="story-grid-side">
-                        <div className="story-single-image">
-                          <img src={slide.sideImage.src} alt={slide.sideImage.alt} loading="lazy" />
-                        </div>
                       </div>
                     </div>
                   )}
 
-                  {/* Slide 3: Dark Navy Enterprise Vision */}
+                  {/* Slide 3: Curious About What's Next */}
                   {slide.theme === "dark-navy" && (
                     <div
                       className="story-card story-card--dark-navy"
-                      style={{ backgroundImage: `url(${slide.bgImage})` }}
+                      style={{ backgroundImage: `url(${slide.sideImage.src})` }}
                     >
-                      <div className="story-card-overlay story-card-overlay--navy">
-                        <div className="story-content">
-                          <h2 className="story-title story-title--serif">
-                            {slide.title}
-                            <br />
-                            {slide.titleLine2}
-                          </h2>
-                          <p className="story-description">{slide.description}</p>
-                          <a href={slide.ctaHref} className="story-cta-link" style={{ color: slide.ctaColor }}>
-                            <span>{slide.ctaLabel}</span>
-                            <span className="story-cta-arrow">{slide.ctaArrow}</span>
-                          </a>
-                        </div>
-
-                        <div className="story-side-illustration">
-                          <img src={slide.sideImage} alt="Daxin Ecosystem Devices" loading="lazy" />
-                        </div>
+                      <div className="story-content story-content--solo story-content--center">
+                        <h2 className="story-title story-title--inter story-title--navy">
+                          {slide.title}
+                        </h2>
+                        <p className="story-description story-description--inter story-description--slate">
+                          We keep exploring new technologies and ideas, looking for meaningful ways to
+                          <br />
+                          bring them into the products we build.
+                        </p>
                       </div>
                     </div>
                   )}
