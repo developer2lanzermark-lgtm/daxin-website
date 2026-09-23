@@ -1,0 +1,96 @@
+.industries {
+  width: 100%;
+  padding: 0 0 0 32px;
+  background-color: #fefaf6;
+}
+
+.industries__bg {
+  min-height: 70vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fefaf6;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 64px 40px;
+}
+
+.industries__inner {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.industries__title {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #1c1c1c;
+  max-width: 520px;
+  margin: 0 0 24px;
+}
+
+.industries__title-line {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.industries__subtitle {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  font-weight: 400;
+  max-width: 900px;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .industries {
+    padding: 0 0 0 16px;
+  }
+
+  .industries__bg {
+    background-position: center 70%;
+    padding: 48px 24px;
+  }
+
+  .industries__title {
+    font-size: clamp(24px, 4.2vw, 32px);
+  }
+
+  .industries__subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  .industries {
+    padding: 0 0 0 12px;
+  }
+
+  .industries__bg {
+    min-height: auto;
+    background-color: rgba(254, 250, 246, 0.94);
+    background-blend-mode: lighten;
+    padding: 40px 16px;
+  }
+
+  .industries__inner {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 24px;
+  }
+
+  .industries__title {
+    font-size: clamp(19px, 6.5vw, 26px);
+    max-width: 100%;
+  }
+
+  .industries__subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}

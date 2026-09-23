@@ -5,9 +5,9 @@ export default function Hero() {
     <section id="home" className="hero">
       <div className="hero__inner">
         <h1 className="hero__title">
-          We make everyday business
+          <span className="hero__title-line">We make everyday business simpler</span>
           <br />
-          simpler with better software.
+          with better software.
         </h1>
 
         <p className="hero__subtitle">

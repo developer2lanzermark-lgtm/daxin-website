@@ -8,18 +8,21 @@ import "../styles/FeaturedProducts.css";
 const PRODUCTS = [
   {
     name: "gPro",
+    slug: "gpro",
     logo: gproLogo,
-    description: "A simple, powerful business management software designed for modern businesses.",
+    description: "A Simple, powerful business management software designed for modern businesses.",
   },
   {
     name: "Demander",
+    slug: "demander",
     logo: demanderLogo,
-    description: "Connecting businesses for orders beyond expectations.",
+    description: "Connecting Businesses for orders beyond expectations",
   },
   {
-    name: "VoiceBill",
+    name: "Voice Bill",
+    slug: "voicebill",
     logo: voicebillLogo,
-    description: "Simply speak, simply bill. An innovative solution for faster retail billing.",
+    description: "Simply Speak, Simply Bill.\nAn Innovative Solution for Faster Retail Billing",
   },
 ];
 
@@ -47,16 +50,19 @@ export default function FeaturedProducts() {
               <img
                 src={product.logo}
                 alt={`${product.name} logo`}
-                className={`featured__item-icon featured__item-icon--${product.name.toLowerCase()}`}
+                className={`featured__item-icon featured__item-icon--${product.slug}`}
               />
               <div>
                 <p className="featured__item-desc">{product.description}</p>
               </div>
             </div>
           ))}
+        </div>
 
+        <div className="featured__cta">
           <Link to="/products" className="featured__explore">
-            Explore it &gt;
+            <span>Explore Products</span>
+            <span className="featured__explore-arrow" aria-hidden="true">&rarr;</span>
           </Link>
         </div>
       </div>
