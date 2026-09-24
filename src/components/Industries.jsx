@@ -12,7 +12,7 @@ export default function Industries() {
           <h2 className="section-title industries__title">
             <span className="industries__title-line">Software that does more.</span>
             <br />
-            So you can too.
+            <span className="industries__title-underline">So y</span>ou can too.
           </h2>
 
           <p className="section-desc industries__subtitle">

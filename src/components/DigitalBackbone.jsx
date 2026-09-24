@@ -1,4 +1,5 @@
 import digitalBackboneBg from "../assets/images/story-header-gpro.webp";
+import daxinMark from "../assets/images/daxin-mark-outline.png";
 import "../styles/DigitalBackbone.css";
 
 export default function DigitalBackbone() {
@@ -7,15 +8,21 @@ export default function DigitalBackbone() {
       <div className="digital-backbone__row">
         <div className="digital-backbone__inner">
           <h2 className="section-title digital-backbone__title">
-            The Digital Backbone
+            The <span className="digital-backbone__title-mark">
+              <img src={daxinMark} alt="" className="digital-backbone__mark" />
+              D
+            </span>igital Backbone
             <br />
             for Growing Businesses
           </h2>
 
           <p className="section-desc digital-backbone__subtitle">
-            Daxin Technologies helps growing businesses build a stronger digital foundation,
+            Daxin Technologies helps growing businesses
             <br />
-            enabling them to manage their operations with the teams they already have.
+            build a stronger digital foundation,
+            enabling them to manage their operations
+            <br />
+            with the teams they already have.
           </p>
         </div>
 
