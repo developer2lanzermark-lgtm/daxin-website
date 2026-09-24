@@ -16,7 +16,7 @@ export default function Products() {
         <div className="image-overlay">
           <div className="gpro-hero-content">
             <p className="gpro-hero-subtitle">gPro · Business Management Software</p>
-            <h1 className="gpro-hero-title">One Platform. Every Part of Your Business.</h1>
+            <h1 className="gpro-hero-title">One Platform. <br /> Every Part of Your Business.</h1>
             <p className="gpro-hero-description">
               gPro brings billing, inventory, taxation, accounting and business
               operations together in one powerful, easy-to-use platform — helping
@@ -42,7 +42,7 @@ export default function Products() {
             </div>
           </div>
           <p className="gpro-hero-trust">
-            Trusted by <strong>{ CUSTOMERS_COUNT }</strong> Businesses · <strong>{  yearsOfExperience }+</strong> Years of Experience
+            Trusted by { CUSTOMERS_COUNT } Businesses Across India · {  yearsOfExperience }+ Years of Experience
           </p>
         </div>
       </section>
