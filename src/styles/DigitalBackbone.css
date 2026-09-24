@@ -1,7 +1,10 @@
 .digital-backbone {
   width: 100%;
+  min-height: 746px;
   background-color: #eef0f5;
   padding: 200px 0 72px;
+  display: flex;
+  align-items: center;
 }
 
 .digital-backbone__row {
@@ -10,10 +13,11 @@
   display: flex;
   align-items: center;
   gap: 48px;
+  margin-top: 40px;
 }
 
 .digital-backbone__inner {
-  flex: 0 0 820px;
+  flex: 0 0 640px;
   min-width: 0;
 }
 
@@ -22,14 +26,15 @@
   min-width: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .digital-backbone__art img {
-  width: 100%;
-  max-width: 380px;
+  width: 380px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 18px;
   border: 2px solid rgba(60, 60, 67, 0.25);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
@@ -45,8 +50,9 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 42px;
-  height: 42px;
+  width: 100px;
+  max-width: none;
+  height: 80px;
   margin-bottom: 4px;
   pointer-events: none;
 }
@@ -62,6 +68,7 @@
 
 @media (max-width: 960px) {
   .digital-backbone {
+    min-height: 0;
     padding: 48px 0;
   }
 
