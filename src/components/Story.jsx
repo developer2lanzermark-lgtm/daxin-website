@@ -5,7 +5,7 @@ import storySlide3 from "../assets/images/story-slide3-curious.webp";
 import storyHeaderImage from "../assets/images/digital-backbone-bg.webp";
 import "../styles/Story.css";
 
-const AUTOPLAY_MS = 7000;
+const AUTOPLAY_MS = 10000;
 
 const SLIDES = [
   {
