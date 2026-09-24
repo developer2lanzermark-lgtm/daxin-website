@@ -54,7 +54,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 98px;
+  margin-top: 118px;
 }
 
 .gpro-hero-btn {
@@ -93,12 +93,12 @@
   font-size: 18px;
   font-weight: 500;
   color: #4a4a4a;
-  margin: 0;
-  position: absolute;
-  bottom: 28px;
-  left: 0;
-  right: 0;
-  text-align: center;
+  margin: 62px 0 0;
+  text-align: left;
+}
+
+.gpro-hero-trust-dot {
+  margin: 0 10px;
 }
 
 .gpro-hero-trust strong {
@@ -129,9 +129,6 @@
   }
 
   .gpro-hero-trust {
-    position: static;
-    padding: 0 16px 24px;
-    background: #fff;
     font-size: 16px;
   }
 

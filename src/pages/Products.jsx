@@ -40,10 +40,10 @@ export default function Products() {
                 Explore Features
               </a>
             </div>
+            <p className="gpro-hero-trust">
+              Trusted by { CUSTOMERS_COUNT } Businesses across India <span className="gpro-hero-trust-dot">·</span> {  yearsOfExperience }+ Years of Experience
+            </p>
           </div>
-          <p className="gpro-hero-trust">
-            Trusted by { CUSTOMERS_COUNT } Businesses Across India · {  yearsOfExperience }+ Years of Experience
-          </p>
         </div>
       </section>
 
