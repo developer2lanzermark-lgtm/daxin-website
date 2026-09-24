@@ -28,9 +28,11 @@
   margin: 0 0 40px;
 }
 
-.industries__title-underline {
-  border-bottom: 1px solid #a3204f;
-  padding-bottom: 6px;
+.industries__title-topline {
+  display: block;
+  width: 100px;
+  border-top: 1px solid #a3204f;
+  margin-bottom: 12px;
 }
 
 .industries__title-line {
