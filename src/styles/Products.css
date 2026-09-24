@@ -148,6 +148,11 @@
 }
 
 /* Demander banner (section 2) */
+/* .demander-hero-section {
+  aspect-ratio: auto;
+  min-height: 880px;
+} */
+
 .demander-hero-content {
   position: absolute;
   top: 50%;
@@ -189,6 +194,70 @@
     max-width: none;
     padding: 24px 16px;
     background: #fff;
+  }
+}
+
+/* Voice Bill banner (section 3) */
+.voicebill-hero-top {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  width: 40%;
+  text-align: left;
+}
+
+.voicebill-hero-logo {
+  display: block;
+  height: 70px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.voicebill-hero-subtitle {
+  position: absolute;
+  top: 46%;
+  left: 60%;
+  width: auto;
+  white-space: nowrap;
+  margin: 0;
+  text-align: left;
+}
+
+.voicebill-hero-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8%;
+  text-align: center;
+}
+
+.voicebill-hero-buttons {
+  justify-content: center;
+}
+
+.voicebill-hero-bottom .section-desc {
+  margin: 0;
+}
+
+.voicebill-hero-buttons {
+  margin-top: 28px;
+}
+
+@media (max-width: 960px) {
+  .voicebill-hero-top,
+  .voicebill-hero-subtitle,
+  .voicebill-hero-bottom {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    padding: 16px;
+    background: #fff;
+    white-space: normal;
   }
 }
 

@@ -1,4 +1,5 @@
 import gproHero from "../assets/images/PRODUCTS_Hero.webp";
+import voicebillBg from "../assets/images/PRODUCTS_03.webp";
 import demanderBg from "../assets/images/PRODUCTS_02.webp";
 import demanderHero from "../assets/images/demander-hero.png";
 import voicebillHero from "../assets/images/voicebill-hero.jpeg";
@@ -68,6 +69,35 @@ export default function Products() {
             <div className="gpro-hero-buttons demander-hero-buttons">
               <a
                 href="https://demander.app/aptadmin/src/app/login.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gpro-hero-btn gpro-hero-btn--outline btn-text"
+              >
+                Explore Features
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="image-background-section voicebill-hero-section">
+        <img src={voicebillBg} alt="Voice Bill mobile billing app" className="image-background" />
+        <div className="image-overlay">
+          <div className="voicebill-hero-top">
+            <img src={voicebillLogo} alt="Voice Bill logo" className="voicebill-hero-logo" />
+            <h2 className="section-title">Simply Speak, Simply Bill</h2>
+          </div>
+          <h3 className="section-subtitle voicebill-hero-subtitle">
+            An innovative solution for faster retail billing
+          </h3>
+          <div className="voicebill-hero-bottom">
+            <p className="section-desc">
+              Built for busy retail counters, Voice Bill mobile app makes billing faster,
+              simpler, and easier —<br />so you can serve more customers with less effort.
+            </p>
+            <div className="gpro-hero-buttons voicebill-hero-buttons">
+              <a
+                href="https://copanel.voicebill.app/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gpro-hero-btn gpro-hero-btn--outline btn-text"
