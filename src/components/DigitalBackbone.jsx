@@ -6,13 +6,13 @@ export default function DigitalBackbone() {
     <section className="digital-backbone">
       <div className="digital-backbone__row">
         <div className="digital-backbone__inner">
-          <h2 className="digital-backbone__title">
+          <h2 className="section-title digital-backbone__title">
             The Digital Backbone
             <br />
             for Growing Businesses
           </h2>
 
-          <p className="digital-backbone__subtitle">
+          <p className="section-desc digital-backbone__subtitle">
             Daxin Technologies helps growing businesses build a stronger digital foundation,
             <br />
             enabling them to manage their operations with the teams they already have.

@@ -42,20 +42,10 @@
 }
 
 .story-header__title {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 50px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #1c1c1c;
   margin: 0 0 40px;
 }
 
 .story-header__desc {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 400;
-  color: #4a4a4a;
   margin: 0;
 }
 
@@ -205,20 +195,16 @@
 }
 
 .story-description {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 400;
+  font-family: var(--font-family-base);
+  font-size: var(--desc-font-size);
+  line-height: var(--desc-line-height);
+  font-weight: var(--desc-font-weight);
   color: #c4bdab;
   max-width: 380px;
   margin: 0 0 14px;
 }
 
 .story-description--inter {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 400;
   white-space: nowrap;
   max-width: none;
   margin-top: 16px;
@@ -235,10 +221,6 @@
 }
 
 .story-description--dark {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 400;
   color: #4a7ab5;
 }
 
