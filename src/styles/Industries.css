@@ -28,6 +28,11 @@
   margin: 0 0 40px;
 }
 
+.industries__title-underline {
+  border-bottom: 1px solid #a3204f;
+  padding-bottom: 6px;
+}
+
 .industries__title-line {
   display: inline-block;
   white-space: nowrap;
