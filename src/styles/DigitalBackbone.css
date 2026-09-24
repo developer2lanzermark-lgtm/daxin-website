@@ -1,7 +1,7 @@
 .digital-backbone {
   width: 100%;
   min-height: 746px;
-  background-color: #eef0f5;
+  background-color: #ecf1fd;
   padding: 200px 0 72px;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@
 }
 
 .digital-backbone__art img {
-  width: 380px;
+  width: 420px;
   max-width: 100%;
   aspect-ratio: 1 / 1;
   height: auto;
