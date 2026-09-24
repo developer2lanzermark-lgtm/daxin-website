@@ -16,50 +16,45 @@
 .gpro-hero-content {
   position: absolute;
   top: 50%;
-  right: 6%;
+  right: 15%;
   transform: translateY(-50%);
-  width: 46%;
-  max-width: 640px;
+  width: 48%;
+  max-width: 720px;
   text-align: left;
 }
 
 .gpro-hero-subtitle {
   font-family: "Inter", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  color: #1c1c1c;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b6b6b;
   margin: 0 0 16px;
 }
 
 .gpro-hero-title {
-  font-family: "Inter", sans-serif;
-  font-size: 46px;
-  font-weight: 600;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(30px, 2.6vw, 50px);
+  font-weight: 400;
+  white-space: nowrap;
   line-height: 1.2;
   color: #1c1c1c;
   margin: 0 0 24px;
 }
 
 .gpro-hero-description {
-  font-family: "Inter", sans-serif;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #4a4a4a;
-  margin: 0;
+  
+  margin-top: 60px;
 }
 
 .gpro-hero-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 28px;
+  margin-top: 118px;
 }
 
 .gpro-hero-btn {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
+ 
   padding: 0 28px;
   height: 51px;
   border-radius: 8px;
@@ -88,16 +83,13 @@
 }
 
 .gpro-hero-trust {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a4a4a;
-  margin: 0;
-  position: absolute;
-  bottom: 28px;
-  left: 0;
-  right: 0;
-  text-align: center;
+
+  margin: 62px 0 0;
+  text-align: left;
+}
+
+.gpro-hero-trust-dot {
+  margin: 0 10px;
 }
 
 .gpro-hero-trust strong {
@@ -128,14 +120,11 @@
   }
 
   .gpro-hero-trust {
-    position: static;
-    padding: 0 16px 24px;
-    background: #fff;
     font-size: 16px;
   }
 
   .gpro-hero-subtitle { font-size: 22px; }
-  .gpro-hero-title { font-size: 32px; }
+  .gpro-hero-title { font-size: 32px; white-space: normal; }
   .gpro-hero-description { font-size: 18px; }
 }
 
