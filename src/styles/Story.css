@@ -376,6 +376,14 @@
     padding: 0 36px;
   }
 
+  .story-section {
+    padding-bottom: 40px;
+  }
+
+  .story-outer-card {
+    margin-bottom: 0;
+  }
+
   .story-card {
     flex-direction: column;
     min-height: auto;
@@ -506,5 +514,34 @@
 
   .story-side-illustration img {
     max-height: 130px;
+  }
+
+  .story-content--solo {
+    max-width: 100%;
+    padding: 24px 22px;
+  }
+
+  .story-title--inter,
+  .story-title--sans {
+    white-space: normal;
+  }
+
+  .story-description--inter,
+  .story-description--slate {
+    white-space: normal;
+    max-width: 100%;
+  }
+
+  .story-title--gold {
+    margin-top: 0;
+  }
+
+  .story-header__image {
+    width: 100%;
+  }
+
+  .story-header__title,
+  .story-header__desc {
+    padding: 0 8px;
   }
 }

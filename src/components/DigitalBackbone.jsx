@@ -28,8 +28,9 @@ export default function DigitalBackbone() {
 
         <div className="digital-backbone__art">
           <div className="digital-backbone__art-frame">
-            <span className="digital-backbone__blob" aria-hidden="true"></span>
-            <span className="digital-backbone__dot" aria-hidden="true"></span>
+            <span className="digital-backbone__dot digital-backbone__dot--blue" aria-hidden="true"></span>
+            <span className="digital-backbone__dot digital-backbone__dot--gold" aria-hidden="true"></span>
+            <span className="digital-backbone__dot digital-backbone__dot--teal" aria-hidden="true"></span>
             <img src={digitalBackboneBg} alt="Industries Daxin serves" />
           </div>
         </div>
