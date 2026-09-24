@@ -1,16 +1,50 @@
-import gproHero from "../assets/images/gpro-hero.png";
+import gproHero from "../assets/images/PRODUCTS_Hero.webp";
 import demanderHero from "../assets/images/demander-hero.png";
 import voicebillHero from "../assets/images/voicebill-hero.jpeg";
 import demanderLogo from "../assets/images/demander-logo.png";
 import voicebillLogo from "../assets/images/voicebill-logo.png";
 import "../styles/Products.css";
 
+import { CUSTOMERS_COUNT,  yearsOfExperience } from '../config/siteStats.js'
+
+
 export default function Products() {
   return (
     <div className="products-page">
       <section className="image-background-section">
         <img src={gproHero} alt="gPro business solution" className="image-background" />
-        <div className="image-overlay"></div>
+        <div className="image-overlay">
+          <div className="gpro-hero-content">
+            <p className="gpro-hero-subtitle">gPro · Business Management Software</p>
+            <h1 className="gpro-hero-title">One Platform. Every Part of Your Business.</h1>
+            <p className="gpro-hero-description">
+              gPro brings billing, inventory, taxation, accounting and business
+              operations together in one powerful, easy-to-use platform — helping
+              wholesale, distribution and retail businesses work smarter every day.
+            </p>
+            <div className="gpro-hero-buttons">
+              <a
+                href="https://gprosoftware.com/book-a-demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gpro-hero-btn gpro-hero-btn--primary"
+              >
+                Book a Demo
+              </a>
+              <a
+                href="https://gprosoftware.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gpro-hero-btn gpro-hero-btn--outline"
+              >
+                Explore Features
+              </a>
+            </div>
+          </div>
+          <p className="gpro-hero-trust">
+            Trusted by <strong>{ CUSTOMERS_COUNT }</strong> Businesses · <strong>{  yearsOfExperience }+</strong> Years of Experience
+          </p>
+        </div>
       </section>
 
       <section className="description-section">
