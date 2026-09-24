@@ -16,8 +16,8 @@ export default function Products() {
         <div className="image-overlay">
           <div className="gpro-hero-content">
             <p className="gpro-hero-subtitle">gPro · Business Management Software</p>
-            <h1 className="gpro-hero-title">One Platform. <br /> Every Part of Your Business.</h1>
-            <p className="gpro-hero-description">
+            <h1 className="section-title">One Platform. <br /> Every Part of Your Business.</h1>
+            <p className="section-desc">
               gPro brings billing, inventory, taxation, accounting and business
               operations together in one powerful, easy-to-use platform — helping
               wholesale, distribution and retail businesses work smarter every day.
