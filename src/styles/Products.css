@@ -8,8 +8,135 @@
 .image-background-section {
   position: relative;
   width: 100%;
-  aspect-ratio: 1920 / 718;
+  aspect-ratio: 1920 / 860;
+  min-height: 520px;
   overflow: hidden;
+}
+
+.gpro-hero-content {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  width: 46%;
+  max-width: 640px;
+  text-align: left;
+}
+
+.gpro-hero-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #1c1c1c;
+  margin: 0 0 16px;
+}
+
+.gpro-hero-title {
+  font-family: "Inter", sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1c1c1c;
+  margin: 0 0 24px;
+}
+
+.gpro-hero-description {
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+.gpro-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.gpro-hero-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 28px;
+  height: 51px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.gpro-hero-btn--primary {
+  background: #017c8b;
+  color: #fff;
+  border: 2px solid #017c8b;
+}
+
+.gpro-hero-btn--outline {
+  background: transparent;
+  color: #017c8b;
+  border: 2px solid #017c8b;
+}
+
+.gpro-hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(1, 124, 139, 0.4);
+}
+
+.gpro-hero-trust {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #4a4a4a;
+  margin: 0;
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.gpro-hero-trust strong {
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .image-background-section {
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+
+  .image-background {
+    position: relative;
+    height: auto;
+  }
+
+  .gpro-hero-content {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    padding: 24px 16px;
+    background: #fff;
+  }
+
+  .gpro-hero-trust {
+    position: static;
+    padding: 0 16px 24px;
+    background: #fff;
+    font-size: 16px;
+  }
+
+  .gpro-hero-subtitle { font-size: 22px; }
+  .gpro-hero-title { font-size: 32px; }
+  .gpro-hero-description { font-size: 18px; }
 }
 
 .image-background {
