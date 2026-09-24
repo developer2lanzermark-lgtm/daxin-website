@@ -13,6 +13,19 @@
   --desc-font-weight: 400;
   --desc-line-height: 1.6;
   --desc-color: #4a4a4a;
+
+  --eyebrow-font-size: 15px;
+  --eyebrow-font-weight: 500;
+  --eyebrow-letter-spacing: 0.04em;
+  --eyebrow-color: #6b6b6b;
+
+   --supportline-font-size: 18px;
+  --supportline-font-weight: 500;
+  --supportline-line-height: 1.6;
+  --supportline-color: #4a4a4a;
+
+  --btn-font-size: 18px;
+  --btn-font-weight: 500;
 }
 
 * {
@@ -34,6 +47,35 @@
   line-height: var(--desc-line-height);
   font-weight: var(--desc-font-weight);
   color: var(--desc-color);
+}
+
+
+.section-eyebrow {
+  font-family: var(--font-family-base);
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  letter-spacing: var(--eyebrow-letter-spacing);
+  color: var(--eyebrow-color);
+}
+
+.support-line {
+
+   font-family: var(--font-family-base);
+  font-size: var(--supportline-font-size);
+  font-weight: var(--supportline-font-weight);
+  letter-spacing: var(--supportline-line-height);
+  color: var(--supportline-color);
+
+
+}
+
+.btn-text {
+ 
+  font-family: var(--font-family-base);
+  font-size: var( --btn-font-size);
+  font-weight: var(--btn-font-weight);
+
+
 }
 
 html,
