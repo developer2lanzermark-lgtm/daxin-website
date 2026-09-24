@@ -9,13 +9,13 @@ export default function Industries() {
         style={{ backgroundImage: `url(${industriesBackground})` }}
       >
         <div className="industries__inner">
-          <h2 className="industries__title">
+          <h2 className="section-title industries__title">
             <span className="industries__title-line">Software that does more.</span>
             <br />
             So you can too.
           </h2>
 
-          <p className="industries__subtitle">
+          <p className="section-desc industries__subtitle">
             With decades of real-world experience,
             <br />
             we create software products across diverse business categories,
