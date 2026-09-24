@@ -39,6 +39,8 @@
   height: auto;
   object-fit: contain;
   margin-top: 20px;
+  position: relative;
+  top: -60px;
   border-radius: 12px;
 }
 

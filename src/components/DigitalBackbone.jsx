@@ -1,5 +1,5 @@
 import digitalBackboneBg from "../assets/images/digital-backbone-photo.webp";
-import daxinMark from "../assets/images/daxin-mark-outline.png";
+import daxinMark from "../assets/images/daxin-mark-growth.webp";
 import "../styles/DigitalBackbone.css";
 
 export default function DigitalBackbone() {
@@ -27,7 +27,11 @@ export default function DigitalBackbone() {
         </div>
 
         <div className="digital-backbone__art">
-          <img src={digitalBackboneBg} alt="Industries Daxin serves" />
+          <div className="digital-backbone__art-frame">
+            <span className="digital-backbone__blob" aria-hidden="true"></span>
+            <span className="digital-backbone__dot" aria-hidden="true"></span>
+            <img src={digitalBackboneBg} alt="Industries Daxin serves" />
+          </div>
         </div>
       </div>
     </section>

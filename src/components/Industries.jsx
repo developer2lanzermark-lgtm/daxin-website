@@ -10,9 +10,10 @@ export default function Industries() {
       >
         <div className="industries__inner">
           <h2 className="section-title industries__title">
+            <span className="industries__title-topline"></span>
             <span className="industries__title-line">Software that does more.</span>
             <br />
-            <span className="industries__title-underline">So y</span>ou can too.
+            So you can too.
           </h2>
 
           <p className="section-desc industries__subtitle">
