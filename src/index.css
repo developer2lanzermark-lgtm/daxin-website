@@ -13,6 +13,11 @@
   --desc-font-weight: 400;
   --desc-line-height: 1.6;
   --desc-color: #4a4a4a;
+
+  --eyebrow-font-size: 15px;
+  --eyebrow-font-weight: 500;
+  --eyebrow-letter-spacing: 0.04em;
+  --eyebrow-color: #6b6b6b;
 }
 
 * {
@@ -34,6 +39,14 @@
   line-height: var(--desc-line-height);
   font-weight: var(--desc-font-weight);
   color: var(--desc-color);
+}
+
+.section-eyebrow {
+  font-family: var(--font-family-base);
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  letter-spacing: var(--eyebrow-letter-spacing);
+  color: var(--eyebrow-color);
 }
 
 html,

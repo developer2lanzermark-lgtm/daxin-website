@@ -39,7 +39,7 @@ export default function FeaturedProducts() {
 
       <div className="featured__list">
         <div className="featured__list-header">
-          <span>OUR PRODUCTS</span>
+          <span className="section-eyebrow">OUR PRODUCTS</span>
         </div>
 
         <hr className="featured__divider" />
