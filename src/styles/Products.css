@@ -145,6 +145,46 @@
   z-index: 1;
 }
 
+/* Demander banner (section 2) */
+.demander-hero-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  width: 46%;
+  max-width: 640px;
+  text-align: left;
+}
+
+.demander-hero-content .section-title,
+.demander-hero-content .section-subtitle,
+.demander-hero-content .section-desc
+ {
+  margin: 0 0 40px;
+}
+
+.demander-hero-content .support-line {
+  margin-top: 60px ;
+  margin-left: 130px;
+}
+
+.demander-hero-buttons {
+  margin-top: 52px;
+}
+
+@media (max-width: 960px) {
+  .demander-hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    padding: 24px 16px;
+    background: #fff;
+  }
+}
+
 /* gPro description */
 .description-section {
   background: #ffffff;

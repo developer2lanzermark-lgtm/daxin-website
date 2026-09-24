@@ -1,4 +1,5 @@
 import gproHero from "../assets/images/PRODUCTS_Hero.webp";
+import demanderBg from "../assets/images/PRODUCTS_02.webp";
 import demanderHero from "../assets/images/demander-hero.png";
 import voicebillHero from "../assets/images/voicebill-hero.jpeg";
 import demanderLogo from "../assets/images/demander-logo.png";
@@ -43,6 +44,37 @@ export default function Products() {
             <p className="gpro-hero-trust support-line">
               Trusted by { CUSTOMERS_COUNT } Businesses across India <span className="gpro-hero-trust-dot">·</span> {  yearsOfExperience }+ Years of Experience
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="image-background-section demander-hero-section">
+        <img src={demanderBg} alt="Demander smart ordering platform" className="image-background" />
+        <div className="image-overlay">
+          <div className="demander-hero-content">
+            <p className="section-eyebrow">Demander · Smart Ordering Platform</p>
+            <h2 className="section-title">
+              Connecting Businesses Beyond Calls Chats Visits and Emails
+            </h2>
+            <h3 className="section-subtitle">
+              A smarter way to receive manage and track every order
+            </h3>
+            <p className="section-desc">
+              Demander brings buyers and sellers together on one connected platform,
+              making it easier to receive, manage and track orders without the
+              everyday friction of scattered conversations.
+            </p>
+            <p className="support-line">Receive Orders Without the Noise</p>
+            <div className="gpro-hero-buttons demander-hero-buttons">
+              <a
+                href="https://demander.app/aptadmin/src/app/login.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gpro-hero-btn gpro-hero-btn--outline btn-text"
+              >
+                Explore Features
+              </a>
+            </div>
           </div>
         </div>
       </section>

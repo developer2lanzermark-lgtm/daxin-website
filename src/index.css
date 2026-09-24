@@ -26,6 +26,12 @@
 
   --btn-font-size: 18px;
   --btn-font-weight: 500;
+
+
+   --subtitle-font-size: 35px;
+  --subtitle-font-weight: 400;
+  --subtitle-line-height: 1.2;
+  --subtitle-color: #1c1c1c;
 }
 
 * {
@@ -78,6 +84,13 @@
 
 }
 
+.section-subtitle {
+  font-family: var(--font-family-base);
+  font-size: var( --subtitle-font-size);
+  line-height: var( --subtitle-line-height);
+  font-weight: var(--subtitle-font-weight);
+  color: var( --subtitle-color);
+}
 html,
 body {
   margin: 0;
