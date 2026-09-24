@@ -64,7 +64,7 @@ export default function Products() {
               making it easier to receive, manage and track orders without the
               everyday friction of scattered conversations.
             </p>
-            <p className="support-line">Receive Orders Without the Noise</p>
+            <p className="demander-support-line">Receive Orders Without the Noise</p>
             <div className="gpro-hero-buttons demander-hero-buttons">
               <a
                 href="https://demander.app/aptadmin/src/app/login.php"
@@ -79,7 +79,7 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="description-section">
+      {/* <section className="description-section">
         <div className="description-container">
           <div className="description-content">
             <h2 className="product-subtitle">
@@ -142,9 +142,9 @@ export default function Products() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="voicebill" className="demander-section voicebill-section">
+      {/* <section id="voicebill" className="demander-section voicebill-section">
         <div className="demander-container">
           <div className="demander-left">
             <img src={voicebillHero} alt="Voice Bill app" className="voicebill-image" />
@@ -176,7 +176,7 @@ export default function Products() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
