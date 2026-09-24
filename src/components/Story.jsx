@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import storySlide1 from "../assets/images/story-slide1-bright.webp";
 import storySlide2 from "../assets/images/story-slide2-growth.webp";
 import storySlide3 from "../assets/images/story-slide3-curious.webp";
+import storyHeaderImage from "../assets/images/digital-backbone-bg.webp";
 import "../styles/Story.css";
 
 const AUTOPLAY_MS = 7000;
@@ -28,7 +29,7 @@ const SLIDES = [
   {
     id: "slide-3",
     theme: "dark-navy",
-    title: "Curious About What's Next.",
+    title: "Curious About What's Next?",
     titleLine2: "",
     description:
       "We keep exploring new technologies and ideas, looking for meaningful ways to bring them into the products we build.",
@@ -52,6 +53,16 @@ export default function Story() {
 
   return (
     <section className="story-section">
+      <div className="story-header">
+        <h2 className="story-header__title">Businesses We Serve</h2>
+        <p className="story-header__desc">
+          Over the years, our software products have supported businesses
+          <br />
+          across diverse sectors throughout India.
+        </p>
+        <img src={storyHeaderImage} alt="gPro business software in use" className="story-header__image" />
+      </div>
+
       <div className="story-container">
         {/* Navigation Buttons */}
         <button
@@ -71,15 +82,13 @@ export default function Story() {
             <div
               className="story-track"
               style={{
-                width: `${total * 100}%`,
-                transform: `translateX(-${index * (100 / total)}%)`,
+                transform: `translateX(-${index * 100}%)`,
               }}
             >
               {SLIDES.map((slide) => (
                 <div
                   className={`story-slide story-slide--${slide.theme}`}
                   key={slide.id}
-                  style={{ width: `${100 / total}%` }}
                 >
                   {/* Slide 1: Full-bleed background image, text over its natural dark side */}
                   {slide.theme === "dark-executive" && (
@@ -124,9 +133,11 @@ export default function Story() {
                           {slide.title}
                         </h2>
                         <p className="story-description story-description--inter story-description--slate">
-                          We keep exploring new technologies and ideas, looking for meaningful ways to
+                          We keep exploring new technologies and ideas,
                           <br />
-                          bring them into the products we build.
+                          looking for meaningful ways
+                          <br />
+                          to bring them into the products we build.
                         </p>
                       </div>
                     </div>

@@ -1,4 +1,4 @@
-import industriesBackground from "../assets/images/industries-hero.webp";
+import industriesBackground from "../assets/images/industries-hero-v2.webp";
 import "../styles/Industries.css";
 
 export default function Industries() {
