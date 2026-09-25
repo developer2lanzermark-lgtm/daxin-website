@@ -38,18 +38,46 @@ const SLIDES = [
 ];
 
 export default function Story() {
-  const [index, setIndex] = useState(0);
+  // Real slides sit at positions 1..total. A copy of the last slide sits before
+  // them (position 0) and a copy of the first sits after them (position total + 1),
+  // so both arrows can keep sliding in one direction and then snap back unseen.
+  const [index, setIndex] = useState(1);
+  const [animate, setAnimate] = useState(true);
   const total = SLIDES.length;
+  const renderSlides = [SLIDES[total - 1], ...SLIDES, SLIDES[0]];
 
-  const goPrev = () => setIndex((i) => (i - 1 + total) % total);
-  const goNext = () => setIndex((i) => (i + 1) % total);
+  const goPrev = () => setIndex((i) => (i <= 0 ? i : i - 1));
+  const goNext = () => setIndex((i) => (i >= total + 1 ? i : i + 1));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((i) => (i + 1) % total);
+      setIndex((i) => (i >= total + 1 ? i : i + 1));
     }, AUTOPLAY_MS);
     return () => clearInterval(timer);
   }, [index, total]);
+
+  useEffect(() => {
+    if (animate) return undefined;
+    let inner;
+    const outer = requestAnimationFrame(() => {
+      inner = requestAnimationFrame(() => setAnimate(true));
+    });
+    return () => {
+      cancelAnimationFrame(outer);
+      cancelAnimationFrame(inner);
+    };
+  }, [animate]);
+
+  const handleTrackTransitionEnd = (e) => {
+    if (e.target !== e.currentTarget || e.propertyName !== "transform") return;
+    if (index === total + 1) {
+      setAnimate(false);
+      setIndex(1);
+    } else if (index === 0) {
+      setAnimate(false);
+      setIndex(total);
+    }
+  };
 
   return (
     <section className="story-section">
@@ -83,12 +111,14 @@ export default function Story() {
               className="story-track"
               style={{
                 transform: `translateX(-${index * 100}%)`,
+                transition: animate ? undefined : "none",
               }}
+              onTransitionEnd={handleTrackTransitionEnd}
             >
-              {SLIDES.map((slide) => (
+              {renderSlides.map((slide, slideIndex) => (
                 <div
                   className={`story-slide story-slide--${slide.theme}`}
-                  key={slide.id}
+                  key={`${slide.id}-${slideIndex}`}
                 >
                   {/* Slide 1: Full-bleed background image, text over its natural dark side */}
                   {slide.theme === "dark-executive" && (

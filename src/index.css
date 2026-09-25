@@ -32,6 +32,11 @@
   --subtitle-font-weight: 400;
   --subtitle-line-height: 1.2;
   --subtitle-color: #1c1c1c;
+
+  /* Text and lines shown on dark / brand-blue backgrounds */
+  --brand-blue: #0a6bd6;
+  --on-dark-color: #ffffff;
+  --on-dark-line-color: rgba(255, 255, 255, 0.45);
 }
 
 * {
@@ -108,6 +113,9 @@ body {
 #root {
   width: 100%;
   overflow-x: hidden;
+  /* clip keeps sideways overflow hidden without becoming a scroll container,
+     which is what lets the sticky header stay frozen at the top */
+  overflow-x: clip;
 }
 
 a {
