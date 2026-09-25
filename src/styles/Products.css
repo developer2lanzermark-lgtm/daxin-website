@@ -263,9 +263,9 @@
 
 .voicebill-hero-logo {
   display: block;
-  height: 90px;
+  height: 110px;
   width: auto;
-  max-width: 250px;
+  max-width: 290px;
   object-fit: contain;
   margin-bottom: 16px;
 }
@@ -877,5 +877,95 @@
 @media (max-width: 960px) {
   .products-page > section:nth-of-type(2) .image-background {
     object-position: 100% center;
+  }
+}
+
+/* gPro logo: left edge lines up with the navbar logo, vertically centred on the eyebrow line */
+.gpro-hero-logo {
+  position: absolute;
+  top: -45px;
+  left: calc(207px - (85vw - min(48vw, 720px)));
+  height: 110px;
+  width: auto;
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 961px) and (max-width: 1440px) {
+  .gpro-hero-logo {
+    left: calc(207px - (98vw - 42vw));
+  }
+}
+
+@media (max-width: 960px) {
+  .gpro-hero-logo {
+    position: static;
+    display: block;
+    height: 90px;
+    margin: 0 0 12px -8px;
+  }
+}
+
+/* Demander logo: right side, centred on the eyebrow line, with a right margin */
+.demander-hero-logo {
+  position: absolute;
+  top: -42px;
+  width: 300px;
+  height: auto;
+  left: calc(88vw - 150px - 300px);
+}
+
+@media (min-width: 961px) and (max-width: 1440px) {
+  .demander-hero-logo {
+    width: 240px;
+    top: -36px;
+    left: calc(94vw - 60px - 240px);
+  }
+}
+
+@media (max-width: 960px) {
+  .demander-hero-logo {
+    position: static;
+    display: block;
+    width: 220px;
+    margin: 0 0 12px;
+  }
+}
+
+/* Eyebrow colour per section (size and weight come from .section-eyebrow in index.css) */
+.products-page > section:nth-of-type(1) { --eyebrow-color: #1e4e8c; }
+.products-page > section:nth-of-type(2) { --eyebrow-color: #b85c0a; }
+.products-page > section:nth-of-type(4) { --eyebrow-color: #1f7a52; }
+
+/* Animated "in progress" dots: 1 dot, then 2, then 3, then repeat */
+.loading-dots > span {
+  opacity: 0;
+  animation: loading-dot 1.8s steps(1, end) infinite;
+}
+
+.loading-dots > span:nth-child(1) { animation-name: loading-dot-1; }
+.loading-dots > span:nth-child(2) { animation-name: loading-dot-2; }
+.loading-dots > span:nth-child(3) { animation-name: loading-dot-3; }
+
+@keyframes loading-dot-1 {
+  0%   { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes loading-dot-2 {
+  0%   { opacity: 0; }
+  33%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes loading-dot-3 {
+  0%   { opacity: 0; }
+  66%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-dots > span {
+    animation: none;
+    opacity: 1;
   }
 }

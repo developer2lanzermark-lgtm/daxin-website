@@ -91,3 +91,34 @@
     height: 46px;
   }
 }
+
+.navbar__menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-right: 183px;
+}
+
+.navbar__link {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1c1c;
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #1e4e8c;
+  border-bottom-color: #1e4e8c;
+}
+
+@media (max-width: 900px) {
+  .navbar__menu {
+    padding-right: 0;
+  }
+}
