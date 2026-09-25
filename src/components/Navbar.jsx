@@ -14,7 +14,7 @@ export default function Navbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              "navbar__link" + (isActive ? " navbar__link--active" : "")
+              `btn-text navbar__link${isActive ? " navbar__link--active" : ""}`
             }
           >
             About Us
