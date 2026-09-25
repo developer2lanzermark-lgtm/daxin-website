@@ -15,6 +15,16 @@
   overflow: hidden;
 }
 
+
+
+.image-background-section-demander  {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 790;
+  min-height: 720px;
+  overflow: hidden;
+}
+
 .gpro-hero-content {
   position: absolute;
   top: 50%;
@@ -153,11 +163,17 @@
   min-height: 880px;
 } */
 
+.demander-hero-section .image-overlay {
+  display: flex;
+  align-items: center;
+  /* padding: 90px 0; */
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .demander-hero-content {
-  position: absolute;
-  top: 50%;
+  position: relative;
   left: 12%;
-  transform: translateY(-50%);
   width: 46%;
   max-width: 640px;
   text-align: left;
@@ -201,7 +217,7 @@
 .voicebill-hero-top {
   position: absolute;
   top: 8%;
-  left: 8%;
+  left: 12%;
   width: 40%;
   text-align: left;
 }
@@ -217,7 +233,7 @@
 
 .voicebill-hero-subtitle {
   position: absolute;
-  top: 46%;
+  top: 54%;
   left: 60%;
   width: auto;
   white-space: nowrap;
