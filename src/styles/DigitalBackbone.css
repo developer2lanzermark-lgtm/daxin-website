@@ -1,19 +1,23 @@
 .digital-backbone {
   width: 100%;
-  background-color: #eef0f5;
+  min-height: 746px;
+  background-color: #ecf1fd;
   padding: 200px 0 72px;
+  display: flex;
+  align-items: center;
 }
 
 .digital-backbone__row {
   width: 100%;
-  padding: 0 48px 0 207px;
+  padding: 0 207px 0 207px;
   display: flex;
   align-items: center;
   gap: 48px;
+  margin-top: 40px;
 }
 
 .digital-backbone__inner {
-  flex: 0 0 820px;
+  flex: 0 0 640px;
   min-width: 0;
 }
 
@@ -22,15 +26,85 @@
   min-width: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+.digital-backbone__art-frame {
+  position: relative;
+  flex-shrink: 0;
+  max-width: 100%;
 }
 
 .digital-backbone__art img {
-  width: 100%;
+  position: relative;
+  z-index: 1;
+  width: 420px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 18px;
+  border: 2px solid rgba(60, 60, 67, 0.25);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.digital-backbone__dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  animation: digital-backbone-dot-float 5s ease-in-out infinite;
+}
+
+.digital-backbone__dot--blue {
+  right: calc(100% + 18px);
+  top: 32%;
+  background: rgba(37, 99, 235, 0.85);
+  animation-duration: 6s;
+}
+
+.digital-backbone__dot--gold {
+  right: calc(100% + 48px);
+  bottom: 14%;
+  background: rgba(233, 196, 106, 0.9);
+}
+
+.digital-backbone__dot--teal {
+  right: calc(100% + 6px);
+  bottom: 42%;
+  width: 10px;
+  height: 10px;
+  background: rgba(20, 184, 166, 0.85);
+  animation-duration: 4.5s;
+}
+
+@keyframes digital-backbone-dot-float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(6px, -10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .digital-backbone__dot {
+    animation: none;
+  }
+}
+
+.digital-backbone__title-mark {
+  position: relative;
+  display: inline-block;
+}
+
+.digital-backbone__mark {
+  position: absolute;
+  bottom: 100%;
+  left: -8px;
+  width: 100px;
+  max-width: none;
+  height: 80px;
+  margin-bottom: 4px;
+  pointer-events: none;
 }
 
 .digital-backbone__title {
@@ -44,6 +118,7 @@
 
 @media (max-width: 960px) {
   .digital-backbone {
+    min-height: 0;
     padding: 48px 0;
   }
 
@@ -58,6 +133,14 @@
     width: 100%;
   }
 
+  .digital-backbone__art {
+    justify-content: center;
+  }
+
+  .digital-backbone__dot {
+    display: none;
+  }
+
   .digital-backbone__title {
     font-size: clamp(26px, 4.5vw, 36px);
     white-space: normal;
@@ -65,10 +148,6 @@
 
   .digital-backbone__subtitle {
     font-size: 16px;
-  }
-
-  .digital-backbone__subtitle br {
-    display: none;
   }
 }
 
@@ -87,9 +166,5 @@
     font-size: 15px;
     line-height: 1.55;
     color: #374151;
-  }
-
-  .digital-backbone__subtitle br {
-    display: none;
   }
 }

@@ -1,4 +1,5 @@
-import digitalBackboneBg from "../assets/images/story-header-gpro.webp";
+import digitalBackboneBg from "../assets/images/digital-backbone-photo.webp";
+import daxinMark from "../assets/images/daxin-mark-growth.webp";
 import "../styles/DigitalBackbone.css";
 
 export default function DigitalBackbone() {
@@ -7,20 +8,31 @@ export default function DigitalBackbone() {
       <div className="digital-backbone__row">
         <div className="digital-backbone__inner">
           <h2 className="section-title digital-backbone__title">
-            The Digital Backbone
+            <span className="digital-backbone__title-mark">
+              <img src={daxinMark} alt="" className="digital-backbone__mark" />
+              T
+            </span>he Digital Backbone
             <br />
             for Growing Businesses
           </h2>
 
           <p className="section-desc digital-backbone__subtitle">
-            Daxin Technologies helps growing businesses build a stronger digital foundation,
+            Daxin Technologies helps growing businesses
+            build a stronger
             <br />
-            enabling them to manage their operations with the teams they already have.
+            digital foundation, enabling them to manage their operations
+            <br />
+            with the teams they already have.
           </p>
         </div>
 
         <div className="digital-backbone__art">
-          <img src={digitalBackboneBg} alt="Industries Daxin serves" />
+          <div className="digital-backbone__art-frame">
+            <span className="digital-backbone__dot digital-backbone__dot--blue" aria-hidden="true"></span>
+            <span className="digital-backbone__dot digital-backbone__dot--gold" aria-hidden="true"></span>
+            <span className="digital-backbone__dot digital-backbone__dot--teal" aria-hidden="true"></span>
+            <img src={digitalBackboneBg} alt="Industries Daxin serves" />
+          </div>
         </div>
       </div>
     </section>

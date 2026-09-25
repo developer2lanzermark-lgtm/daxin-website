@@ -28,6 +28,13 @@
   margin: 0 0 40px;
 }
 
+.industries__title-topline {
+  display: block;
+  width: 100px;
+  border-top: 1px solid #a3204f;
+  margin-bottom: 12px;
+}
+
 .industries__title-line {
   display: inline-block;
   white-space: nowrap;
@@ -59,10 +66,6 @@
 
   .industries__subtitle {
     font-size: 16px;
-  }
-
-  .industries__subtitle br {
-    display: none;
   }
 }
 
@@ -104,9 +107,5 @@
     line-height: 1.55;
     color: #374151;
     max-width: 100%;
-  }
-
-  .industries__subtitle br {
-    display: none;
   }
 }

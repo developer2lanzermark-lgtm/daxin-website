@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import storySlide1 from "../assets/images/story-slide1-bright.webp";
 import storySlide2 from "../assets/images/story-slide2-growth.webp";
 import storySlide3 from "../assets/images/story-slide3-curious.webp";
-import storyHeaderImage from "../assets/images/digital-backbone-bg.webp";
+import storyHeaderImage from "../assets/images/story-header-icons.webp";
 import "../styles/Story.css";
 
-const AUTOPLAY_MS = 7000;
+const AUTOPLAY_MS = 10000;
 
 const SLIDES = [
   {
