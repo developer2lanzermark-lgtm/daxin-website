@@ -12,9 +12,20 @@ export default function Navbar() {
 
         <nav className="navbar__menu" aria-label="Main">
           <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              "navbar__link" + (isActive ? " navbar__link--active" : "")
+            }
+          >
+            About Us
+          </NavLink>
+
+          <NavLink
             to="/products"
             className={({ isActive }) =>
-              `btn-text navbar__link${isActive ? " navbar__link--active" : ""}`
+              `btn-text navbar__link${
+                isActive ? " navbar__link--active" : ""
+              }`
             }
           >
             Products
