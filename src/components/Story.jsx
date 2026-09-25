@@ -38,17 +38,20 @@ const SLIDES = [
 ];
 
 export default function Story() {
-  const [index, setIndex] = useState(0);
+  // Real slides sit at positions 1..total. A copy of the last slide sits before
+  // them (position 0) and a copy of the first sits after them (position total + 1),
+  // so both arrows can keep sliding in one direction and then snap back unseen.
+  const [index, setIndex] = useState(1);
   const [animate, setAnimate] = useState(true);
   const total = SLIDES.length;
-  const renderSlides = [...SLIDES, SLIDES[0]];
+  const renderSlides = [SLIDES[total - 1], ...SLIDES, SLIDES[0]];
 
-  const goPrev = () => setIndex((i) => (i - 1 + total) % total);
-  const goNext = () => setIndex((i) => (i >= total ? i : i + 1));
+  const goPrev = () => setIndex((i) => (i <= 0 ? i : i - 1));
+  const goNext = () => setIndex((i) => (i >= total + 1 ? i : i + 1));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((i) => (i >= total ? i : i + 1));
+      setIndex((i) => (i >= total + 1 ? i : i + 1));
     }, AUTOPLAY_MS);
     return () => clearInterval(timer);
   }, [index, total]);
@@ -67,9 +70,12 @@ export default function Story() {
 
   const handleTrackTransitionEnd = (e) => {
     if (e.target !== e.currentTarget || e.propertyName !== "transform") return;
-    if (index === total) {
+    if (index === total + 1) {
       setAnimate(false);
-      setIndex(0);
+      setIndex(1);
+    } else if (index === 0) {
+      setAnimate(false);
+      setIndex(total);
     }
   };
 
