@@ -21,7 +21,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1920 / 790;
-  min-height: 620px;
+  min-height: 820px;
   overflow: hidden;
 }
 
@@ -78,7 +78,9 @@
 .gpro-hero-btn {
  
   padding: 0 28px;
+  width: 220px;
   height: 51px;
+  box-sizing: border-box;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
@@ -204,21 +206,35 @@
   font-size: 34px;
   font-weight: 500;
   letter-spacing: 0;
-  color: #2563EB; 
+  color: #b85c0a;
+  margin-top: 60px ;
+  margin-left: 60px;
+}
+
+
+.demander-hero-content .coming-soon-support-line {
+  font-family: "Caveat", cursive;
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #1f7a52;
   margin-top: 60px ;
   margin-left: 130px;
 }
+
 
 .demander-hero-buttons {
   margin-top: 52px;
 }
 
-.comingsoon-hero-content .section-title {
+.comingsoon-hero-content .section-title,
+.demander-hero-title {
   white-space: nowrap;
 }
 
 @media (max-width: 960px) {
-  .comingsoon-hero-content .section-title {
+  .comingsoon-hero-content .section-title,
+  .demander-hero-title {
     white-space: normal;
   }
 }
@@ -247,16 +263,16 @@
 
 .voicebill-hero-logo {
   display: block;
-  height: 70px;
+  height: 90px;
   width: auto;
-  max-width: 220px;
+  max-width: 250px;
   object-fit: contain;
   margin-bottom: 16px;
 }
 
 .voicebill-hero-subtitle {
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 67%;
   width: auto;
   white-space: nowrap;
@@ -273,15 +289,17 @@
 }
 
 .voicebill-hero-buttons {
-  justify-content: center;
+  margin-top: 52px;
 }
 
-.voicebill-hero-bottom .section-desc {
-  margin: 0;
+.nowrap-line {
+  white-space: nowrap;
 }
 
-.voicebill-hero-buttons {
-  margin-top: 28px;
+@media (max-width: 960px) {
+  .nowrap-line {
+    white-space: normal;
+  }
 }
 
 @media (max-width: 960px) {

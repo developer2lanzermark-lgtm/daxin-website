@@ -55,22 +55,22 @@ export default function Products() {
         <div className="image-overlay">
           <div className="demander-hero-content">
             <p className="section-eyebrow">Demander · Smart Ordering Platform</p>
-            <h2 className="section-title">
-              Connecting Businesses Beyond Calls Chats Visits and Emails
+            <h2 className="section-title demander-hero-title">
+              Connecting Businesses  <br /> Beyond Calls Chats Visits and Emails
             </h2>
             <h3 className="section-subtitle">
-              A smarter way to receive manage and track every order
+              A Smarter Way to Manage B2B Orders
             </h3>
             <p className="section-desc">
               Demander brings buyers and sellers together on one connected platform,
               making it easier to receive, manage and track orders without the
               everyday friction of scattered conversations.
             </p>
-            <p className="demander-support-line">Receive Orders Without the Noise</p>
+            <p className="demander-support-line">Receive Orders 24X7,  Without the Noise</p>
             <div className="gpro-hero-buttons demander-hero-buttons">
               <a
-                href="https://gprosoftware.com/book-a-demo"
-                target="_blank"
+                href="#"
+              
                 rel="noopener noreferrer"
                 className="gpro-hero-btn gpro-hero-btn--primary btn-text"
               >
@@ -89,25 +89,23 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="image-background-section voicebill-hero-section">
+      <section className="image-background-section voicebill-hero-section demander-hero-section">
         <img src={voicebillBg} alt="Voice Bill mobile billing app" className="image-background" />
         <div className="image-overlay">
-          <div className="voicebill-hero-top">
+          <div className="demander-hero-content">
             <img src={voicebillLogo} alt="Voice Bill logo" className="voicebill-hero-logo" />
             <h2 className="section-title">Simply Speak, Simply Bill</h2>
-          </div>
-          <h3 className="section-subtitle voicebill-hero-subtitle">
-            An innovative solution <br /> for faster retail billing
-          </h3>
-          <div className="voicebill-hero-bottom">
+            <h3 className="section-subtitle nowrap-line">
+              An innovative solution for faster retail billing
+            </h3>
             <p className="section-desc">
               Built for busy retail counters, Voice Bill mobile app makes billing faster,
-              simpler, and easier —<br />so you can serve more customers with less effort.
+              simpler, and easier — so you can serve more customers with less effort.
             </p>
             <div className="gpro-hero-buttons voicebill-hero-buttons">
               <a
-                href="https://gprosoftware.com/book-a-demo"
-                target="_blank"
+                href="#"
+                
                 rel="noopener noreferrer"
                 className="gpro-hero-btn gpro-hero-btn--primary btn-text"
               >
@@ -130,11 +128,12 @@ export default function Products() {
         <img src={comingSoonBg} alt="Upcoming Daxin products" className="image-background" />
         <div className="image-overlay">
           <div className="demander-hero-content comingsoon-hero-content">
+            <p className="section-eyebrow">What Next</p>
             <h2 className="section-title">Something new is taking shape</h2>
             <p className="section-desc">
               We’re working on new ideas and solutions designed to help businesses work smarter.
             </p>
-            <p className="section-desc">Stay tuned for what’s coming next.</p>
+            <p className="coming-soon-support-line">Stay tuned for what’s coming next.</p>
           </div>
         </div>
       </section>
