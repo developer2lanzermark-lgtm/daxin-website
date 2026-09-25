@@ -21,9 +21,19 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1920 / 790;
-  min-height: 720px;
+  min-height: 620px;
   overflow: hidden;
 }
+
+
+.image-background-section-comingsoon  {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 590;
+  min-height: 620px;
+  overflow: hidden;
+}
+
 
 .gpro-hero-content {
   position: absolute;
@@ -78,20 +88,23 @@
 }
 
 .gpro-hero-btn--primary {
-  background: #017c8b;
+  background: var(--btn-color, #1e4e8c);
   color: #fff;
-  border: 2px solid #017c8b;
+  border: 2px solid var(--btn-color, #1e4e8c);
 }
 
 .gpro-hero-btn--outline {
   background: transparent;
-  color: #017c8b;
-  border: 2px solid #017c8b;
+  color: var(--btn-color, #1e4e8c);
+  border: 2px solid var(--btn-color, #1e4e8c);
 }
+
+.demander-hero-buttons { --btn-color: #b85c0a; }
+.voicebill-hero-buttons { --btn-color: #2c4fd0; }
 
 .gpro-hero-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 3px 10px rgba(1, 124, 139, 0.4);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 .gpro-hero-trust {
@@ -191,13 +204,23 @@
   font-size: 34px;
   font-weight: 500;
   letter-spacing: 0;
-  color: #3a4a5c;
+  color: #2563EB; 
   margin-top: 60px ;
   margin-left: 130px;
 }
 
 .demander-hero-buttons {
   margin-top: 52px;
+}
+
+.comingsoon-hero-content .section-title {
+  white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+  .comingsoon-hero-content .section-title {
+    white-space: normal;
+  }
 }
 
 @media (max-width: 960px) {
@@ -233,8 +256,8 @@
 
 .voicebill-hero-subtitle {
   position: absolute;
-  top: 54%;
-  left: 57%;
+  top: 50%;
+  left: 67%;
   width: auto;
   white-space: nowrap;
   margin: 0;

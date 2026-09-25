@@ -1,6 +1,7 @@
 import gproHero from "../assets/images/PRODUCTS_Hero.webp";
 import voicebillBg from "../assets/images/PRODUCTS_03.webp";
 import demanderBg from "../assets/images/PRODUCTS_02.webp";
+import comingSoonBg from "../assets/images/PRODUCTS_04.webp";
 import demanderHero from "../assets/images/demander-hero.png";
 import voicebillHero from "../assets/images/voicebill-hero.jpeg";
 import demanderLogo from "../assets/images/demander-logo.png";
@@ -68,6 +69,14 @@ export default function Products() {
             <p className="demander-support-line">Receive Orders Without the Noise</p>
             <div className="gpro-hero-buttons demander-hero-buttons">
               <a
+                href="https://gprosoftware.com/book-a-demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gpro-hero-btn gpro-hero-btn--primary btn-text"
+              >
+                Book a Demo
+              </a>
+              <a
                 href="https://demander.app/aptadmin/src/app/login.php"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,7 +97,7 @@ export default function Products() {
             <h2 className="section-title">Simply Speak, Simply Bill</h2>
           </div>
           <h3 className="section-subtitle voicebill-hero-subtitle">
-            An innovative solution for faster retail billing
+            An innovative solution <br /> for faster retail billing
           </h3>
           <div className="voicebill-hero-bottom">
             <p className="section-desc">
@@ -96,6 +105,14 @@ export default function Products() {
               simpler, and easier —<br />so you can serve more customers with less effort.
             </p>
             <div className="gpro-hero-buttons voicebill-hero-buttons">
+              <a
+                href="https://gprosoftware.com/book-a-demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gpro-hero-btn gpro-hero-btn--primary btn-text"
+              >
+                Book a Demo
+              </a>
               <a
                 href="https://copanel.voicebill.app/login"
                 target="_blank"
@@ -105,6 +122,19 @@ export default function Products() {
                 Explore Features
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="image-background-section-comingsoon demander-hero-section">
+        <img src={comingSoonBg} alt="Upcoming Daxin products" className="image-background" />
+        <div className="image-overlay">
+          <div className="demander-hero-content comingsoon-hero-content">
+            <h2 className="section-title">Something new is taking shape</h2>
+            <p className="section-desc">
+              We’re working on new ideas and solutions designed to help businesses work smarter.
+            </p>
+            <p className="section-desc">Stay tuned for what’s coming next.</p>
           </div>
         </div>
       </section>
