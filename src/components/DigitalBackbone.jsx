@@ -1,37 +1,42 @@
-import digitalBackboneBg from "../assets/images/digital-backbone-photo.webp";
-import daxinMark from "../assets/images/daxin-mark-growth.webp";
+import digitalBackboneBg from "../assets/images/digital-backbone-bg-v2.webp";
+import highlightStrokes from "../assets/images/highlight-strokes.png";
 import "../styles/DigitalBackbone.css";
 
 export default function DigitalBackbone() {
   return (
-    <section className="digital-backbone">
+    <section
+      className="digital-backbone"
+      style={{ backgroundImage: `url(${digitalBackboneBg})` }}
+    >
       <div className="digital-backbone__row">
         <div className="digital-backbone__inner">
           <h2 className="section-title digital-backbone__title">
-            <span className="digital-backbone__title-mark">
-              <img src={daxinMark} alt="" className="digital-backbone__mark" />
-              T
-            </span>he Digital Backbone
+            The Digital{" "}
+            <span className="digital-backbone__highlight-word">
+              Backbone
+              <img
+                src={highlightStrokes}
+                alt=""
+                className="digital-backbone__highlight"
+                aria-hidden="true"
+              />
+            </span>
             <br />
             for Growing Businesses
           </h2>
 
-          <p className="section-desc digital-backbone__subtitle">
-            Daxin Technologies helps growing businesses
-            build a stronger
-            <br />
-            digital foundation, enabling them to manage their operations
-            <br />
-            with the teams they already have.
-          </p>
-        </div>
+          <div className="digital-backbone__copy">
+            <p className="section-desc digital-backbone__subtitle">
+              Daxin Technologies helps growing businesses build a stronger{" "}
+              <br />
+              digital foundation, so they can scale their operations,{" "}
+              <br />
+              handle more business, and grow with the teams they already have.
+            </p>
 
-        <div className="digital-backbone__art">
-          <div className="digital-backbone__art-frame">
-            <span className="digital-backbone__dot digital-backbone__dot--blue" aria-hidden="true"></span>
-            <span className="digital-backbone__dot digital-backbone__dot--gold" aria-hidden="true"></span>
-            <span className="digital-backbone__dot digital-backbone__dot--teal" aria-hidden="true"></span>
-            <img src={digitalBackboneBg} alt="Industries Daxin serves" />
+            <p className="support-line digital-backbone__tagline">
+              Do More. Scale Better. Grow With the Team You Have.
+            </p>
           </div>
         </div>
       </div>

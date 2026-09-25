@@ -39,17 +39,39 @@ const SLIDES = [
 
 export default function Story() {
   const [index, setIndex] = useState(0);
+  const [animate, setAnimate] = useState(true);
   const total = SLIDES.length;
+  const renderSlides = [...SLIDES, SLIDES[0]];
 
   const goPrev = () => setIndex((i) => (i - 1 + total) % total);
-  const goNext = () => setIndex((i) => (i + 1) % total);
+  const goNext = () => setIndex((i) => (i >= total ? i : i + 1));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((i) => (i + 1) % total);
+      setIndex((i) => (i >= total ? i : i + 1));
     }, AUTOPLAY_MS);
     return () => clearInterval(timer);
   }, [index, total]);
+
+  useEffect(() => {
+    if (animate) return undefined;
+    let inner;
+    const outer = requestAnimationFrame(() => {
+      inner = requestAnimationFrame(() => setAnimate(true));
+    });
+    return () => {
+      cancelAnimationFrame(outer);
+      cancelAnimationFrame(inner);
+    };
+  }, [animate]);
+
+  const handleTrackTransitionEnd = (e) => {
+    if (e.target !== e.currentTarget || e.propertyName !== "transform") return;
+    if (index === total) {
+      setAnimate(false);
+      setIndex(0);
+    }
+  };
 
   return (
     <section className="story-section">
@@ -83,12 +105,14 @@ export default function Story() {
               className="story-track"
               style={{
                 transform: `translateX(-${index * 100}%)`,
+                transition: animate ? undefined : "none",
               }}
+              onTransitionEnd={handleTrackTransitionEnd}
             >
-              {SLIDES.map((slide) => (
+              {renderSlides.map((slide, slideIndex) => (
                 <div
                   className={`story-slide story-slide--${slide.theme}`}
-                  key={slide.id}
+                  key={`${slide.id}-${slideIndex}`}
                 >
                   {/* Slide 1: Full-bleed background image, text over its natural dark side */}
                   {slide.theme === "dark-executive" && (
