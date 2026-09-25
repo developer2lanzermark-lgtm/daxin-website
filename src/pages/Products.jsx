@@ -49,7 +49,7 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="image-background-section demander-hero-section">
+      <section className="image-background-section-demander demander-hero-section">
         <img src={demanderBg} alt="Demander smart ordering platform" className="image-background" />
         <div className="image-overlay">
           <div className="demander-hero-content">
