@@ -140,8 +140,8 @@
 
 .principles .principles__tagline {
   margin: 22px 0 0;
-  font-weight: 400;
-  font-size: var(--desc-font-size);
+  font-weight: 600;
+  font-size: calc(var(--desc-font-size) - 3px);
   line-height: 1.35;
   color: var(--title-color);
 }
@@ -201,7 +201,7 @@
 .principles .principles__eyebrow {
   margin: 8px 0 0;
   font-family: var(--font-family-base);
-  font-size: 23px;
+  font-size: 27px;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0.26em;
@@ -332,7 +332,7 @@
 
   .principles .principles__tagline {
     margin-top: 18px;
-    font-size: 19px;
+    font-size: 16px;
   }
 
   .principles__banner {
@@ -348,7 +348,7 @@
   }
 
   .principles .principles__eyebrow {
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 0.2em;
   }
 }

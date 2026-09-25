@@ -39,9 +39,9 @@
 
 .digital-backbone__highlight {
   position: absolute;
-  top: -0.8em;
-  right: -1.3em;
-  width: 1.7em;
+  top: -0.565em;
+  right: -1.025em;
+  width: 1.15em;
   max-width: none;
   height: auto;
   pointer-events: none;
