@@ -5,6 +5,9 @@ import FeaturedProducts from "./components/FeaturedProducts";
 import Industries from "./components/Industries";
 import Story from "./components/Story";
 import DigitalBackbone from "./components/DigitalBackbone";
+import Principles from "./components/Principles";
+import MadeInIndia from "./components/MadeInIndia";
+import GetStarted from "./components/GetStarted";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import heroBackground from "./assets/images/hero-background.webp";
@@ -23,6 +26,9 @@ function Home() {
       <Industries />
       <Story />
       <DigitalBackbone />
+      <Principles />
+      <MadeInIndia />
+      <GetStarted />
     </main>
   );
 }
