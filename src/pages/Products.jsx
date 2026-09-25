@@ -1,3 +1,5 @@
+import demanderLogoWeb from "../assets/images/DEMANDER LOGO-PNG.png";
+import gproLogo from "../assets/images/gPro_LOGO-RED-TITLE-WEB-2026.webp";
 import gproHero from "../assets/images/PRODUCTS_Hero.webp";
 import voicebillBg from "../assets/images/PRODUCTS_03.webp";
 import demanderBg from "../assets/images/PRODUCTS_02.webp";
@@ -18,6 +20,7 @@ export default function Products() {
         <img src={gproHero} alt="gPro business solution" className="image-background" />
         <div className="image-overlay">
           <div className="gpro-hero-content">
+            <img src={gproLogo} alt="gPro logo" className="gpro-hero-logo" />
             <p className="section-eyebrow">gPro · Business Management Software</p>
             <h1 className="section-title">One Platform. <br /> Every Part of Your Business.</h1>
             <p className="section-desc gpro-hero-description">
@@ -54,6 +57,7 @@ export default function Products() {
         <img src={demanderBg} alt="Demander smart ordering platform" className="image-background" />
         <div className="image-overlay">
           <div className="demander-hero-content">
+            <img src={demanderLogoWeb} alt="Demander logo" className="demander-hero-logo" />
             <p className="section-eyebrow">Demander · Smart Ordering Platform</p>
             <h2 className="section-title demander-hero-title">
               Connecting Businesses  <br /> Beyond Calls Chats Visits and Emails
@@ -128,8 +132,13 @@ export default function Products() {
         <img src={comingSoonBg} alt="Upcoming Daxin products" className="image-background" />
         <div className="image-overlay">
           <div className="demander-hero-content comingsoon-hero-content">
-            <p className="section-eyebrow">What Next</p>
-            <h2 className="section-title">Something new is taking shape</h2>
+            <p className="section-eyebrow">What's Next ?</p>
+            <h2 className="section-title">
+              Something new is taking shape
+              <span className="loading-dots" aria-hidden="true">
+                <span>.</span><span>.</span><span>.</span>
+              </span>
+            </h2>
             <p className="section-desc">
               We’re working on new ideas and solutions designed to help businesses work smarter.
             </p>
