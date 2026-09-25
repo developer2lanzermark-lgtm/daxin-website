@@ -154,6 +154,20 @@
 }
 
 @media (max-width: 600px) {
+  /* Text on top, the whole picture underneath so nothing sits over the people */
+  .digital-backbone {
+    padding: 44px 0 290px;
+    background-size: auto 260px;
+    background-position: right bottom;
+  }
+
+  .digital-backbone::before {
+    top: auto;
+    bottom: 190px;
+    height: 70px;
+    background: linear-gradient(180deg, #ecf1fd, rgba(236, 241, 253, 0));
+  }
+
   .digital-backbone__row {
     padding: 0 20px;
   }
