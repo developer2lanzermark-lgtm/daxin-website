@@ -7,6 +7,7 @@ import Story from "./components/Story";
 import DigitalBackbone from "./components/DigitalBackbone";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
+import About from "./pages/About";
 import heroBackground from "./assets/images/hero-background.webp";
 import "./App.css";
 
@@ -35,6 +36,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </div>

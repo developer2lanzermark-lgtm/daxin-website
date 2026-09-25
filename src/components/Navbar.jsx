@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import daxinLogo from "../assets/images/daxin-logo.png";
 import "../styles/Navbar.css";
 
@@ -9,6 +9,16 @@ export default function Navbar() {
         <Link to="/" className="navbar__logo">
           <img src={daxinLogo} alt="Daxin Technologies" />
         </Link>
+        <nav className="navbar__menu" aria-label="Main">
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              "navbar__link" + (isActive ? " navbar__link--active" : "")
+            }
+          >
+            About Us
+          </NavLink>
+        </nav>
       </div>
     </header>
   );
