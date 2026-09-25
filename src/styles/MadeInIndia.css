@@ -55,6 +55,44 @@
   color: var(--on-dark-color);
 }
 
+/* Desktop: content centered and sitting higher, clear of the drawing at the bottom.
+   The section's own height and the background image are not touched. */
+@media (min-width: 901px) {
+  .made-in-india {
+    align-items: flex-start;
+  }
+
+  .made-in-india__inner {
+    margin-top: -32px;
+    text-align: center;
+  }
+
+  .made-in-india__rule {
+    margin: 26px auto 44px;
+  }
+
+  .made-in-india__stats {
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+/* Laptops: the drawing is relatively larger here, so lift the set a little more */
+@media (min-width: 901px) and (max-width: 1500px) {
+  .made-in-india__inner {
+    margin-top: -60px;
+  }
+
+  .made-in-india__rule {
+    margin: 22px auto 30px;
+  }
+
+  .made-in-india__value,
+  .made-in-india__label {
+    padding-right: 28px;
+  }
+}
+
 /* Tablet: numbers and labels in two columns */
 @media (max-width: 900px) {
   .made-in-india {

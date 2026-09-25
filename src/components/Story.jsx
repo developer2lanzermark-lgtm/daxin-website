@@ -84,7 +84,7 @@ export default function Story() {
       <div className="story-header">
         <h2 className="section-title story-header__title">Businesses We Serve</h2>
         <p className="section-desc story-header__desc">
-          Over the years, our software products have supported businesses
+          Over the years, our software products have supported businesses{" "}
           <br />
           across diverse sectors throughout India.
         </p>
