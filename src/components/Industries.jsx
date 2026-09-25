@@ -17,11 +17,11 @@ export default function Industries() {
           </h2>
 
           <p className="section-desc industries__subtitle">
-            With decades of real-world experience,
+            With decades of real-world experience,{" "}
             <br />
-            we create software products across diverse business categories,
+            we create software products across diverse business categories,{" "}
             <br />
-            bringing together technology and practical thinking
+            bringing together technology and practical thinking{" "}
             <br />
             to solve meaningful business problems.
           </p>

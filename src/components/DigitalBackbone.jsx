@@ -35,7 +35,11 @@ export default function DigitalBackbone() {
             </p>
 
             <p className="support-line digital-backbone__tagline">
-              Do More. Scale Better. Grow With the Team You Have.
+              Do More
+              <span className="digital-backbone__dot" aria-hidden="true">·</span>
+              Scale Better
+              <span className="digital-backbone__dot" aria-hidden="true">·</span>
+              Grow With the Team You Have
             </p>
           </div>
         </div>
