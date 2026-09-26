@@ -7,7 +7,9 @@ import aboutJourneyImg from "../assets/images/ABOUT_US_06.webp";
 import gproLogo from "../assets/images/gPro_LOGO-RED-TITLE-WEB-2026.webp";
 import demanderLogo from "../assets/images/DEMANDER LOGO-PNG.png";
 import voicebillLogo from "../assets/images/voicebill-logo.png";
+import { Link } from "react-router-dom";
 import "../styles/About.css";
+import "../styles/FeaturedProducts.css";
 
 import aboutTodayBg from "../assets/images/ABOUT_US_07.webp";
 import {
@@ -202,6 +204,12 @@ export default function About() {
             alt="Software products built by Daxin Technologies"
             className="about-software__image"
           />
+          <div className="featured__cta">
+            <Link to="/products" className="featured__explore">
+              <span>Explore Products</span>
+              <span className="featured__explore-arrow" aria-hidden="true">&gt;</span>
+            </Link>
+          </div>
         </div>
         <p className="section-desc about-software__next">The Next Build...</p>
       </section>
