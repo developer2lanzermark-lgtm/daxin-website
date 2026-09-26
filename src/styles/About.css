@@ -15,7 +15,7 @@
 }
 
 .about-story__content .section-title {
-  margin: 0 0 24px;
+  margin: 0 0 50px;
 }
 
 .about-story__content .section-desc {
@@ -26,7 +26,7 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 8px;
+  margin-top: -20px;
   margin-bottom: -30px;
  
 }
@@ -44,12 +44,13 @@
 /* Section 2: About Us — text left, image right */
 .about-hero {
   width: 100%;
-  padding: 80px 0;
+  padding: 48px 0;
 }
 
 .about-hero__inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 48px;
   margin-left: 12%;
 }
@@ -81,9 +82,10 @@
   min-width: 0;
   display: block;
   width: 100%;
+  max-width: 620px;
   height: auto;
 
-  margin-right: 8%;
+  margin-right: 12%;
 }
 
 @media (max-width: 960px) {
@@ -106,7 +108,7 @@
 /* Section 3: We Build Software — image left, text right */
 .about-build {
   width: 100%;
-  padding: 80px 0;
+  padding: 38px 0;
 }
 
 .about-build__inner {
@@ -121,6 +123,7 @@
   min-width: 0;
   display: block;
   width: 100%;
+   max-width: 620px;
   height: auto;
   margin-left: 12%;
 }
@@ -183,11 +186,39 @@
   margin: 32px 0 0;
 }
 
+/* Line + image share one width, so each icon sits under its phrase */
+.about-craft__showcase {
+  width: max-content;
+  max-width: calc(100% - 40px);
+  margin-top: 32px;
+}
+
+.about-craft__showcase .section-craft-integrity {
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+  font-size: clamp(14px, 4vw, 52px);
+}
+
+.about-craft__sep {
+  margin: 0 1.8em;
+}
+
 .about-craft__image {
   display: block;
-  width: 100%;
+  width: 85%;
   height: auto;
-  margin-top: 48px;
+  margin-top: 24px;
+  margin-left: 170px;
+}
+
+
+.section-craft-integrity {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #1c1c1c;
 }
 
 @media (max-width: 960px) {
@@ -196,7 +227,7 @@
   }
 
   .about-craft__image {
-    margin-top: 32px;
+    margin-top: 16px;
   }
 }
 
@@ -224,38 +255,62 @@
   margin: 0;
 }
 
-.about-software__content .about-software__list {
+/* Logos and image share one width. The image has 4 equal panels, so a
+   4-column grid puts each logo above its panel (4th panel = The Next Build). */
+.about-software__showcase {
+  width: min(100% - 40px, 1200px);
+  margin-top: 36px;
+  margin-left: 130px;
+}
+
+.about-software__list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding: 0;
-  margin: 28px 0 0;
+  margin: 0;
 }
 
 .about-software__list li {
-  position: relative;
-  padding-left: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* space after the bullet */
 }
 
 .about-software__list li::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
+  flex: none;
   width: 8px;
   height: 8px;
+  margin-left: 44px; /* space before the bullet */
   border-radius: 50%;
   background: #2a7fe0;
-  transform: translateY(-50%);
+}
+
+.about-software__logo {
+  display: block;
+  height: 110px;
+  width: auto;
+  max-width: calc(100% - 76px); /* before gap + bullet + after gap */
+  object-fit: contain;
 }
 
 .about-software__image {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 18px;
+  margin-top: -28px;
+}
+
+.about-software .about-software__next {
+  margin: 16px 0 0;
+  padding: 0 20px;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 @media (max-width: 960px) {
@@ -264,6 +319,226 @@
   }
 
   .about-software__image {
-    margin-top: 32px;
+    margin-top: 12px;
+  }
+
+  .about-software__logo {
+    height: 24px;
+  }
+
+  .about-software__list li {
+    gap: 8px;
+  }
+
+  .about-software__list li::before {
+    width: 6px;
+    height: 6px;
+    margin-left: 8px;
+  }
+
+  .about-software__logo {
+    max-width: calc(100% - 22px);
+  }
+}
+
+/* Section 6: Since 1998 — centered text, image below */
+.about-journey {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 96px; /* ~3 lines of space below the labels */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-journey__content {
+  width: 100%;
+  max-width: 960px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-journey__content .section-title {
+  margin: 0 0 54px;
+}
+
+.about-journey__content .section-desc {
+  margin: 0;
+}
+
+/* ADJUST HERE: moves the image + labels up/down together.
+   More negative = higher (e.g. -10%), less negative = lower (e.g. -4%).
+   Uses % of width so it scales with the image's blank top area. */
+.about-journey__showcase {
+  width: 100%;
+  margin-top: -7%;
+}
+
+.about-journey__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Column widths centre each label under its circle in the image
+   (circle centres sit at ~11%, 35%, 58% and 82% of the image width).
+   The negative margin (a % of width, so it scales with the image)
+   pulls the labels up over the image's empty bottom area. */
+.about-journey__steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 22.2fr 26fr 20.2fr 26.8fr 4.8fr;
+  margin: -11% 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.about-journey__steps li {
+  padding: 0 8px;
+}
+
+.about-journey__steps .section-title {
+  margin: 0 0 8px;
+}
+
+
+.about-journey__steps .section-desc {
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .about-journey {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .about-journey__steps li {
+    padding: 0 2px;
+  }
+
+  .about-journey__steps .section-title {
+    font-size: clamp(14px, 3.6vw, 28px);
+    margin-bottom: 4px;
+  }
+
+  .about-journey__steps .section-desc {
+    font-size: clamp(10px, 2.2vw, 16px);
+  }
+}
+
+/* Section 7: DAXIN Today — background image, content on the empty left side */
+.about-today {
+  width: 100%;
+  min-height: calc(100vw * 748 / 2103); /* image's own aspect ratio */
+  display: flex;
+  align-items: center;
+  padding: 64px 0;
+  background-color: #f4f8fd;
+  background-image: var(--about-today-bg, none);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
+
+.about-today__content {
+  width: 46%;
+  max-width: 720px;
+  margin-left: 12%;
+}
+
+.about-today__title {
+  margin: 0 0 20px;
+}
+
+/* .about-today__brand {
+  color: #2a7fe0;
+} */
+
+.about-today__content .about-today__subtitle {
+  margin: 0 0 20px;
+}
+
+.about-today__content .section-desc {
+  margin: 0 0 14px;
+}
+
+.about-today__stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 0;
+  margin: 32px 0 0;
+}
+
+.about-today__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(30, 70, 140, 0.08);
+}
+
+.about-today__icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.about-today__icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.about-today__icon--blue   { background: #e3efff; color: #2a6fd6; }
+.about-today__icon--green  { background: #e2f6e7; color: #2e9d4f; }
+.about-today__icon--purple { background: #f0e6fb; color: #7b3fc4; }
+.about-today__icon--orange { background: #fff0e0; color: #ec7a1c; }
+
+.about-today__value {
+  font-family: var(--font-family-base);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a4fb8;
+}
+
+.about-today__label {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  color: var(--desc-color);
+  margin-top: 4px;
+}
+
+@media (max-width: 1200px) {
+  .about-today__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .about-today {
+    min-height: 0;
+    padding: 48px 20px;
+    /* fade the illustration so the text stays readable over it */
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+      var(--about-today-bg, none);
+  }
+
+  .about-today__content {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .about-today__value {
+    font-size: 22px;
   }
 }
