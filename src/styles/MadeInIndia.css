@@ -44,7 +44,8 @@
 .made-in-india__value {
   margin: 0;
   font-size: 22px;
-  padding: 0 48px 16px 0;
+  line-height: 1;
+  padding: 4px 48px 16px 0;
   border-bottom: 1px solid var(--on-dark-line-color);
   color: var(--on-dark-color);
 }

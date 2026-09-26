@@ -202,14 +202,14 @@
   margin: 8px 0 0;
   font-family: var(--font-family-base);
   font-size: 27px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: 0.26em;
   color: var(--title-color);
 }
 
 .principles__banner-desc {
-  margin: 14px auto 0;
+  margin: 35px auto 0;
 }
 
 /* Narrow laptops: three cards get tight, so the icon sits above the title */
