@@ -8,7 +8,7 @@
 
 .navbar__inner {
   width: 100%;
-  height: 92px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,14 +27,69 @@
   object-fit: contain;
 }
 
+/* Room for more menus: the list takes all the space beside the logo and stays on one line.
+   An empty leading item with an auto margin keeps the group at the right when it fits, and lets
+   it scroll sideways (instead of running over the logo) when there are too many links. */
 .navbar__menu {
+  --menu-gap: 32px;
   display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
   align-items: center;
-  gap: 32px;
+  justify-content: flex-start;
+  gap: var(--menu-gap);
+  margin-left: 32px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* padding leaves room for the focus outline; the negative margin keeps the layout where it was */
+  padding: 6px;
+  margin-right: -6px;
+}
+
+.navbar__menu::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar__menu::before {
+  content: "";
+  flex: 0 0 0;
+  margin-left: auto;
+  margin-right: calc(-1 * var(--menu-gap));
+}
+
+.navbar__menu > .navbar__link {
+  flex: 0 0 auto;
+}
+
+/* A link hidden on this page (Home on the home page) keeps its slot so nothing shifts */
+.navbar__link--ghost {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Desktop: the menu is a fixed zone that starts at the same spot on every page and holds
+   Home, Products, About Us plus room for three more. New links fill the empty space to the
+   right, so the current menus never move. Change --menu-zone-width if the space needs to grow. */
+@media (min-width: 901px) {
+  .navbar {
+    --menu-zone-width: 580px;
+  }
+
+  .navbar__menu {
+    flex: 0 1 var(--menu-zone-width);
+    margin-left: auto;
+  }
+
+  .navbar__menu::before {
+    display: none;
+  }
 }
 
 .navbar__link {
   position: relative;
+  font-size: 16px;
+  font-weight: 400;
   padding: 8px 0;
   color: var(--title-color);
   text-decoration: none;
@@ -71,9 +126,24 @@
 }
 
 @media (max-width: 900px) {
+  .navbar__link--ghost {
+    display: none;
+  }
+
   .navbar__inner {
     padding: 0 40px;
-    height: 80px;
+    height: 68px;
+  }
+
+  .navbar__menu {
+    --menu-gap: 24px;
+    margin-left: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .navbar__menu::-webkit-scrollbar {
+    display: none;
   }
 
   .navbar__logo img {
@@ -84,7 +154,16 @@
 @media (max-width: 480px) {
   .navbar__inner {
     padding: 0 20px;
-    height: 64px;
+    height: 56px;
+  }
+
+  .navbar__menu {
+    --menu-gap: 16px;
+    margin-left: 12px;
+  }
+
+  .navbar__link {
+    font-size: 15px;
   }
 
   .navbar__logo img {
