@@ -12,6 +12,9 @@ import GetStarted from "./components/GetStarted";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import About from "./pages/About";
+import Careers from "./pages/Careers";
+import Internship from "./pages/Internship";
+import Contact from "./pages/Contact";
 import AppointmentModal from "./components/AppointmentModal";
 import { AppointmentProvider } from "./context/AppointmentContext";
 import heroBackground from "./assets/images/hero-background.webp";
@@ -48,6 +51,9 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/about" element={<About />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/internship" element={<Internship />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
           <AppointmentModal />
