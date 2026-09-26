@@ -1,7 +1,9 @@
-import { BOOK_APPOINTMENT_URL } from "../config/siteLinks";
+import { useAppointmentModal } from "../context/AppointmentContext";
 import "../styles/GetStarted.css";
 
 export default function GetStarted() {
+  const { openModal } = useAppointmentModal();
+
   return (
     <section className="get-started" aria-labelledby="get-started-title">
       <div className="get-started__inner">
@@ -12,9 +14,13 @@ export default function GetStarted() {
           Let’s get you started.
         </p>
 
-        <a className="btn-text get-started__cta" href={BOOK_APPOINTMENT_URL}>
+        <button
+          type="button"
+          className="btn-text get-started__cta"
+          onClick={openModal}
+        >
           Book an Appointment
-        </a>
+        </button>
       </div>
     </section>
   );
