@@ -1,25 +1,111 @@
 .zoho-footer {
   width: 100%;
-  background-color: #0f1f3d;
-  padding: 42px 20px;
+}
+
+/* Light band: logo + menu columns, sits right under the page content
+   (e.g. directly below "Ready to work better?" on the home page) */
+.zoho-footer__nav {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 32px 20px 48px;
   display: flex;
   justify-content: center;
-  align-items: center;
   box-sizing: border-box;
 }
 
-.zoho-footer__container {
+.zoho-footer__nav-inner {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.zoho-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.zoho-footer__logo:hover {
+  opacity: 0.8;
+}
+
+.zoho-footer__logo img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
+.zoho-footer__menus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 64px;
+}
+
+.zoho-footer__menu {
+  min-width: 150px;
+}
+
+.zoho-footer__menu-title {
+  display: block;
+  font-family: var(--font-family-base);
+  font-size: 26px;
+  font-weight: 400;
+  color: #1c1c1c;
+  margin: 0 0 22px;
+  letter-spacing: normal;
+}
+
+.zoho-footer__menu-title--link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.zoho-footer__menu-title--link:hover {
+  color: var(--brand-blue, #0a6bd6);
+}
+
+.zoho-footer__menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.zoho-footer__menu-link {
+  font-family: var(--font-family-base);
+  font-size: 17px;
+  font-weight: 400;
+  color: #3a3a3a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.zoho-footer__menu-link:hover {
+  color: var(--brand-blue, #0a6bd6);
+}
+
+/* Dark band: copyright only */
+.zoho-footer__bottom {
+  width: 100%;
+  background-color: #0f1f3d;
+  padding: 42px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
+  box-sizing: border-box;
 }
 
-.zoho-footer__logo {
+.zoho-footer__bottom-logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -27,11 +113,11 @@
   transition: opacity 0.2s ease;
 }
 
-.zoho-footer__logo:hover {
+.zoho-footer__bottom-logo:hover {
   opacity: 0.88;
 }
 
-.zoho-footer__logo img {
+.zoho-footer__bottom-logo img {
   height: 40px;
   width: auto;
   object-fit: contain;
@@ -39,6 +125,7 @@
 
 .zoho-footer__copyright {
   margin: 0;
+  text-align: center;
   color: #b5bac7;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
@@ -47,13 +134,41 @@
   letter-spacing: 0.2px;
 }
 
-@media (max-width: 600px) {
-  .zoho-footer {
-    padding: 32px 16px;
+@media (max-width: 700px) {
+  .zoho-footer__nav {
+    padding: 44px 20px 36px;
+  }
+
+  .zoho-footer__nav-inner {
+    flex-direction: column;
+    gap: 32px;
   }
 
   .zoho-footer__logo img {
+    height: 48px;
+  }
+
+  .zoho-footer__menus {
+    width: 100%;
+    gap: 28px 32px;
+  }
+}
+
+@media (max-width: 420px) {
+  .zoho-footer__bottom {
+    padding: 32px 16px;
+  }
+
+  .zoho-footer__bottom-logo img {
     height: 28px;
+  }
+
+  .zoho-footer__menus {
+    gap: 24px;
+  }
+
+  .zoho-footer__menu {
+    min-width: 45%;
   }
 
   .zoho-footer__copyright {
