@@ -76,7 +76,7 @@ export default function Principles() {
                     <span>{item.number}</span>
                     <i aria-hidden="true"></i>
                   </span>
-                  <h3 className="principles__card-title">{item.title}</h3>
+                  <h3 className="section-subtitle principles__card-title">{item.title}</h3>
                 </div>
               </div>
 

@@ -516,9 +516,33 @@
     max-height: 130px;
   }
 
+  /* Cards: text on top, the whole picture underneath, so the text never covers the people */
   .story-content--solo {
     max-width: 100%;
-    padding: 24px 22px;
+    padding: 24px 20px 172px;
+  }
+
+  .story-card--dark-exec,
+  .story-card--light-beige,
+  .story-card--dark-navy {
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
+  .story-card--dark-navy {
+    background-color: #f1f3f7;
+  }
+
+  .story-card--dark-exec::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 62px;
+    height: 56px;
+    background: linear-gradient(180deg, #050608, rgba(5, 6, 8, 0));
+    pointer-events: none;
   }
 
   .story-title--inter,
@@ -536,12 +560,31 @@
     margin-top: 0;
   }
 
-  .story-header__image {
-    width: 100%;
+  .story-header {
+    margin-bottom: 28px;
+    padding: 0 12px;
   }
 
-  .story-header__title,
+  .story-header__title {
+    margin: 8px 0 14px;
+    padding: 0 8px;
+    font-size: clamp(30px, 8.4vw, 38px);
+    line-height: 1.2;
+  }
+
   .story-header__desc {
     padding: 0 8px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .story-header__desc br {
+    display: none;
+  }
+
+  .story-header__image {
+    width: 100%;
+    top: 0;
+    margin-top: 24px;
   }
 }
