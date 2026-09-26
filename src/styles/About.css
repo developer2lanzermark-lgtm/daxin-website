@@ -102,3 +102,168 @@
     flex: none;
   }
 }
+
+/* Section 3: We Build Software — image left, text right */
+.about-build {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.about-build__inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-right: 12%;
+}
+
+.about-build__image {
+  flex: 1 1 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: 12%;
+}
+
+.about-build__content {
+  flex: 0 1 620px;
+  text-align: left;
+}
+
+.about-build__content .section-title {
+  margin: 0 0 20px;
+}
+
+.about-build__content .section-desc {
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .about-build {
+    padding: 48px 20px;
+  }
+
+  .about-build__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    margin-right: 0;
+  }
+
+  .about-build__image {
+    margin-left: 0;
+  }
+
+  .about-build__content {
+    flex: none;
+  }
+}
+
+/* Section 4: Our Craft — centered text, image below */
+.about-craft {
+  width: 100%;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-craft__content {
+  width: 100%;
+  max-width: 960px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-craft__content .section-desc {
+  margin: 0 0 20px;
+}
+
+.about-craft__content .section-subtitle {
+  margin: 32px 0 0;
+}
+
+.about-craft__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 48px;
+}
+
+@media (max-width: 960px) {
+  .about-craft {
+    padding-top: 48px;
+  }
+
+  .about-craft__image {
+    margin-top: 32px;
+  }
+}
+
+/* Section 5: Software We Build — centered text, image below */
+.about-software {
+  width: 100%;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-software__content {
+  width: 100%;
+  max-width: 960px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-software__content .section-title {
+  margin: 0 0 24px;
+}
+
+.about-software__content .section-desc {
+  margin: 0;
+}
+
+.about-software__content .about-software__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 40px;
+  padding: 0;
+  margin: 28px 0 0;
+}
+
+.about-software__list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.about-software__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2a7fe0;
+  transform: translateY(-50%);
+}
+
+.about-software__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 18px;
+}
+
+@media (max-width: 960px) {
+  .about-software {
+    padding-top: 48px;
+  }
+
+  .about-software__image {
+    margin-top: 32px;
+  }
+}
