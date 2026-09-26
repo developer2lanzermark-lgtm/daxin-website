@@ -201,13 +201,23 @@
   margin: 0 0 40px;
 }
 
-.demander-hero-content .demander-support-line {
+/* .demander-hero-content .demander-support-line {
   font-family: "Caveat", cursive;
   font-size: 34px;
   font-weight: 500;
   letter-spacing: 0;
   color: #b85c0a;
   margin-top: 60px ;
+  margin-left: 60px;
+} */
+
+.demander-hero-content .demander-support-line {
+  font-family: "Kalam", cursive;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #b85c0a;
+  margin-top: 60px;
   margin-left: 60px;
 }
 
@@ -909,7 +919,7 @@
 .demander-hero-logo {
   position: absolute;
   top: -42px;
-  width: 300px;
+  width: 230px;
   height: auto;
   left: calc(88vw - 150px - 300px);
 }
@@ -936,10 +946,10 @@
 .products-page > section:nth-of-type(2) { --eyebrow-color: #b85c0a; }
 .products-page > section:nth-of-type(4) { --eyebrow-color: #1f7a52; }
 
-/* Animated "in progress" dots: 1 dot, then 2, then 3, then repeat */
+/* Animated "in progress" dots: none, then 1, then 2, then 3, then repeat */
 .loading-dots > span {
   opacity: 0;
-  animation: loading-dot 1.8s steps(1, end) infinite;
+  animation: loading-dot 2.4s steps(1, end) infinite;
 }
 
 .loading-dots > span:nth-child(1) { animation-name: loading-dot-1; }
@@ -947,19 +957,20 @@
 .loading-dots > span:nth-child(3) { animation-name: loading-dot-3; }
 
 @keyframes loading-dot-1 {
-  0%   { opacity: 1; }
+  0%   { opacity: 0; }
+  25%  { opacity: 1; }
   100% { opacity: 1; }
 }
 
 @keyframes loading-dot-2 {
   0%   { opacity: 0; }
-  33%  { opacity: 1; }
+  50%  { opacity: 1; }
   100% { opacity: 1; }
 }
 
 @keyframes loading-dot-3 {
   0%   { opacity: 0; }
-  66%  { opacity: 1; }
+  75%  { opacity: 1; }
   100% { opacity: 1; }
 }
 
