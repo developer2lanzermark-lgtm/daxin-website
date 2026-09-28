@@ -98,6 +98,7 @@ export default function About() {
       <section className="about-story">
         <div className="about-story__content">
           <h1 className="section-title">We are Daxin <br /> This is our story</h1>
+             <span className="about-firstsec__line" aria-hidden="true" />
           <p className="section-desc">
             In the 1990s, in a small shop in Tirunelveli, at the southern tip of
             India, we started with computer training and project guidance for
@@ -119,7 +120,7 @@ export default function About() {
             <h2 className="section-title">About Us</h2>
             <span className="about-hero__line" aria-hidden="true" />
             <p className="section-desc">
-              For more than 27 years, we've taken our own approach to building
+              For more than  {yearsOfExperience}+ years, we've taken our own approach to building
               software for real business needs—and provided trusted support to
               our customers with integrity and dedication.
             </p>
@@ -157,12 +158,16 @@ export default function About() {
             Creating great software is an art, and it takes dedication.
             <br />
             Years of experience help us create products that deliver real value
-            to our <br /> customers.
+            to our customers.
           </p>
           <p className="section-subtitle">
-            Earning Business Confidence matters more than revenue alone.
+            Earning Business Confidence matters <br /> more than revenue alone.
           </p>
+
+           <span className="about-foursec__line" aria-hidden="true" />
         </div>
+
+           
         <div className="about-craft__showcase">
           <p className="section-craft-integrity">
             Our Craft
@@ -182,6 +187,8 @@ export default function About() {
       <section className="about-software">
         <div className="about-software__content">
           <h2 className="section-title">Software We Build</h2>
+
+           <span className="about-fifthsec__line" aria-hidden="true" />
           <p className="section-desc">
             We build practical software products that simplify everyday
             business.
@@ -198,25 +205,36 @@ export default function About() {
             <li>
               <img src={voicebillLogo} alt="VoiceBill" className="about-software__logo" />
             </li>
+            <li className="about-software__next-item">
+              <span className="about-software__next">The Next Build...</span>
+            </li>
           </ul>
+
+          
           <img
             src={aboutSoftwareImg}
             alt="Software products built by Daxin Technologies"
             className="about-software__image"
           />
+
+
           <div className="featured__cta">
             <Link to="/products" className="featured__explore">
               <span>Explore Products</span>
               <span className="featured__explore-arrow" aria-hidden="true">&gt;</span>
             </Link>
           </div>
+          
         </div>
-        <p className="section-desc about-software__next">The Next Build...</p>
+        {/* <p className="section-desc about-software__next about-software__next--below">
+          The Next Build...
+        </p> */}
       </section>
 
       <section className="about-journey">
         <div className="about-journey__content">
           <h2 className="section-title">Since 1998. Still Building.</h2>
+          <span className="about-sixthsec__line" aria-hidden="true" />
           <p className="section-desc">
             {yearsOfExperience}+ years of learning, building and
             improving—always staying close <br /> to the businesses we serve.
@@ -230,24 +248,24 @@ export default function About() {
           />
           <ol className="about-journey__steps">
             <li>
-              <h3 className="section-title about-journey__year">1998</h3>
-              <p className="section-desc">Where It Started</p>
+              <h3 className="section-title about-journey__year about-journey__step-title">1998</h3>
+              <p className="section-desc about-journey__step-desc">Where it <br /> Started</p>
             </li>
             <li>
-              <h3 className="section-title">Experience</h3>
-              <p className="section-desc">
+              <h3 className="section-title about-journey__step-title">Experience</h3>
+              <p className="section-desc about-journey__step-desc">
                 Learning from <br /> Real Businesses
               </p>
             </li>
             <li>
-              <h3 className="section-title">Today</h3>
-              <p className="section-desc">
+              <h3 className="section-title about-journey__step-title">Today</h3>
+              <p className="section-desc about-journey__step-desc">
                 Building &amp; <br /> Improving Products
               </p>
             </li>
             <li>
-              <h3 className="section-title">What’s Next</h3>
-              <p className="section-desc">
+              <h3 className="section-title about-journey__step-title">What’s Next</h3>
+              <p className="section-desc about-journey__step-desc">
                 Building for <br /> the Future
               </p>
             </li>
