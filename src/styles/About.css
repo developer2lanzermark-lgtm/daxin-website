@@ -250,15 +250,15 @@
 }
 
 .about-craft__sep {
-  margin: 0 1.4em;
+  margin: 0 0.3em;
 }
 
 .about-craft__image {
   display: block;
-  width: 65%;
+  width: 45%;
   height: auto;
   margin-top: 24px;
-  margin-left: 290px;
+  margin-left: 470px;
 }
 
 
@@ -546,7 +546,7 @@
 /* Section 7: DAXIN Today — background image, content on the empty left side */
 .about-today {
   width: 100%;
-  min-height: calc(100vw * 748 / 2103); /* image's own aspect ratio */
+  min-height: calc(100vw * 848 / 2103); 
   display: flex;
   align-items: center;
   padding: 64px 0;
