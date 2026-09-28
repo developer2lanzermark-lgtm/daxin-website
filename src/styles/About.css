@@ -208,6 +208,7 @@
 
   .about-build__content {
     flex: none;
+    margin-left: 10px;
   }
 }
 
@@ -270,6 +271,17 @@
   color: #1c1c1c;
 }
 
+/* Laptop (MDPI 1280 / HDPI 1440): the fixed 490px offset only lines up on
+   wide desktops, so centre the image under the 50px phrase line instead. */
+@media (min-width: 961px) and (max-width: 1440px) {
+  .about-craft__image {
+    width: 775px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 960px) {
   .about-craft {
     padding-top: 48px;
@@ -281,6 +293,11 @@
 
   .about-craft__sep {
     margin: 0 0.6em;
+  }
+
+  /* beat the desktop 50px !important so the line fits the screen */
+  .about-craft__showcase .section-craft-integrity {
+    font-size: clamp(14px, 4vw, 32px) !important;
   }
 
   .about-craft__image {
@@ -320,6 +337,15 @@
   width: min(100% - 40px, 1200px);
   margin-top: 36px;
   margin-left: 130px;
+}
+
+/* Laptop (MDPI 1280 / HDPI 1440): the 130px offset pushes the showcase past
+   the right edge, so centre it with equal side space instead. */
+@media (min-width: 961px) and (max-width: 1440px) {
+  .about-software__showcase {
+    width: min(100% - 80px, 1200px);
+    margin-left: 0;
+  }
 }
 
 .about-software__list {
@@ -405,8 +431,14 @@
     margin-left: 0;
   }
 
+  /* "The Next Build..." gets its own full-width row under the logos */
   .about-software__next-item {
-    display: none !important;
+    grid-column: 1 / -1;
+    margin-top: 12px;
+  }
+
+  .about-software__list .about-software__next {
+    font-size: 30px;
   }
 
   .about-software .about-software__next--below {
@@ -679,6 +711,72 @@
   }
 }
 
+/* Laptop (MDPI 1280 / HDPI 1440): keep the content compact so it stays in
+   the image's empty left side, and fade that side so text never sits on
+   the illustration. */
+@media (min-width: 961px) and (max-width: 1440px) {
+  .about-today {
+    padding: 48px 0;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(244, 248, 253, 0.95) 0%,
+        rgba(244, 248, 253, 0.85) 36%,
+        rgba(244, 248, 253, 0) 50%
+      ),
+      var(--about-today-bg, none);
+  }
+
+  .about-today__content {
+    width: 38%;
+    margin-left: 5%;
+  }
+
+  .about-today__content .about-today__title {
+    font-size: clamp(44px, 4.4vw, 64px);
+    margin-bottom: 20px;
+  }
+
+  .about-today__content .about-today__subtitle {
+    white-space: normal;
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .about-today__content .section-desc {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .about-today__stats {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .about-today__stat {
+    padding: 14px 6px;
+  }
+
+  .about-today__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 8px;
+  }
+
+  .about-today__icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .about-today__value {
+    font-size: 20px;
+  }
+
+  .about-today__label {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 960px) {
   .about-today {
     min-height: 0;
@@ -695,7 +793,13 @@
     margin-left: 0;
   }
 
+  .about-today__content .about-today__subtitle {
+    white-space: normal;
+  }
+
   .about-today__value {
     font-size: 22px;
   }
+
+
 }
