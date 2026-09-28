@@ -35,7 +35,6 @@ function Home() {
       <DigitalBackbone />
       <Principles />
       <MadeInIndia />
-      <GetStarted />
     </main>
   );
 }
@@ -55,6 +54,7 @@ export default function App() {
             <Route path="/internship" element={<Internship />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <GetStarted />
           <Footer />
           <AppointmentModal />
         </div>
