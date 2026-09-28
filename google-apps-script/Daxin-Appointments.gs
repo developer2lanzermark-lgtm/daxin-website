@@ -40,16 +40,15 @@ var SHEET_NAME = "Daxin Tech";
 
 var HEADERS = [
   "Timestamp",
-  "Full Name",
+  "Name",
   "Country Code",
   "Mobile Number",
   "Email",
   "City",
-  "State / Region",
-  "Country",
+  "State / Province / Region",
   "Purpose",
   "Appointment Date",
-  "Preferred Time Slot",
+  "Preferred Time Slot to talk",
 ];
 
 function doPost(e) {
@@ -68,7 +67,6 @@ function doPost(e) {
       data.email || "",
       data.city || "",
       data.state || "",
-      data.country || "",
       Array.isArray(data.purpose) ? data.purpose.join(", ") : (data.purpose || ""),
       data.date || "",
       data.schedule || "",

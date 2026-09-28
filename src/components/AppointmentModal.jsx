@@ -208,7 +208,6 @@ const getEmptyForm = () => ({
   email: "",
   city: "",
   state: "",
-  country: "India",
   purpose: [],
   date: getTodayStr(),
   schedule: "",
@@ -437,7 +436,7 @@ export default function AppointmentModal() {
               )}
               <div className="appt-summary-row">
                 <span>Location</span>
-                <strong>{formData.city}, {formData.state}, {formData.country}</strong>
+                <strong>{formData.city}, {formData.state}</strong>
               </div>
               <div className="appt-summary-row">
                 <span>Purpose</span>
