@@ -12,6 +12,8 @@ import GetStarted from "./components/GetStarted";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import About from "./pages/About";
+import AppointmentModal from "./components/AppointmentModal";
+import { AppointmentProvider } from "./context/AppointmentContext";
 import heroBackground from "./assets/images/hero-background.webp";
 import "./App.css";
 
@@ -37,17 +39,20 @@ function Home() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="app">
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <AppointmentProvider>
+      <BrowserRouter>
+        <div className="app">
+          <ScrollToTop />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+          <Footer />
+          <AppointmentModal />
+        </div>
+      </BrowserRouter>
+    </AppointmentProvider>
   );
 }

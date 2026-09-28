@@ -31,6 +31,7 @@
   color: var(--on-dark-color);
   text-decoration: none;
   outline: 0;
+  cursor: pointer;
   transition: filter 0.2s ease;
 }
 

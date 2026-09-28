@@ -1,0 +1,354 @@
+.appt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.appt-modal {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 26px 44px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+  box-sizing: border-box;
+}
+
+.appt-modal * {
+  box-sizing: border-box;
+}
+
+.appt-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #f1f3f7;
+  color: #1c1c1c;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.appt-close:hover {
+  background: #e6e9ef;
+}
+
+.appt-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.appt-logo {
+  height: 52px;
+  width: auto;
+  margin: 0 auto 16px;
+}
+
+.appt-title {
+  font-size: 26px;
+  margin: 0;
+}
+
+.appt-subtitle {
+  font-size: 15px;
+  margin: 8px 0 0;
+}
+
+.appt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Consistent two/three-column rows. City gets a little less room than
+   State/Country, since state and country names run longer. */
+.appt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* One shared 3-column track for every multi-field row, so left/right edges
+   and the internal divider line up consistently down the whole form. */
+.appt-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.appt-phone-row {
+  display: grid;
+  grid-template-columns: 178px 1fr;
+  gap: 8px;
+}
+
+.appt-country-code {
+  padding-left: 10px;
+  padding-right: 24px;
+  text-overflow: ellipsis;
+}
+
+.appt-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.appt-label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+
+/* Every input, select and the custom multiselect share one height and one
+   focus/error treatment so the form reads as a single, even grid. */
+.appt-input,
+.appt-multiselect {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
+  font-family: var(--font-family-base);
+  font-size: 14.5px;
+  color: #1c1c1c;
+  background: #ffffff;
+  transition: border-color 0.15s ease;
+}
+
+.appt-input {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+select.appt-input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238a8fa3' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input[type="date"].appt-input {
+  padding-right: 10px;
+}
+
+.appt-input:focus,
+.appt-multiselect:focus-within {
+  outline: none;
+  border-color: var(--brand-blue);
+}
+
+.appt-input--error {
+  border-color: #e11d2e;
+}
+
+.appt-error {
+  font-size: 12.5px;
+  color: #e11d2e;
+}
+
+.appt-multiselect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: auto;
+  min-height: 44px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.appt-multiselect--open {
+  border-color: var(--brand-blue);
+}
+
+.appt-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.appt-placeholder {
+  color: #8a8fa3;
+  font-size: 14.5px;
+}
+
+.appt-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eaf1ff;
+  color: var(--brand-blue);
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+.appt-chip button {
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+}
+
+.appt-multiselect-arrow {
+  font-size: 10px;
+  color: #8a8fa3;
+  flex-shrink: 0;
+}
+
+.appt-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  max-height: 164px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  padding: 6px;
+}
+
+.appt-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  cursor: pointer;
+}
+
+.appt-menu-item:hover {
+  background: #f4f6fb;
+}
+
+.appt-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.appt-submit {
+  height: 44px;
+  padding: 0 26px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  background: var(--brand-blue);
+  color: #ffffff;
+}
+
+.appt-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.appt-submit:hover {
+  filter: brightness(0.92);
+}
+
+.appt-success {
+  text-align: center;
+  padding: 12px 0 4px;
+}
+
+.appt-success-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #e8f7ee;
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appt-success-title {
+  font-size: 26px;
+  margin: 0;
+}
+
+.appt-success-desc {
+  font-size: 16px;
+  margin: 10px 0 24px;
+}
+
+.appt-summary {
+  text-align: left;
+  border: 1px solid #eceef2;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.appt-summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.appt-summary-row strong {
+  color: #1c1c1c;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .appt-modal {
+    padding: 28px 20px;
+    border-radius: 8px;
+  }
+
+  .appt-grid,
+  .appt-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .appt-phone-row {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .appt-country-code {
+    padding-left: 8px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+
+  .appt-title {
+    font-size: 22px;
+  }
+}
