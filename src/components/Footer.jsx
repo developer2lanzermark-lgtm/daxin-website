@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import daxinLogo from "../assets/images/daxin-logo.png";
 import daxinLogoWhite from "../assets/images/daxin-logo-footer.png";
 import "../styles/Footer.css";
 
@@ -62,28 +61,24 @@ export default function Footer() {
   const handleLogoClick = useSamePageScrollToTop("/");
 
   return (
-    <footer className="zoho-footer">
-      <div className="zoho-footer__nav">
-        <div className="zoho-footer__nav-inner">
-          <Link to="/" className="zoho-footer__logo" aria-label="Daxin Homepage" onClick={handleLogoClick}>
-            <img src={daxinLogo} alt="Daxin Technologies" />
-          </Link>
-
-          <nav className="zoho-footer__menus" aria-label="Footer">
+    <footer className="site-footer">
+      <div className="site-footer__nav">
+        <div className="site-footer__nav-inner">
+          <nav className="site-footer__menus" aria-label="Footer">
             {FOOTER_MENUS.map((menu) =>
               menu.links ? (
-                <div className="zoho-footer__menu" key={menu.title}>
+                <div className="site-footer__menu" key={menu.title}>
                   {menu.to ? (
-                    <FooterLink to={menu.to} className="zoho-footer__menu-title zoho-footer__menu-title--link">
+                    <FooterLink to={menu.to} className="site-footer__menu-title site-footer__menu-title--link">
                       {menu.title}
                     </FooterLink>
                   ) : (
-                    <span className="zoho-footer__menu-title">{menu.title}</span>
+                    <span className="site-footer__menu-title">{menu.title}</span>
                   )}
-                  <ul className="zoho-footer__menu-list">
+                  <ul className="site-footer__menu-list">
                     {menu.links.map((link) => (
                       <li key={link.label}>
-                        <FooterLink to={link.to} external={link.external} className="zoho-footer__menu-link">
+                        <FooterLink to={link.to} external={link.external} className="site-footer__menu-link">
                           {link.label}
                         </FooterLink>
                       </li>
@@ -91,11 +86,11 @@ export default function Footer() {
                   </ul>
                 </div>
               ) : (
-                <div className="zoho-footer__menu" key={menu.title}>
+                <div className="site-footer__menu" key={menu.title}>
                   <FooterLink
                     to={menu.to}
                     external={menu.external}
-                    className="zoho-footer__menu-title zoho-footer__menu-title--link"
+                    className="site-footer__menu-title site-footer__menu-title--link"
                   >
                     {menu.title}
                   </FooterLink>
@@ -106,11 +101,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="zoho-footer__bottom">
-        <Link to="/" className="zoho-footer__bottom-logo" aria-label="Daxin Homepage" onClick={handleLogoClick}>
+      <div className="site-footer__bottom">
+        <Link to="/" className="site-footer__bottom-logo" aria-label="Daxin Homepage" onClick={handleLogoClick}>
           <img src={daxinLogoWhite} alt="Daxin Technologies" />
         </Link>
-        <p className="zoho-footer__copyright">
+        <p className="site-footer__copyright">
           © {currentYear}, Daxin Technologies. All Rights Reserved.
         </p>
       </div>
