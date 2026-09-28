@@ -1,10 +1,10 @@
-.zoho-footer {
+.site-footer {
   width: 100%;
 }
 
 /* Light band: logo + menu columns, sits right under the page content
    (e.g. directly below "Ready to work better?" on the home page) */
-.zoho-footer__nav {
+.site-footer__nav {
   width: 100%;
   background-color: #ffffff;
   padding: 32px 24px 48px;
@@ -13,17 +13,17 @@
   box-sizing: border-box;
 }
 
-.zoho-footer__nav-inner {
+.site-footer__nav-inner {
   max-width: 900px;
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 64px;
   flex-wrap: wrap;
 }
 
-.zoho-footer__logo {
+.site-footer__logo {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -33,69 +33,105 @@
   margin-top: -6px;
 }
 
-.zoho-footer__logo:hover {
+.site-footer__logo:hover {
   opacity: 0.8;
 }
 
-.zoho-footer__logo img {
+.site-footer__logo img {
   height: 76px;
   width: auto;
   object-fit: contain;
 }
 
-.zoho-footer__menus {
+.site-footer__menus {
   display: flex;
   flex-wrap: wrap;
   gap: 40px 64px;
 }
 
-.zoho-footer__menu {
+.site-footer__menu {
   min-width: 150px;
 }
 
-.zoho-footer__menu-title {
-  display: block;
-  font-family: var(--font-family-base);
-  font-size: 26px;
-  font-weight: 400;
+.site-footer__menu-title {
+  display: inline-block;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
   color: #1c1c1c;
-  margin: 0 0 22px;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
   letter-spacing: normal;
+  position: relative;
 }
 
-.zoho-footer__menu-title--link {
+.site-footer__menu-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 26px;
+  height: 2px;
+  background: var(--brand-blue, #0a6bd6);
+  transition: width 0.22s ease;
+}
+
+.site-footer__menu-title--link {
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.zoho-footer__menu-title--link:hover {
+.site-footer__menu-title--link:hover {
   color: var(--brand-blue, #0a6bd6);
 }
 
-.zoho-footer__menu-list {
+.site-footer__menu-title--link:hover::after {
+  width: 100%;
+}
+
+.site-footer__menu-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 13px;
 }
 
-.zoho-footer__menu-link {
-  font-family: var(--font-family-base);
-  font-size: 17px;
+.site-footer__menu-link {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #3a3a3a;
   text-decoration: none;
-  transition: color 0.2s ease;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+  transition: color 0.15s ease;
 }
 
-.zoho-footer__menu-link:hover {
+.site-footer__menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #f5b301;
+  transition: width 0.22s ease;
+}
+
+.site-footer__menu-link:hover {
   color: var(--brand-blue, #0a6bd6);
 }
 
+.site-footer__menu-link:hover::after {
+  width: 100%;
+}
+
 /* Dark band: copyright only */
-.zoho-footer__bottom {
+.site-footer__bottom {
   width: 100%;
   background-color: #0f1f3d;
   padding: 42px 20px;
@@ -107,7 +143,7 @@
   box-sizing: border-box;
 }
 
-.zoho-footer__bottom-logo {
+.site-footer__bottom-logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -115,17 +151,17 @@
   transition: opacity 0.2s ease;
 }
 
-.zoho-footer__bottom-logo:hover {
+.site-footer__bottom-logo:hover {
   opacity: 0.88;
 }
 
-.zoho-footer__bottom-logo img {
+.site-footer__bottom-logo img {
   height: 40px;
   width: auto;
   object-fit: contain;
 }
 
-.zoho-footer__copyright {
+.site-footer__copyright {
   margin: 0;
   text-align: center;
   color: #b5bac7;
@@ -137,43 +173,43 @@
 }
 
 @media (max-width: 700px) {
-  .zoho-footer__nav {
+  .site-footer__nav {
     padding: 44px 20px 36px;
   }
 
-  .zoho-footer__nav-inner {
+  .site-footer__nav-inner {
     flex-direction: column;
     gap: 32px;
   }
 
-  .zoho-footer__logo img {
+  .site-footer__logo img {
     height: 48px;
   }
 
-  .zoho-footer__menus {
+  .site-footer__menus {
     width: 100%;
     gap: 28px 32px;
   }
 }
 
 @media (max-width: 420px) {
-  .zoho-footer__bottom {
+  .site-footer__bottom {
     padding: 32px 16px;
   }
 
-  .zoho-footer__bottom-logo img {
+  .site-footer__bottom-logo img {
     height: 28px;
   }
 
-  .zoho-footer__menus {
+  .site-footer__menus {
     gap: 24px;
   }
 
-  .zoho-footer__menu {
+  .site-footer__menu {
     min-width: 45%;
   }
 
-  .zoho-footer__copyright {
+  .site-footer__copyright {
     font-size: 12.5px;
   }
 }
