@@ -216,15 +216,12 @@ export default function About() {
             alt="Software products built by Daxin Technologies"
             className="about-software__image"
           />
-
-
           <div className="featured__cta">
             <Link to="/products" className="featured__explore">
               <span>Explore Products</span>
               <span className="featured__explore-arrow" aria-hidden="true">&gt;</span>
             </Link>
           </div>
-          
         </div>
         {/* <p className="section-desc about-software__next about-software__next--below">
           The Next Build...

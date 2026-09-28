@@ -1,0 +1,22 @@
+.placeholder-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 24px;
+}
+
+.placeholder-page__section {
+  max-width: 640px;
+  text-align: center;
+}
+
+.placeholder-page__section .section-title {
+  margin: 0 0 16px;
+}
+
+@media (max-width: 600px) {
+  .placeholder-page {
+    padding: 64px 20px;
+  }
+}
