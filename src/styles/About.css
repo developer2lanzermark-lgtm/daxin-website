@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
 /* Section 1: The Story */
 .about-story {
   width: 100%;
@@ -558,11 +560,50 @@
 .about-today__content {
   width: 46%;
   max-width: 720px;
-  margin-left: 12%;
+  margin-left: 8%;
 }
 
-.about-today__title {
-  margin: 0 0 20px;
+/* "DAXIN / Today" stacked logo-style title with swoosh + sparkles */
+.about-today__content .about-today__title {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  margin: 0 0 28px;
+  font-family: "Montserrat", "Inter", sans-serif;
+  font-size: clamp(44px, 5.6vw, 104px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.about-today__brand {
+  display: block;
+  transform: rotate(-2deg);
+  transform-origin: left bottom;
+  color: #1a56db;
+  background: linear-gradient(90deg, #1a56db 0%, #3b8cf0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-today__day {
+  display: block;
+  color: #16213e;
+}
+
+.about-today__swoosh {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -0.2em;
+  width: 4.8em;
+  height: 1.8em;
+  overflow: visible;
+  fill: none;
+  stroke: #3b8cf0;
+  stroke-linecap: round;
+  pointer-events: none;
 }
 
 /* .about-today__brand {

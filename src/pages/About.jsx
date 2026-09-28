@@ -279,7 +279,17 @@ export default function About() {
       >
         <div className="about-today__content">
           <h2 className="section-title about-today__title">
-            <span className="about-today__brand">DAXIN</span> Today
+            <span className="about-today__brand">DAXIN</span>{" "}
+            <span className="about-today__day">Today</span>
+            <svg
+              className="about-today__swoosh"
+              viewBox="0 0 480 180"
+              aria-hidden="true"
+            >
+              <path d="M12 88 C50 83 60 86 50 72" strokeWidth="5" opacity="0.8" />
+              <path d="M345 152 C390 124 440 104 478 102 C498 101 494 108 484 114 C472 120 458 120 " strokeWidth="4" opacity="0.55" />
+              <path d="M-6 0 L12 10 M32 -28 L35 -16M360 45 L375 40 M365 60 L376 66" strokeWidth="4" />
+            </svg>
           </h2>
           <p className="section-subtitle about-today__subtitle">
             A Product Company With a Long-Term View
