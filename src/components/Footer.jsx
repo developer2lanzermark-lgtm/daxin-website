@@ -18,6 +18,7 @@ const FOOTER_MENUS = [
   },
   {
     title: "Products",
+    to: "/products",
     links: [
       { label: "gPro", to: "https://gprosoftware.com/", external: true },
       { label: "Demander", to: "https://seller.demander.app/aptadmin/seller/app/login", external: true },
@@ -72,7 +73,13 @@ export default function Footer() {
             {FOOTER_MENUS.map((menu) =>
               menu.links ? (
                 <div className="zoho-footer__menu" key={menu.title}>
-                  <span className="zoho-footer__menu-title">{menu.title}</span>
+                  {menu.to ? (
+                    <FooterLink to={menu.to} className="zoho-footer__menu-title zoho-footer__menu-title--link">
+                      {menu.title}
+                    </FooterLink>
+                  ) : (
+                    <span className="zoho-footer__menu-title">{menu.title}</span>
+                  )}
                   <ul className="zoho-footer__menu-list">
                     {menu.links.map((link) => (
                       <li key={link.label}>
