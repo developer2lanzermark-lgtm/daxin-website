@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
 /* Section 1: The Story */
 .about-story {
   width: 100%;
@@ -26,7 +28,7 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-top: -20px;
+  margin-top: -60px;
   margin-bottom: -30px;
  
 }
@@ -72,6 +74,52 @@
   background: #2a7fe0;
   margin-bottom: 28px;
 }
+
+
+.about-firstsec__line {
+  display: block;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: #2a7fe0;
+  margin-bottom: 52px;
+  margin-left: 420px;
+}
+
+
+.about-foursec__line {
+  display: block;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: #2a7fe0;
+  margin-bottom: 12px;
+  margin-left: 420px;
+  margin-top: 40px;
+}
+
+.about-fifthsec__line {
+  display: block;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: #2a7fe0;
+  margin-bottom: 22px;
+  margin-left: 420px;
+  margin-top: 20px;
+}
+
+.about-sixthsec__line {
+  display: block;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: #2a7fe0;
+  margin-bottom: 42px;
+  margin-left: 420px;
+  margin-top: -10px;
+}
+
 
 .about-hero__content .section-desc {
   margin: 0;
@@ -131,6 +179,7 @@
 .about-build__content {
   flex: 0 1 620px;
   text-align: left;
+  margin-left: 110px;
 }
 
 .about-build__content .section-title {
@@ -201,21 +250,21 @@
 }
 
 .about-craft__sep {
-  margin: 0 1.8em;
+  margin: 0 1.4em;
 }
 
 .about-craft__image {
   display: block;
-  width: 85%;
+  width: 65%;
   height: auto;
   margin-top: 24px;
-  margin-left: 170px;
+  margin-left: 290px;
 }
 
 
 .section-craft-integrity {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 52px;
+  font-size: 50px !important;
   line-height: 1.2;
   font-weight: 400;
   color: #1c1c1c;
@@ -226,8 +275,18 @@
     padding-top: 48px;
   }
 
+  .about-craft__showcase {
+    width: calc(100% - 40px);
+  }
+
+  .about-craft__sep {
+    margin: 0 0.6em;
+  }
+
   .about-craft__image {
+    width: 100%;
     margin-top: 16px;
+    margin-left: 0;
   }
 }
 
@@ -284,8 +343,8 @@
   width: 8px;
   height: 8px;
   margin-left: 44px; /* space before the bullet */
-  border-radius: 50%;
-  background: #2a7fe0;
+  /* border-radius: 50%;
+  background: #2a7fe0; */
 }
 
 .about-software__logo {
@@ -313,31 +372,75 @@
   letter-spacing: 0;
 }
 
+/* "The Next Build..." sits in the 4th logo slot, above the question-mark panel */
+.about-software__next-item::before {
+  display: none;
+}
+
+.about-software__list .about-software__next {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.about-software .about-software__next--below {
+  display: none;
+}
+
+.about-software .featured__cta {
+  justify-content: center;
+  margin-top: -24px;
+}
+
+.about-software .featured__explore {
+  font-size: 17px;
+}
+
 @media (max-width: 960px) {
   .about-software {
     padding-top: 48px;
+  }
+
+  .about-software__showcase {
+    margin-left: 0;
+  }
+
+  .about-software__next-item {
+    display: none !important;
+  }
+
+  .about-software .about-software__next--below {
+    display: block;
+  }
+
+  .about-software .featured__cta {
+    margin-top: 18px;
   }
 
   .about-software__image {
     margin-top: 12px;
   }
 
+  .about-software__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .about-software__logo {
-    height: 24px;
+    height: 40px;
   }
 
   .about-software__list li {
-    gap: 8px;
+    gap: 6px;
   }
 
   .about-software__list li::before {
     width: 6px;
     height: 6px;
-    margin-left: 8px;
+    margin-left: 0;
   }
 
   .about-software__logo {
-    max-width: calc(100% - 22px);
+    max-width: calc(100% - 12px);
   }
 }
 
@@ -370,8 +473,8 @@
    More negative = higher (e.g. -10%), less negative = lower (e.g. -4%).
    Uses % of width so it scales with the image's blank top area. */
 .about-journey__showcase {
-  width: 100%;
-  margin-top: -7%;
+  width: 50%;
+  margin: -3.5% auto 0;
 }
 
 .about-journey__image {
@@ -406,10 +509,24 @@
   margin: 0;
 }
 
+/* Smaller step labels to match the half-width image (size only) */
+.about-journey__step-title {
+  font-size: clamp(16px, 1.7vw, 32px);
+}
+
+.about-journey__step-desc {
+  font-size: clamp(16px, 0.85vw, 16px);
+}
+
 @media (max-width: 960px) {
   .about-journey {
     padding-top: 48px;
     padding-bottom: 56px;
+  }
+
+  .about-journey__showcase {
+    width: 100%;
+    margin-top: -7%;
   }
 
   .about-journey__steps li {
@@ -443,11 +560,50 @@
 .about-today__content {
   width: 46%;
   max-width: 720px;
-  margin-left: 12%;
+  margin-left: 8%;
 }
 
-.about-today__title {
-  margin: 0 0 20px;
+/* "DAXIN / Today" stacked logo-style title with swoosh + sparkles */
+.about-today__content .about-today__title {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  margin: 0 0 28px;
+  font-family: "Montserrat", "Inter", sans-serif;
+  font-size: clamp(44px, 5.6vw, 104px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.about-today__brand {
+  display: block;
+  transform: rotate(-2deg);
+  transform-origin: left bottom;
+  color: #1a56db;
+  background: linear-gradient(90deg, #1a56db 0%, #3b8cf0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-today__day {
+  display: block;
+  color: #16213e;
+}
+
+.about-today__swoosh {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -0.2em;
+  width: 4.8em;
+  height: 1.8em;
+  overflow: visible;
+  fill: none;
+  stroke: #3b8cf0;
+  stroke-linecap: round;
+  pointer-events: none;
 }
 
 /* .about-today__brand {
@@ -456,6 +612,7 @@
 
 .about-today__content .about-today__subtitle {
   margin: 0 0 20px;
+  white-space: nowrap;
 }
 
 .about-today__content .section-desc {
@@ -504,7 +661,7 @@
 .about-today__value {
   font-family: var(--font-family-base);
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   color: #1a4fb8;
 }
