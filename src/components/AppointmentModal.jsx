@@ -465,7 +465,7 @@ export default function AppointmentModal() {
                   ref={nameInputRef}
                   type="text"
                   className={`appt-input${errors.name ? " appt-input--error" : ""}`}
-                  maxLength={60}
+                  maxLength={250}
                   value={formData.name}
                   onChange={(e) => setField("name", e.target.value)}
                 />
@@ -503,7 +503,7 @@ export default function AppointmentModal() {
                 <input
                   type="email"
                   className={`appt-input${errors.email ? " appt-input--error" : ""}`}
-                  maxLength={80}
+                  maxLength={100}
                   value={formData.email}
                   onChange={(e) => setField("email", e.target.value)}
                 />
@@ -516,7 +516,7 @@ export default function AppointmentModal() {
                   <input
                     type="text"
                     className={`appt-input${errors.city ? " appt-input--error" : ""}`}
-                    maxLength={50}
+                    maxLength={100}
                     value={formData.city}
                     onChange={(e) => setField("city", e.target.value)}
                   />
@@ -528,7 +528,7 @@ export default function AppointmentModal() {
                   <input
                     type="text"
                     className={`appt-input${errors.state ? " appt-input--error" : ""}`}
-                    maxLength={50}
+                    maxLength={100}
                     value={formData.state}
                     onChange={(e) => setField("state", e.target.value)}
                   />
