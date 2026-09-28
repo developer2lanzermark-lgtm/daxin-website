@@ -17,7 +17,7 @@
   max-width: 900px;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 64px;
   flex-wrap: wrap;
@@ -29,6 +29,8 @@
   text-decoration: none;
   transition: opacity 0.2s ease;
   flex-shrink: 0;
+  margin-left: -16px;
+  margin-top: -6px;
 }
 
 .zoho-footer__logo:hover {
@@ -36,7 +38,7 @@
 }
 
 .zoho-footer__logo img {
-  height: 64px;
+  height: 76px;
   width: auto;
   object-fit: contain;
 }
