@@ -1,0 +1,12 @@
+import { chromium } from "playwright";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1300, height: 900 } });
+await page.goto("http://localhost:5173/", { waitUntil: "networkidle" });
+const homeTitle = await page.$eval(".hero .section-title", el => getComputedStyle(el).fontSize).catch(async () => await page.$eval(".section-title", el => getComputedStyle(el).fontSize));
+console.log("Home page section-title size:", homeTitle);
+await page.goto("http://localhost:5173/careers", { waitUntil: "networkidle" });
+const titleSize = await page.$eval(".careers-split-content .section-title", el => getComputedStyle(el).fontSize);
+const subSize = await page.$eval(".careers-split-content .section-subtitle", el => getComputedStyle(el).fontSize);
+const descSize = await page.$eval(".careers-split-content .section-desc", el => getComputedStyle(el).fontSize);
+console.log("Careers title size:", titleSize, "| subtitle:", subSize, "| desc:", descSize);
+await browser.close();

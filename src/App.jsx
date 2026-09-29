@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import Hero from "./components/Hero";
@@ -13,7 +13,6 @@ import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
-import Internship from "./pages/Internship";
 import Contact from "./pages/Contact";
 import AppointmentModal from "./components/AppointmentModal";
 import { AppointmentProvider } from "./context/AppointmentContext";
@@ -51,7 +50,7 @@ export default function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/about" element={<About />} />
             <Route path="/careers" element={<Careers />} />
-            <Route path="/internship" element={<Internship />} />
+            <Route path="/internship" element={<Navigate to="/careers" replace />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <GetStarted />
