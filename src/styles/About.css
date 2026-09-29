@@ -24,6 +24,13 @@
   margin: 0;
 }
 
+/* Desktop / laptop: widen the description so it wraps to three lines */
+@media (min-width: 961px) {
+  .about-story__content {
+    max-width: 1240px;
+  }
+}
+
 .about-story__image {
   display: block;
   width: 100%;
@@ -84,7 +91,7 @@
   background: #2a7fe0;
   margin-bottom: 32px;
   margin-top: -16px;
-  margin-left: 420px;
+  margin-left: 550px;
 }
 
 
@@ -260,7 +267,7 @@
   width: 45%;
   height: auto;
   margin-top: 24px;
-  margin-left: 490px;
+  margin-left: 520px;
 }
 
 
