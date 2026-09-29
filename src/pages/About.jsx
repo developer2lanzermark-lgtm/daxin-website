@@ -97,7 +97,7 @@ export default function About() {
     <div className="about-page">
       <section className="about-story">
         <div className="about-story__content">
-          <h1 className="section-title">We are Daxin <br /> This is our story</h1>
+          <h1 className="section-title">We are Daxin. <br /> This is our story.</h1>
              <span className="about-firstsec__line" aria-hidden="true" />
           <p className="section-desc">
             In the 1990s, in a small shop in Tirunelveli, at the southern tip of
@@ -154,17 +154,19 @@ export default function About() {
 
       <section className="about-craft">
         <div className="about-craft__content">
+
+            <p className="section-title">
+            Earning Business Confidence matters <br /> more than revenue alone.
+          </p>
+
+           <span className="about-foursec__line" aria-hidden="true" />
           <p className="section-desc">
             Creating great software is an art, and it takes dedication.
             <br />
             Years of experience help us create products that deliver real value
             to our customers.
           </p>
-          <p className="section-subtitle">
-            Earning Business Confidence matters <br /> more than revenue alone.
-          </p>
-
-           <span className="about-foursec__line" aria-hidden="true" />
+        
         </div>
 
            

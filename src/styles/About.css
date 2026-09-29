@@ -82,7 +82,8 @@
   height: 4px;
   border-radius: 2px;
   background: #2a7fe0;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
+  margin-top: -16px;
   margin-left: 420px;
 }
 
@@ -93,9 +94,9 @@
   height: 4px;
   border-radius: 2px;
   background: #2a7fe0;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
   margin-left: 420px;
-  margin-top: 40px;
+  margin-top: -10px;
 }
 
 .about-fifthsec__line {
@@ -251,7 +252,7 @@
 }
 
 .about-craft__sep {
-  margin: 0 0.3em;
+  margin: 0 1em;
 }
 
 .about-craft__image {
@@ -265,7 +266,7 @@
 
 .section-craft-integrity {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 50px !important;
+  font-size: 35px !important;
   line-height: 1.2;
   font-weight: 400;
   color: #1c1c1c;
@@ -336,7 +337,7 @@
 .about-software__showcase {
   width: min(100% - 40px, 1200px);
   margin-top: 36px;
-  margin-left: 130px;
+  margin-left: 120px;
 }
 
 /* Laptop (MDPI 1280 / HDPI 1440): the 130px offset pushes the showcase past
@@ -383,9 +384,10 @@
 
 .about-software__image {
   display: block;
-  width: 100%;
+  width: 90%;
   height: auto;
   margin-top: -28px;
+  margin-left: 90px !important;
 }
 
 .about-software .about-software__next {
