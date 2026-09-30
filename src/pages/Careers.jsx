@@ -1,13 +1,10 @@
 import careersHeroBg from "../assets/images/careers-hero-bg.jpg";
 import cultureImg from "../assets/images/careers-culture-team.jpg";
-import internshipImg from "../assets/images/careers-internship-mentor.jpg";
+import internshipImg from "../assets/images/careers-internship-mentor.png";
 import benefitsImg from "../assets/images/careers-benefits-lounge.jpg";
 import joinTeamImg from "../assets/images/careers-join-team.jpg";
-import { CUSTOMERS_COUNT, yearsOfExperience } from "../config/siteStats.js";
+import { yearsOfExperience } from "../config/siteStats.js";
 import "../styles/Careers.css";
-
-const formatStat = (value) =>
-  String(value).replace(/\d+/, (n) => Number(n).toLocaleString("en-IN"));
 
 export default function Careers() {
   return (
@@ -21,12 +18,13 @@ export default function Careers() {
           <div className="careers-hero-overlay" />
           <div className="careers-hero-container">
             <div className="careers-hero-glass-card">
-              <span className="careers-badge">CAREERS AT DAXIN TECHNOLOGIES</span>
+              <span className="careers-badge">WE'RE HIRING</span>
               <h1 className="careers-hero-title">
-                Build Software That Powers Businesses
+                Your Next Big Career Move Starts Here
               </h1>
               <p className="careers-hero-subtitle">
-                Join us to solve real-world problems in enterprise technology.
+                Build real products, solve real problems, and grow with a
+                team that backs your ideas from day one.
               </p>
             </div>
           </div>
@@ -41,8 +39,8 @@ export default function Careers() {
             </div>
             <div className="careers-stat-divider" />
             <div className="careers-stat-item">
-              <strong>{formatStat(CUSTOMERS_COUNT)}</strong>
-              <span>Active Businesses</span>
+              <strong>Always</strong>
+              <span>Open to Great Talent</span>
             </div>
             <div className="careers-stat-divider" />
             <div className="careers-stat-item">
@@ -59,14 +57,14 @@ export default function Careers() {
         <div className="careers-split-section careers-split-right">
           <div className="careers-split-container">
             <div className="careers-split-content">
-              <h2 className="section-title">People-First Culture</h2>
+              <h2 className="section-title">The Way We Actually Work</h2>
               <p className="section-subtitle">
-                Freedom, Ownership, and Technical Mastery
+                Small Teams, Direct Access, Real Decisions
               </p>
               <p className="section-desc">
-                We value transparency, open ideas, and collaborative
-                problem-solving over rigid hierarchies. Every team member
-                has the autonomy to innovate and excel.
+                Daxin has been a product company since 1998 — every engineer
+                owns a real module, works in small teams, and talks directly
+                to the people who decide what ships.
               </p>
             </div>
             <div className="careers-split-media">
@@ -94,14 +92,14 @@ export default function Careers() {
               </div>
             </div>
             <div className="careers-split-content">
-              <h2 className="section-title">Internship &amp; Graduate Program</h2>
+              <h2 className="section-title">A Real Path to a Full-Time Job</h2>
               <p className="section-subtitle">
-                Real Projects, Direct Mentorship, and Full-Time Roles
+                For Job Seekers, Not Students on Break
               </p>
               <p className="section-desc">
-                Work alongside senior engineers on live software products.
-                Gain hands-on industry experience and build a strong
-                foundation for your tech career.
+                This program is for serious job seekers. It runs 6 months
+                to 1 year based on your skill and ability — and if you're
+                eligible, the role becomes permanent.
               </p>
             </div>
           </div>
@@ -116,12 +114,12 @@ export default function Careers() {
             <div className="careers-split-content">
               <h2 className="section-title">Rewards &amp; Work-Life Harmony</h2>
               <p className="section-subtitle">
-                Comprehensive Support for Your Personal Growth
+                Fair Pay, Real Time Off, No Metro-City Grind
               </p>
               <p className="section-desc">
-                Enjoy competitive compensation, continuous learning
-                programs, health benefits, and state-of-the-art tools
-                designed to help you thrive.
+                A fair monthly stipend, festival and personal leave, and
+                working hours that don't bleed into your evenings — this is
+                a Tirunelveli-rooted team, not a burnout culture.
               </p>
             </div>
             <div className="careers-split-media">
@@ -154,10 +152,17 @@ export default function Careers() {
                 Simple, Merit-Based, and Candidate-Friendly Hiring
               </p>
               <p className="section-desc">
-                We are looking for passionate developers, designers, and
-                problem solvers. Explore open roles and take the next step
-                in your career with Daxin.
+                Passionate about building real software? Take the next
+                step and apply in minutes.
               </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfkMpsCaq-wbAbUAGrxzEssv_fmc6FuBTl7npli8mi0seRRgw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="careers-explore-btn"
+              >
+                Explore It →
+              </a>
             </div>
           </div>
         </div>
