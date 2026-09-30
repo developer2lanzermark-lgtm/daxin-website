@@ -234,6 +234,26 @@
   margin: 0;
 }
 
+.careers-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 13px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #0a6bd6;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.careers-explore-btn:hover {
+  background: #085bb5;
+  transform: translateY(-2px);
+}
+
 .careers-feature-list {
   list-style: none;
   padding: 0;
