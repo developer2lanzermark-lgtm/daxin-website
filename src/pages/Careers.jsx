@@ -1,8 +1,8 @@
 import careersHeroBg from "../assets/images/careers-hero-bg.jpg";
-import cultureImg from "../assets/images/careers-culture-team.jpg";
+import cultureImg from "../assets/images/careers-culture-sketch.jpg";
 import internshipImg from "../assets/images/careers-internship-mentor.png";
-import benefitsImg from "../assets/images/careers-benefits-lounge.jpg";
-import joinTeamImg from "../assets/images/careers-join-team.jpg";
+import benefitsImg from "../assets/images/careers-benefits-sketch.jpg";
+import joinTeamImg from "../assets/images/careers-join-sketch.jpg";
 import { yearsOfExperience } from "../config/siteStats.js";
 import "../styles/Careers.css";
 
