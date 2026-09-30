@@ -1,17 +1,173 @@
-import "../styles/PlaceholderPage.css";
+import careersHeroBg from "../assets/images/careers-hero-bg.jpg";
+import cultureImg from "../assets/images/careers-culture-team.jpg";
+import internshipImg from "../assets/images/careers-internship-mentor.png";
+import benefitsImg from "../assets/images/careers-benefits-lounge.jpg";
+import joinTeamImg from "../assets/images/careers-join-team.jpg";
+import { yearsOfExperience } from "../config/siteStats.js";
+import "../styles/Careers.css";
 
 export default function Careers() {
   return (
-    <div className="placeholder-page">
-      <section className="placeholder-page__section">
-        <h1 className="section-title">Careers at Daxin</h1>
-        <p className="section-desc">
-          We're always glad to meet people who care about building good
-          software. Open roles will be listed here soon — in the meantime,
-          reach out to us through the Contact page and tell us a bit about
-          yourself.
-        </p>
+    <div className="careers-page">
+      {/* SECTION 1: HERO COVER BANNER & BRAND STATS */}
+      <section className="careers-section-hero">
+        <div
+          className="careers-hero-cover"
+          style={{ backgroundImage: `url(${careersHeroBg})` }}
+        >
+          <div className="careers-hero-overlay" />
+          <div className="careers-hero-container">
+            <div className="careers-hero-glass-card">
+              <span className="careers-badge">WE'RE HIRING</span>
+              <h1 className="careers-hero-title">
+                Your Next Big Career Move Starts Here
+              </h1>
+              <p className="careers-hero-subtitle">
+                Build real products, solve real problems, and grow with a
+                team that backs your ideas from day one.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats Strip */}
+        <div className="careers-stats-bar">
+          <div className="careers-stats-container">
+            <div className="careers-stat-item">
+              <strong>{yearsOfExperience}+ Years</strong>
+              <span>Product Heritage</span>
+            </div>
+            <div className="careers-stat-divider" />
+            <div className="careers-stat-item">
+              <strong>Always</strong>
+              <span>Open to Great Talent</span>
+            </div>
+            <div className="careers-stat-divider" />
+            <div className="careers-stat-item">
+              <strong>100%</strong>
+              <span>Product-Focused</span>
+            </div>
+          </div>
+        </div>
       </section>
+
+      {/* SECTION 2: WORKPLACE CULTURE & PHILOSOPHY (RIGHT & LEFT SIDE IMAGES) */}
+      <section className="careers-section-culture">
+        {/* Right Side Image Block */}
+        <div className="careers-split-section careers-split-right">
+          <div className="careers-split-container">
+            <div className="careers-split-content">
+              <h2 className="section-title">The Way We Actually Work</h2>
+              <p className="section-subtitle">
+                Small Teams, Direct Access, Real Decisions
+              </p>
+              <p className="section-desc">
+                Daxin has been a product company since 1998 — every engineer
+                owns a real module, works in small teams, and talks directly
+                to the people who decide what ships.
+              </p>
+            </div>
+            <div className="careers-split-media">
+              <div className="careers-image-wrapper">
+                <img
+                  src={cultureImg}
+                  alt="People-first culture at Daxin Technologies"
+                  className="careers-split-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Left Side Image Block */}
+        <div className="careers-split-section careers-split-left">
+          <div className="careers-split-container">
+            <div className="careers-split-media">
+              <div className="careers-image-wrapper">
+                <img
+                  src={internshipImg}
+                  alt="Internship and graduate program at Daxin Technologies"
+                  className="careers-split-img"
+                />
+              </div>
+            </div>
+            <div className="careers-split-content">
+              <h2 className="section-title">A Real Path to a Full-Time Job</h2>
+              <p className="section-subtitle">
+                For Job Seekers, Not Students on Break
+              </p>
+              <p className="section-desc">
+                This program is for serious job seekers. It runs 6 months
+                to 1 year based on your skill and ability — and if you're
+                eligible, the role becomes permanent.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: BENEFITS & PERKS + JOIN OUR TEAM (RIGHT & LEFT SIDE IMAGES) */}
+      <section className="careers-section-culture">
+        {/* Right Side Image Block */}
+        <div className="careers-split-section careers-split-right">
+          <div className="careers-split-container">
+            <div className="careers-split-content">
+              <h2 className="section-title">Rewards &amp; Work-Life Harmony</h2>
+              <p className="section-subtitle">
+                Fair Pay, Real Time Off, No Metro-City Grind
+              </p>
+              <p className="section-desc">
+                A fair monthly stipend, festival and personal leave, and
+                working hours that don't bleed into your evenings — this is
+                a Tirunelveli-rooted team, not a burnout culture.
+              </p>
+            </div>
+            <div className="careers-split-media">
+              <div className="careers-image-wrapper">
+                <img
+                  src={benefitsImg}
+                  alt="Benefits and workplace perks at Daxin Technologies"
+                  className="careers-split-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Left Side Image Block */}
+        <div className="careers-split-section careers-split-left">
+          <div className="careers-split-container">
+            <div className="careers-split-media">
+              <div className="careers-image-wrapper">
+                <img
+                  src={joinTeamImg}
+                  alt="Join the team at Daxin Technologies"
+                  className="careers-split-img"
+                />
+              </div>
+            </div>
+            <div className="careers-split-content">
+              <h2 className="section-title">Explore Opportunities</h2>
+              <p className="section-subtitle">
+                Simple, Merit-Based, and Candidate-Friendly Hiring
+              </p>
+              <p className="section-desc">
+                Passionate about building real software? Take the next
+                step and apply in minutes.
+              </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfkMpsCaq-wbAbUAGrxzEssv_fmc6FuBTl7npli8mi0seRRgw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="careers-explore-btn"
+              >
+                Explore It →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
