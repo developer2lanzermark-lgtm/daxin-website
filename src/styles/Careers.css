@@ -624,6 +624,14 @@
   .careers-image-wrapper {
     height: 280px;
   }
+  .careers-split-content .section-title {
+    white-space: normal;
+    font-size: 23px;
+  }
+  .careers-explore-btn {
+    width: 100%;
+    text-align: center;
+  }
   .careers-stat-divider {
     display: none;
   }
