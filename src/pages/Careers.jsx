@@ -1,8 +1,8 @@
 import careersHeroBg from "../assets/images/careers-hero-bg.jpg";
-import cultureImg from "../assets/images/careers-culture-team.jpg";
+import cultureImg from "../assets/images/careers-culture-sketch.jpg";
 import internshipImg from "../assets/images/careers-internship-mentor.png";
-import benefitsImg from "../assets/images/careers-benefits-lounge.jpg";
-import joinTeamImg from "../assets/images/careers-join-team.jpg";
+import benefitsImg from "../assets/images/careers-benefits-sketch.jpg";
+import joinTeamImg from "../assets/images/careers-join-sketch.jpg";
 import { yearsOfExperience } from "../config/siteStats.js";
 import "../styles/Careers.css";
 
@@ -23,8 +23,8 @@ export default function Careers() {
                 Your Next Big Career Move Starts Here
               </h1>
               <p className="careers-hero-subtitle">
-                Build real products, solve real problems, and grow with a
-                team that backs your ideas from day one.
+                Looking for the right opportunity? Join a growing team that
+                truly backs your ideas from day one.
               </p>
             </div>
           </div>
@@ -44,8 +44,8 @@ export default function Careers() {
             </div>
             <div className="careers-stat-divider" />
             <div className="careers-stat-item">
-              <strong>100%</strong>
-              <span>Product-Focused</span>
+              <strong>Open</strong>
+              <span>To Every Department</span>
             </div>
           </div>
         </div>
@@ -57,14 +57,14 @@ export default function Careers() {
         <div className="careers-split-section careers-split-right">
           <div className="careers-split-container">
             <div className="careers-split-content">
-              <h2 className="section-title">The Way We Actually Work</h2>
+              <h2 className="section-title">A Place Where You Can Grow</h2>
               <p className="section-subtitle">
-                Small Teams, Direct Access, Real Decisions
+                What Every Team Member Can Expect Here
               </p>
               <p className="section-desc">
-                Daxin has been a product company since 1998 — every engineer
-                owns a real module, works in small teams, and talks directly
-                to the people who decide what ships.
+                Daxin has been a product company since 1998 — every team
+                member owns real responsibility and talks directly to the
+                people who decide what happens next.
               </p>
             </div>
             <div className="careers-split-media">
@@ -92,15 +92,23 @@ export default function Careers() {
               </div>
             </div>
             <div className="careers-split-content">
-              <h2 className="section-title">A Real Path to a Full-Time Job</h2>
+              <h2 className="section-title">Internship, With a Real Future</h2>
               <p className="section-subtitle">
-                For Job Seekers, Not Students on Break
+                Built for Job Seekers
               </p>
               <p className="section-desc">
-                This program is for serious job seekers. It runs 6 months
-                to 1 year based on your skill and ability — and if you're
+                Built for software development job seekers. It runs 6
+                months to 1 year based on your skill and ability — and if
                 eligible, the role becomes permanent.
               </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfkMpsCaq-wbAbUAGrxzEssv_fmc6FuBTl7npli8mi0seRRgw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="careers-explore-btn"
+              >
+                Apply for Internship →
+              </a>
             </div>
           </div>
         </div>
@@ -161,7 +169,7 @@ export default function Careers() {
                 rel="noopener noreferrer"
                 className="careers-explore-btn"
               >
-                Explore It →
+                Apply Now →
               </a>
             </div>
           </div>
