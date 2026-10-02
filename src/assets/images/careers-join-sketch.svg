@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <filter id="watercolor-bleed" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="0.8" result="blurred" />
+      <feMerge>
+        <feMergeNode in="blurred" />
+        <feMergeNode in="SourceGraphic" opacity="0.3" />
+      </feMerge>
+    </filter>
+
+    <filter id="pencil-stroke" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+
+    <pattern id="paper-texture" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="#faf6f0" />
+      <path d="M0,0 L200,200 M200,0 L0,200" stroke="#e8dfd1" stroke-width="0.5" opacity="0.15" />
+    </pattern>
+
+    <linearGradient id="wash-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.15" />
+    </linearGradient>
+
+    <linearGradient id="wash-purple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.15" />
+    </linearGradient>
+
+    <linearGradient id="skin-1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a0684b" />
+      <stop offset="100%" stop-color="#804e35" />
+    </linearGradient>
+    <linearGradient id="skin-2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b87b5c" />
+      <stop offset="100%" stop-color="#995e43" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#paper-texture)" />
+
+  <g filter="url(#watercolor-bleed)">
+    <path d="M 50,30 Q 350,10 700,40 T 1150,20 L 1160,650 Q 800,670 450,640 T 50,650 Z" fill="#fdf8f0" opacity="0.9" />
+    <path d="M 80,70 Q 300,50 550,110 T 500,440 Q 250,490 70,390 Z" fill="url(#wash-blue)" />
+    <path d="M 680,60 Q 950,90 1120,130 T 1080,590 Q 750,630 620,460 Z" fill="url(#wash-purple)" />
+  </g>
+
+  <!-- Background Architecture (Modern Daxin Conference Room with Daxin Wall Logo) -->
+  <g filter="url(#pencil-stroke)" stroke="#334155" stroke-width="1.8" fill="none" opacity="0.6">
+    <line x1="100" y1="80" x2="1100" y2="80" />
+    <line x1="600" y1="80" x2="600" y2="480" stroke-dasharray="6,4" />
+
+    <!-- Sketched Daxin Wall Signage -->
+    <rect x="420" y="110" width="360" height="80" rx="12" fill="#ffffff" opacity="0.8" stroke="#2563eb" stroke-width="2" />
+    <text x="600" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="#1e3a8a" text-anchor="middle">DAXIN TECHNOLOGIES</text>
+    <text x="600" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0d9488" text-anchor="middle">BUILD YOUR CAREER WITH US</text>
+  </g>
+
+  <!-- Conference Table Sketched -->
+  <g filter="url(#pencil-stroke)">
+    <path d="M 100,480 L 1100,480 L 1140,640 L 60,640 Z" fill="#3b82f6" opacity="0.15" stroke="#1d4ed8" stroke-width="2" />
+    <line x1="60" y1="640" x2="1140" y2="640" stroke="#1e3a8a" stroke-width="3" />
+  </g>
+
+  <!-- HUMAN FIGURES (EXACTLY 2 INDIAN PROFESSIONALS SHAKING HANDS / WELCOMING CANDIDATE) -->
+
+  <!-- FIGURE 1: Indian Tech Lead / Mentor (Left, standing/welcoming warmly) -->
+  <g id="join-mentor" filter="url(#watercolor-bleed)">
+    <path d="M 180,310 C 200,250 270,240 330,255 C 360,270 370,310 360,370 L 340,550 C 290,570 200,560 170,520 Z" fill="#2563eb" opacity="0.85" />
+    <path d="M 180,520 L 340,530 L 360,650 L 160,640 Z" fill="#334155" opacity="0.8" />
+  </g>
+
+  <g id="join-mentor-sketch" filter="url(#pencil-stroke)" stroke="#1e293b" stroke-width="2.2" fill="none">
+    <!-- Hair & Head (Indian Male) -->
+    <path d="M 230,130 C 210,130 200,160 205,185 C 210,205 220,225 240,230 C 265,235 285,220 280,190 C 275,160 260,130 230,130 Z" fill="#0f172a" stroke="#0f172a" />
+    <path d="M 215,160 C 220,145 265,145 275,165 C 280,190 270,220 245,225 C 220,220 210,190 215,160 Z" fill="url(#skin-1)" />
+    <!-- Eyes & Confident Smile -->
+    <ellipse cx="235" cy="175" rx="3" ry="3" fill="#0f172a" />
+    <ellipse cx="260" cy="175" rx="3" ry="3" fill="#0f172a" />
+    <path d="M 235,198 Q 248,208 260,198" stroke="#0f172a" stroke-width="2.2" />
+
+    <!-- Torso Contour -->
+    <path d="M 200,230 Q 165,270 175,330 L 180,520" />
+    <path d="M 275,230 Q 325,270 320,330 L 330,520" />
+
+    <!-- Right Arm extended forward in welcoming handshake gesture -->
+    <path d="M 300,280 Q 390,320 460,340" stroke="#2563eb" stroke-width="16" stroke-linecap="round" />
+    <path d="M 460,340 L 510,340" stroke="url(#skin-1)" stroke-width="12" stroke-linecap="round" />
+  </g>
+
+  <!-- FIGURE 2: Indian Candidate / Engineer (Right, shaking hand / accepting offer warmly) -->
+  <g id="join-candidate" filter="url(#watercolor-bleed)">
+    <path d="M 830,300 C 850,250 920,240 970,255 C 1000,270 1010,310 1000,370 L 980,540 C 930,560 850,550 820,510 Z" fill="#0d9488" opacity="0.85" />
+    <path d="M 830,510 L 980,520 L 1000,650 L 810,640 Z" fill="#1e3a8a" opacity="0.8" />
+  </g>
+
+  <g id="join-candidate-sketch" filter="url(#pencil-stroke)" stroke="#1e293b" stroke-width="2.2" fill="none">
+    <!-- Dark Neat Hair (Indian Male / Female candidate) -->
+    <path d="M 890,130 C 860,130 850,160 855,185 C 860,205 870,225 890,230 C 915,235 935,220 930,190 C 925,160 910,130 890,130 Z" fill="#0f172a" stroke="#0f172a" />
+    <path d="M 875,160 C 880,145 925,145 935,165 C 940,190 930,220 905,225 C 880,220 870,190 875,160 Z" fill="url(#skin-2)" />
+    <!-- Eyes & Big Happy Smile -->
+    <ellipse cx="885" cy="175" rx="3" ry="3" fill="#0f172a" />
+    <ellipse cx="910" cy="175" rx="3" ry="3" fill="#0f172a" />
+    <path d="M 885,198 Q 898,208 912,198" stroke="#991b1b" stroke-width="2.2" />
+
+    <!-- Torso Contour -->
+    <path d="M 860,230 Q 825,270 835,330 L 840,510" />
+    <path d="M 935,230 Q 985,270 980,330 L 990,510" />
+
+    <!-- Left Arm extended forward shaking hand -->
+    <path d="M 860,280 Q 750,320 620,340" stroke="#0d9488" stroke-width="16" stroke-linecap="round" />
+    <path d="M 620,340 L 570,340" stroke="url(#skin-2)" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Handshake Point in the middle -->
+    <ellipse cx="540" cy="340" rx="18" ry="14" fill="#d97706" opacity="0.8" stroke="#1e293b" stroke-width="2" />
+  </g>
+
+  <!-- Title Badge overlay on bottom left -->
+  <g opacity="0.85">
+    <rect x="60" y="585" width="280" height="42" rx="21" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <circle cx="82" cy="606" r="8" fill="#2563eb" />
+    <text x="100" y="611" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1e293b">Join the Daxin Team</text>
+  </g>
+</svg>

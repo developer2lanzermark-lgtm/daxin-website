@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <filter id="watercolor-bleed" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="0.8" result="blurred" />
+      <feMerge>
+        <feMergeNode in="blurred" />
+        <feMergeNode in="SourceGraphic" opacity="0.3" />
+      </feMerge>
+    </filter>
+
+    <filter id="pencil-stroke" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+
+    <pattern id="paper-texture" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="#faf6f0" />
+      <path d="M0,0 L200,200 M200,0 L0,200" stroke="#e8dfd1" stroke-width="0.5" opacity="0.15" />
+    </pattern>
+
+    <linearGradient id="wash-green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.15" />
+    </linearGradient>
+
+    <linearGradient id="wash-warm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.15" />
+    </linearGradient>
+
+    <linearGradient id="skin-1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a0684b" />
+      <stop offset="100%" stop-color="#804e35" />
+    </linearGradient>
+    <linearGradient id="skin-2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b87b5c" />
+      <stop offset="100%" stop-color="#995e43" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Paper -->
+  <rect width="1200" height="675" fill="url(#paper-texture)" />
+
+  <!-- Watercolor Soft Garden Lounge Washes -->
+  <g filter="url(#watercolor-bleed)">
+    <path d="M 40,30 Q 350,10 700,40 T 1160,20 L 1170,650 Q 800,670 450,640 T 40,650 Z" fill="#fdf8f0" opacity="0.9" />
+    <!-- Garden Greenery Wash (Plants & Tirunelveli Hills Window View) -->
+    <path d="M 60,60 Q 300,40 550,100 T 500,420 Q 250,480 50,380 Z" fill="url(#wash-green)" />
+    <!-- Sunlit Warm Lounge Wash -->
+    <path d="M 650,50 Q 950,80 1140,120 T 1100,580 Q 750,620 600,450 Z" fill="url(#wash-warm)" />
+  </g>
+
+  <!-- Background Architecture (Large Terrace Glass Windows & Potted Palms) -->
+  <g filter="url(#pencil-stroke)" stroke="#334155" stroke-width="1.8" fill="none" opacity="0.6">
+    <!-- Window Frame Structure -->
+    <line x1="80" y1="60" x2="1120" y2="60" />
+    <line x1="80" y1="60" x2="80" y2="460" />
+    <line x1="450" y1="60" x2="450" y2="460" />
+    <line x1="800" y1="60" x2="800" y2="460" />
+    <line x1="1120" y1="60" x2="1120" y2="460" />
+    <line x1="80" y1="240" x2="1120" y2="240" />
+
+    <!-- Lush Potted Monstera / Palm Leaves (Left & Right) -->
+    <!-- Left Plant -->
+    <path d="M 120,460 C 90,380 60,300 130,220 Q 180,300 160,400 Z" fill="#15803d" opacity="0.4" />
+    <path d="M 140,460 C 180,370 240,290 300,240 Q 280,340 200,420 Z" fill="#16a34a" opacity="0.45" />
+    <!-- Plant Pot -->
+    <polygon points="120,460 180,460 165,540 135,540" fill="#d97706" opacity="0.6" stroke="#92400e" stroke-width="1.5" />
+
+    <!-- Right Plant -->
+    <path d="M 1020,460 C 1050,370 1120,310 1160,250 Q 1100,340 1050,420 Z" fill="#15803d" opacity="0.4" />
+    <polygon points="1000,460 1060,460 1045,540 1015,540" fill="#d97706" opacity="0.6" stroke="#92400e" stroke-width="1.5" />
+  </g>
+
+  <!-- Lounge Furniture (Cozy Armchairs, Coffee Table, Tea/Coffee set) -->
+  <g filter="url(#pencil-stroke)">
+    <!-- Floor Tile lines sketch -->
+    <line x1="50" y1="550" x2="1150" y2="550" stroke="#cbd5e1" stroke-width="1.5" />
+
+    <!-- Left Armchair (Navy Blue Plush Chair) -->
+    <path d="M 180,420 C 170,360 210,340 270,340 C 330,340 370,360 360,420 L 370,540 C 370,570 170,570 170,540 Z" fill="#1e3a8a" opacity="0.35" stroke="#1e293b" stroke-width="2" />
+    <path d="M 190,440 L 350,440 L 340,530 L 200,530 Z" fill="#2563eb" opacity="0.4" />
+
+    <!-- Right Armchair (Warm Terracotta Orange Chair) -->
+    <path d="M 820,420 C 810,360 850,340 910,340 C 970,340 1010,360 1000,420 L 1010,540 C 1010,570 810,570 810,540 Z" fill="#ea580c" opacity="0.35" stroke="#7c2d12" stroke-width="2" />
+    <path d="M 830,440 L 990,440 L 980,530 L 840,530 Z" fill="#f97316" opacity="0.4" />
+
+    <!-- Central Low Wooden Coffee Table -->
+    <ellipse cx="590" cy="530" rx="140" ry="30" fill="#d97706" opacity="0.3" stroke="#78350f" stroke-width="2" />
+    <!-- Table legs -->
+    <line x1="480" y1="540" x2="470" y2="600" stroke="#78350f" stroke-width="3" />
+    <line x1="700" y1="540" x2="710" y2="600" stroke="#78350f" stroke-width="3" />
+
+    <!-- Coffee Table Items (Traditional South Indian Dabarah / Filter Coffee & Snacks) -->
+    <ellipse cx="550" cy="525" rx="14" ry="8" fill="#fbbf24" stroke="#b45309" stroke-width="1.5" />
+    <ellipse cx="550" cy="522" rx="10" ry="5" fill="#78350f" />
+    <ellipse cx="620" cy="525" rx="14" ry="8" fill="#fbbf24" stroke="#b45309" stroke-width="1.5" />
+    <ellipse cx="620" cy="522" rx="10" ry="5" fill="#78350f" />
+  </g>
+
+  <!-- HUMAN FIGURES (EXACTLY 2 INDIAN PROFESSIONALS RELAXING & ENJOYING WORK-LIFE HARMONY) -->
+
+  <!-- FIGURE 1: Indian Male Engineer (Left, sitting comfortably in chair, laptop on lap, smiling) -->
+  <g id="benefits-male" filter="url(#watercolor-bleed)">
+    <!-- Mustard Yellow Casual Shirt Wash -->
+    <path d="M 210,320 C 230,270 290,260 340,275 C 370,290 380,330 370,390 L 360,510 C 310,530 230,520 200,480 Z" fill="#d97706" opacity="0.8" />
+    <!-- Blue Denim Jeans Wash -->
+    <path d="M 210,480 L 360,490 L 380,620 L 190,610 Z" fill="#1d4ed8" opacity="0.75" />
+  </g>
+
+  <g id="benefits-male-sketch" filter="url(#pencil-stroke)" stroke="#1e293b" stroke-width="2.2" fill="none">
+    <!-- Hair & Head (Indian Male) -->
+    <path d="M 250,150 C 230,150 220,180 225,205 C 230,225 240,245 260,250 C 285,255 305,240 300,210 C 295,180 280,150 250,150 Z" fill="#0f172a" stroke="#0f172a" />
+    <path d="M 235,180 C 240,165 285,165 295,185 C 300,210 290,240 265,245 C 240,240 230,210 235,180 Z" fill="url(#skin-1)" />
+    <!-- Smile & Eyes -->
+    <ellipse cx="255" cy="195" rx="3" ry="3" fill="#0f172a" />
+    <ellipse cx="280" cy="195" rx="3" ry="3" fill="#0f172a" />
+    <path d="M 255,218 Q 268,228 280,218" stroke="#0f172a" stroke-width="2.2" />
+
+    <!-- Torso Contour -->
+    <path d="M 230,250 Q 195,290 205,350 L 210,480" />
+    <path d="M 295,250 Q 345,290 340,350 L 350,480" />
+
+    <!-- Open Laptop on lap -->
+    <polygon points="250,410 370,410 390,450 230,450" fill="#94a3b8" stroke="#334155" stroke-width="2" />
+    <rect x="260" y="340" width="100" height="70" rx="3" fill="#38bdf8" opacity="0.6" stroke="#0284c7" stroke-width="1.5" />
+  </g>
+
+  <!-- FIGURE 2: Indian Female Professional (Right, sitting comfortably, holding coffee cup, laughing/talking) -->
+  <g id="benefits-female" filter="url(#watercolor-bleed)">
+    <!-- Coral / Peach Casual Top Wash -->
+    <path d="M 840,310 C 860,260 920,250 970,265 C 1000,280 1010,320 1000,380 L 990,500 C 940,520 860,510 830,470 Z" fill="#f43f5e" opacity="0.8" />
+    <!-- Cream Trousers Wash -->
+    <path d="M 840,470 L 990,480 L 1010,620 L 820,610 Z" fill="#fef3c7" opacity="0.85" />
+  </g>
+
+  <g id="benefits-female-sketch" filter="url(#pencil-stroke)" stroke="#1e293b" stroke-width="2.2" fill="none">
+    <!-- Dark Wavy Hair (Indian Female) -->
+    <path d="M 890,140 C 860,140 850,170 855,200 C 845,230 840,260 850,290 C 860,310 880,300 885,280 C 895,310 890,340 880,360" fill="#0f172a" stroke="#0f172a" />
+    <circle cx="890" cy="180" r="28" fill="#0f172a" />
+
+    <!-- Face Contour -->
+    <path d="M 870,175 C 875,160 920,160 928,178 C 935,200 925,230 900,235 C 875,230 865,200 870,175 Z" fill="url(#skin-2)" />
+    <!-- Bindi -->
+    <circle cx="896" cy="172" r="1.8" fill="#dc2626" />
+    <!-- Eyes & Big Warm Smile -->
+    <ellipse cx="885" cy="188" rx="3" ry="3" fill="#0f172a" />
+    <ellipse cx="910" cy="188" rx="3" ry="3" fill="#0f172a" />
+    <path d="M 885,208 Q 898,222 912,208" stroke="#991b1b" stroke-width="2.5" />
+
+    <!-- Torso Contour -->
+    <path d="M 860,240 Q 825,280 835,340 L 840,470" />
+    <path d="M 925,240 Q 975,280 970,340 L 980,470" />
+
+    <!-- Right Arm holding filter coffee cup towards center -->
+    <path d="M 850,300 Q 770,330 730,370" stroke="#f43f5e" stroke-width="14" stroke-linecap="round" />
+    <!-- Coffee Cup in hand -->
+    <ellipse cx="720" cy="370" rx="12" ry="9" fill="#d97706" stroke="#78350f" stroke-width="2" />
+  </g>
+
+  <!-- Title Badge overlay on bottom left -->
+  <g opacity="0.85">
+    <rect x="60" y="585" width="280" height="42" rx="21" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <circle cx="82" cy="606" r="8" fill="#f59e0b" />
+    <text x="100" y="611" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1e293b">Work-Life Harmony at Daxin</text>
+  </g>
+</svg>

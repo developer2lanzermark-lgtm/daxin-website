@@ -8,7 +8,7 @@ import {
 } from "../config/siteStats.js";
 import "../styles/FAQ.css";
 
-const FAQ_CATEGORIES = [
+export const FAQ_CATEGORIES = [
   {
     id: "company",
     title: "Company",

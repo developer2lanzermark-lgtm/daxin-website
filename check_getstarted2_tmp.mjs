@@ -1,0 +1,10 @@
+import { chromium } from "playwright";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1300, height: 900 } });
+await page.goto("http://localhost:5173/", { waitUntil: "networkidle" });
+const homeBtn = await page.$eval(".get-started__cta", el => ({ tag: el.tagName, text: el.textContent }));
+console.log("On /:", homeBtn);
+await page.goto("http://localhost:5173/about", { waitUntil: "networkidle" });
+const aboutBtn = await page.$eval(".get-started__cta", el => ({ tag: el.tagName, text: el.textContent }));
+console.log("On /about:", aboutBtn);
+await browser.close();

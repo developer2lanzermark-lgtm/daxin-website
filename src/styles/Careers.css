@@ -614,15 +614,25 @@
     width: 100%;
     max-width: 100%;
     padding: 28px;
+    order: 2;
   }
   .careers-split-media,
   .careers-split-right .careers-split-media,
   .careers-split-left .careers-split-media {
     position: static;
     width: 100%;
+    order: 1;
   }
   .careers-image-wrapper {
     height: 280px;
+  }
+  .careers-split-content .section-title {
+    white-space: normal;
+    font-size: 23px;
+  }
+  .careers-explore-btn {
+    width: 100%;
+    text-align: center;
   }
   .careers-stat-divider {
     display: none;
