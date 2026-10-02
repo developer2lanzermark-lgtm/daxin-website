@@ -35,13 +35,13 @@ export const FAQ_CATEGORIES = [
         a: "Our Craft, Our Integrity and Our Passion. We never compromise on quality, we are honest and transparent with no hidden agenda, we honour our promises with responsive support, and we keep exploring new technologies to make our products better.",
       },
       {
-        q: "Are Daxin products made in India?",
-        a: "Yes. All our products are designed, built and supported by our own team in India.",
+        q: "Where are Daxin's offices located?",
+        a: "Our office is located at Plot No. 743, 2nd Floor, Near Income Tax Office, Rahmath Nagar 3rd Street, Tiruchendur Road, Palayamkottai, Tirunelveli – 627011, Tamil Nadu, India.",
       },
       {
         q: "How can I contact Daxin?",
-        a: "You can reach us through the Contact page, or book an appointment with our team from anywhere on the website.",
-        link: { label: "Go to Contact", to: "/contact" },
+        a: "Contact our Sales Team at sales@gprosoftware.com / +91 90470 29298, or our Support Team at support@gprosoftware.com / +91 63790 53761.",
+        
       },
     ],
   },
@@ -54,20 +54,7 @@ export const FAQ_CATEGORIES = [
         q: "Does Daxin build its own software products?",
         a: `Yes. Daxin is a product company. We design, build and continuously evolve our own products, with ${PRODUCTS_COUNT} product releases and improvements over the years.`,
       },
-      {
-        q: "What is gPro?",
-        a: "gPro is a simple, powerful business management software designed for modern businesses — covering billing, inventory, accounts and every part of your business.",
-        link: { label: "Visit gPro", to: "https://gprosoftware.com/", external: true },
-      },
-      {
-        q: "What is Demander?",
-        a: "Demander is a smart ordering platform that connects businesses with their customers so they can receive orders 24x7, without the noise of calls and messages.",
-      },
-      {
-        q: "What is Voice Bill?",
-        a: "Voice Bill is an innovative retail billing solution — simply speak, and the bill is created. It is built for faster checkout at busy counters.",
-        link: { label: "Learn about Voice Bill", to: "/products#voicebill" },
-      },
+      
       {
         q: "Which devices do Daxin products work on?",
         a: "Our products are built to work across desktop, tablet and mobile, so you can manage your business wherever you are.",
@@ -83,6 +70,11 @@ export const FAQ_CATEGORIES = [
       {
         q: "What kind of support do I get after purchase?",
         a: "We believe in responsive support and long-term relationships. Our team helps with installation, training and day-to-day questions so you can use the software with confidence.",
+      },
+      {
+         q: "What are the support hours?",
+         a: "Our support team is available Monday to Friday, 9:30 AM to 7:00 PM, and Saturday, 9:30 AM to 4:30 PM (IST). We are closed on Sundays and public holidays.",
+             
       },
     ],
   },
@@ -112,10 +104,10 @@ export const FAQ_CATEGORIES = [
         q: "Is there a stipend during the internship?",
         a: "Yes. Interns receive a fair monthly stipend, along with festival and personal leave.",
       },
-      {
-        q: "Where is the team located?",
-        a: "We are a Tirunelveli-rooted team. You get meaningful product work without the metro-city grind.",
-      },
+      // {
+      //   q: "Where is the team located?",
+      //   a: "We are a Tirunelveli-rooted team. You get meaningful product work without the metro-city grind.",
+      // },
       {
         q: "What is it like to work at Daxin?",
         a: "Small teams, direct access and real decisions. Every engineer owns a real module and talks directly to the people who decide what ships — with working hours that don't bleed into your evenings.",
@@ -159,6 +151,10 @@ export const FAQ_CATEGORIES = [
       {
         q: "Will Daxin support the customers I refer?",
         a: "Yes. Every customer gets the same dedicated support from our team, so your referrals are always in good hands.",
+      },
+        {
+        q: "Can a referral partner become a reseller later?",
+        a: "No. The Referral Partner program and reselling are separate, and a referral partner role does not convert into a reseller role",
       },
     ],
   },
