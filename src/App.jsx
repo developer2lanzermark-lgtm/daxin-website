@@ -15,6 +15,7 @@ import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import SiteChat from "./components/SiteChat";
 import AppointmentModal from "./components/AppointmentModal";
 import { AppointmentProvider } from "./context/AppointmentContext";
 import heroBackground from "./assets/images/hero-background.webp";
@@ -57,6 +58,7 @@ export default function App() {
           </Routes>
           <GetStarted />
           <Footer />
+          <SiteChat />
           <AppointmentModal />
         </div>
       </BrowserRouter>
