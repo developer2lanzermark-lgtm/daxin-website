@@ -14,6 +14,7 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import FAQ from "./pages/FAQ";
 import AppointmentModal from "./components/AppointmentModal";
 import { AppointmentProvider } from "./context/AppointmentContext";
 import heroBackground from "./assets/images/hero-background.webp";
@@ -52,6 +53,7 @@ export default function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/internship" element={<Navigate to="/careers" replace />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
           </Routes>
           <GetStarted />
           <Footer />

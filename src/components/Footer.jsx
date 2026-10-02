@@ -8,6 +8,7 @@ const FOOTER_MENUS = [
     links: [
       { label: "About Us", to: "/about" },
       { label: "Careers & Internship", to: "/careers" },
+      { label: "FAQ", to: "/faq" },
     ],
   },
   {
