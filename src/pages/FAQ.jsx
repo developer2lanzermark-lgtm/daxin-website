@@ -47,13 +47,17 @@ export const FAQ_CATEGORIES = [
   },
   {
     id: "software",
-    title: "Software Development",
+    title: "Software & Support",
     desc: "Our products, how we build them, updates and support",
     items: [
       {
         q: "Does Daxin build its own software products?",
         a: `Yes. Daxin is a product company. We design, build and continuously evolve our own products, with ${PRODUCTS_COUNT} product releases and improvements over the years.`,
       },
+      {
+          q: "What technologies are used to build Daxin products?",
+       a: "Our products are built with proven, modern technologies: PHP (Laravel), .NET, React, jQuery, HTML and CSS on the front end and application layers, with MySQL as the database. We choose the right tools for each product so it stays fast, reliable and easy to maintain.",
+     },
       
       {
         q: "Which devices do Daxin products work on?",
@@ -65,7 +69,7 @@ export const FAQ_CATEGORIES = [
       },
       {
         q: "Do you take custom software projects?",
-        a: "Our focus is on building and improving our own products. If you have a specific business need, talk to us — many requirements can be met through our existing products and their ongoing development.",
+        a: "No. We focus on developing and supporting our own software products rather than taking up custom software projects.",
       },
       {
         q: "What kind of support do I get after purchase?",
@@ -156,6 +160,52 @@ export const FAQ_CATEGORIES = [
         q: "Can a referral partner become a reseller later?",
         a: "No. The Referral Partner program and reselling are separate, and a referral partner role does not convert into a reseller role",
       },
+    ],
+  },
+
+  {
+    id: "customers",
+    title: "Getting Started",
+    desc: "Demo, onboarding, implementation, migration, sales",
+    items: [
+        {
+        q: "How can I contact the sales team?",
+        a: "Contact our Sales Team at sales@gprosoftware.com or +91 90470 29298.",
+      },
+        {
+        q: "How can I choose the right product for my business?",
+        a: "Contact our team to discuss your business needs, and we’ll help you choose the right product.",
+      },
+      
+      {
+      q: "How do I book a demo?",
+       a: "Contact our team through the Contact page, or book an appointment from anywhere on the website. Tell us which product you're interested in, and we'll arrange a demo at a time that suits you.",
+ 
+      },
+      {
+            q: "How do I buy a product?",
+            a: "Get in touch with our team and tell us about your business. We'll help you choose the right product, then guide you through the purchase, installation and training.",
+ 
+         },
+        {
+          q: "What payment methods do you accept?",
+          a: "We accept bank transfer (NEFT/RTGS/IMPS), UPI and cheque. Our team will share the payment details when you confirm your order.",
+        },
+        {
+           q: "Do you provide GST invoices?",
+            a: "Yes. We provide GST-compliant tax invoices for all purchases. Please share your GSTIN when you place your order so we can include it on the invoice.",
+        },
+      {
+        q: "Do you provide training for new customers?",
+        a: "Yes. We provide training to help new customers get started and use our software confidently.",
+      },
+      {
+        q: "Can you help migrate my existing business data?",
+        a: "Our team can guide you on data migration based on your business requirements.",
+       
+      },
+    
+     
     ],
   },
 ];
