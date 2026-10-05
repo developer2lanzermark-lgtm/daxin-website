@@ -15,6 +15,7 @@ import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import InfoPage from "./pages/InfoPage";
 import SiteChat from "./components/SiteChat";
 import AppointmentModal from "./components/AppointmentModal";
 import { AppointmentProvider } from "./context/AppointmentContext";
@@ -55,6 +56,8 @@ export default function App() {
             <Route path="/internship" element={<Navigate to="/careers" replace />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/privacy-policy" element={<InfoPage page="privacy" />} />
+            <Route path="/terms-and-conditions" element={<InfoPage page="terms" />} />
           </Routes>
           <GetStarted />
           <Footer />

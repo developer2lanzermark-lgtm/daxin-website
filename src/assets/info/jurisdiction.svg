@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" fill="none">
+  <defs>
+    <linearGradient id="jurisdiction-bg" x1="0" y1="0" x2="480" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FE"/><stop offset="1" stop-color="#DCE9FB"/>
+    </linearGradient>
+    <filter id="jurisdiction-f" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#1B3A66" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="480" height="340" rx="26" fill="url(#jurisdiction-bg)"/>
+  <circle cx="402" cy="256" r="50" fill="#F5B301" opacity="0.3"/>
+  <circle cx="64" cy="80" r="16" fill="#1B5FCC" opacity="0.22"/>
+  <g filter="url(#jurisdiction-f)">
+    <path d="M240 58l140 56H100z" fill="#1B5FCC"/>
+    <rect x="100" y="114" width="280" height="18" fill="#123F8A"/>
+    <g fill="#fff">
+      <rect x="122" y="140" width="24" height="104" rx="4"/><rect x="176" y="140" width="24" height="104" rx="4"/>
+      <rect x="280" y="140" width="24" height="104" rx="4"/><rect x="334" y="140" width="24" height="104" rx="4"/>
+    </g>
+    <rect x="216" y="160" width="48" height="84" rx="24" fill="#EAF1FD"/>
+    <rect x="90" y="244" width="300" height="20" rx="6" fill="#1B5FCC"/>
+    <rect x="76" y="264" width="328" height="16" rx="6" fill="#123F8A"/>
+    <path d="M396 96c0-22 18-36 34-36s34 14 34 36c0 26-34 58-34 58s-34-32-34-58z" fill="#E01B22"/>
+    <circle cx="430" cy="96" r="12" fill="#fff"/>
+    <circle cx="240" cy="94" r="10" fill="#F5B301"/>
+  </g>
+</svg>
