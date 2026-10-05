@@ -47,7 +47,7 @@
 
 /* Aligns with the navbar's padding: 0 207px — same as .faq-container margin-left: 12% */
 .dxed-container {
-  padding: 0 24px 0 207px;
+  padding: 0 207px;
 }
 
 .dxed-hero h1 {
@@ -79,7 +79,7 @@
 
 /* ---------- body ---------- */
 .dxed-body {
-  padding: 20px 24px 24px 207px;
+  padding: 20px 207px 24px;
 }
 
 .dxed-section {
