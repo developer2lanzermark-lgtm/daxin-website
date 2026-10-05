@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" fill="none">
+  <defs>
+    <linearGradient id="legal-bg" x1="0" y1="0" x2="480" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FE"/><stop offset="1" stop-color="#DCE9FB"/>
+    </linearGradient>
+    <filter id="legal-f" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#1B3A66" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="480" height="340" rx="26" fill="url(#legal-bg)"/>
+  <circle cx="402" cy="256" r="50" fill="#F5B301" opacity="0.3"/>
+  <circle cx="64" cy="80" r="16" fill="#1B5FCC" opacity="0.22"/>
+  <g filter="url(#legal-f)">
+    <rect x="110" y="70" width="260" height="212" rx="20" fill="#fff"/>
+    <rect x="234" y="96" width="12" height="150" rx="6" fill="#1B5FCC"/>
+    <rect x="160" y="110" width="160" height="10" rx="5" fill="#1B5FCC"/>
+    <rect x="200" y="240" width="80" height="16" rx="8" fill="#1B5FCC"/>
+    <path d="M172 120l-26 60h52z M308 120l-26 60h52z" stroke="#9FB4D4" stroke-width="3" fill="none"/>
+    <path d="M144 180a28 18 0 0 0 56 0z" fill="#F5B301"/>
+    <path d="M280 180a28 18 0 0 0 56 0z" fill="#E01B22"/>
+    <circle cx="240" cy="94" r="12" fill="#F5B301"/>
+  </g>
+</svg>

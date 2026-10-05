@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" fill="none">
+  <defs>
+    <linearGradient id="sh-bg" x1="0" y1="0" x2="480" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FE"/><stop offset="1" stop-color="#DCE9FB"/>
+    </linearGradient>
+    <filter id="sh-f" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#1B3A66" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="480" height="340" rx="26" fill="url(#sh-bg)"/>
+  <circle cx="410" cy="70" r="40" fill="#F5B301" opacity="0.3"/>
+  <!-- connectors -->
+  <g stroke="#1B5FCC" stroke-width="5" stroke-dasharray="10 8" stroke-linecap="round" opacity="0.55">
+    <path d="M240 170 L120 90"/><path d="M240 170 L120 250"/><path d="M240 170 L370 170"/>
+  </g>
+  <g filter="url(#sh-f)">
+    <!-- central shield/data hub -->
+    <circle cx="240" cy="170" r="58" fill="#fff"/>
+    <path d="M240 134l32 12v22c0 22-14 36-32 44-18-8-32-22-32-44v-22z" fill="#1B5FCC"/>
+    <path d="M228 172l9 9 16-18" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- partner nodes -->
+    <rect x="68" y="56" width="104" height="68" rx="14" fill="#fff"/>
+    <circle cx="96" cy="90" r="14" fill="#E01B22"/><rect x="118" y="82" width="40" height="8" rx="4" fill="#DCE6F5"/><rect x="118" y="96" width="28" height="8" rx="4" fill="#EAF1FD"/>
+    <rect x="68" y="216" width="104" height="68" rx="14" fill="#fff"/>
+    <circle cx="96" cy="250" r="14" fill="#F5B301"/><rect x="118" y="242" width="40" height="8" rx="4" fill="#DCE6F5"/><rect x="118" y="256" width="28" height="8" rx="4" fill="#EAF1FD"/>
+    <rect x="330" y="136" width="104" height="68" rx="14" fill="#fff"/>
+    <circle cx="358" cy="170" r="14" fill="#1B5FCC"/><rect x="380" y="162" width="40" height="8" rx="4" fill="#DCE6F5"/><rect x="380" y="176" width="28" height="8" rx="4" fill="#EAF1FD"/>
+  </g>
+</svg>
