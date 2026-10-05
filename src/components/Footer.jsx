@@ -60,7 +60,7 @@ const SOCIAL_LINKS = [
     label: "Facebook",
     href: "https://www.facebook.com/daxintechnologies/",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true">
         <circle cx="12" cy="12" r="11" fill="#1877F2" />
         <path fill="#fff" d="M13.3 19v-5.6h1.9l.3-2.2h-2.2V9.8c0-.6.2-1.1 1.1-1.1h1.2V6.7c-.2 0-.9-.1-1.7-.1-1.7 0-2.9 1-2.9 3v1.7H9.2v2.2h1.9V19h2.2z" />
       </svg>
