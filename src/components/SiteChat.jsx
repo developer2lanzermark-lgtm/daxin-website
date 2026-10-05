@@ -185,7 +185,7 @@ const FALLBACK =
 
 const GREETING = {
   role: "bot",
-  text: "Hi! I'm the Daxin Assistant. Ask me anything about gPro, Demander, Voice Bill, careers, or the company.",
+  text: "Hi! I'm the Daxin Assistant. Ask me anything about the company.",
 };
 
 export default function SiteChat() {
