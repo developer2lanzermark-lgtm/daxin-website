@@ -21,6 +21,21 @@ const FOOTER_MENUS = [
     ],
   },
   {
+    title: "Location",
+    details: [
+      {
+        lines: [
+          "Plot No.743, 2nd Floor",
+          "Rahmathnagar 3rd Street,",
+          "Near Income Tax Office",
+          "Tiruchendur Road, Palayamkottai",
+          "Tirunelveli, Tamilnadu",
+          "India - 627011",
+        ],
+      },
+    ],
+  },
+  {
     title: "Contact Sales",
     to: "/contact",
     details: [
@@ -30,17 +45,6 @@ const FOOTER_MENUS = [
         lines: ["sales@daxintechnologies.com"],
         href: "https://mail.google.com/mail/?view=cm&fs=1&to=sales@daxintechnologies.com",
         external: true,
-      },
-      {
-        label: "Location",
-        lines: [
-          "Plot No.743, 2nd Floor",
-          "Rahmathnagar 3rd Street,",
-          "Near Income Tax Office",
-          "Tiruchendur Road, Palayamkottai",
-          "Tirunelveli, Tamilnadu",
-          "India - 627011",
-        ],
       },
     ],
   },
@@ -172,18 +176,24 @@ export default function Footer() {
                 </div>
               ) : (
                 <div className="site-footer__menu" key={menu.title}>
-                  <FooterLink
-                    to={menu.to}
-                    external={menu.external}
-                    className="site-footer__menu-title site-footer__menu-title--link"
-                  >
-                    {menu.title}
-                  </FooterLink>
+                  {menu.to ? (
+                    <FooterLink
+                      to={menu.to}
+                      external={menu.external}
+                      className="site-footer__menu-title site-footer__menu-title--link"
+                    >
+                      {menu.title}
+                    </FooterLink>
+                  ) : (
+                    <span className="site-footer__menu-title">{menu.title}</span>
+                  )}
                   {menu.details && (
                     <div className="site-footer__details">
                       {menu.details.map((item) => (
-                        <div className="site-footer__detail" key={item.label}>
-                          <strong className="site-footer__detail-label">{item.label}</strong>
+                        <div className="site-footer__detail" key={item.label || item.lines[0]}>
+                          {item.label && (
+                            <strong className="site-footer__detail-label">{item.label}</strong>
+                          )}
                           {item.lines.map((line) =>
                             item.href ? (
                               <a
