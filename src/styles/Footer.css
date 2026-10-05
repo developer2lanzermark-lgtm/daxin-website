@@ -130,6 +130,102 @@
   width: 100%;
 }
 
+.site-footer__details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 4px;
+  max-width: 260px;
+}
+
+.site-footer__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.site-footer__detail-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 2px;
+}
+
+.site-footer__detail-text {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+a.site-footer__detail-text {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a.site-footer__detail-text:hover {
+  color: var(--brand-blue, #0a6bd6);
+}
+
+/* Light band below copyright: social icons + legal links */
+.site-footer__legal {
+  width: 100%;
+  background-color: #f3f5f9;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.site-footer__social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.site-footer__social-link {
+  display: inline-flex;
+  color: #1c1c1c;
+  transition: opacity 0.2s ease;
+}
+
+.site-footer__social-link:hover {
+  opacity: 0.8;
+}
+
+.site-footer__legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.site-footer__legal-links a {
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+.site-footer__legal-links a:hover {
+  color: var(--brand-blue, #0a6bd6);
+  text-decoration: underline;
+}
+
+.site-footer__legal-sep {
+  color: #8a8f9c;
+  margin: 0 10px;
+}
+
 /* Dark band: copyright only */
 .site-footer__bottom {
   width: 100%;
@@ -165,7 +261,7 @@
   margin: 0;
   text-align: center;
   color: #b5bac7;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.5;
