@@ -1,8 +1,13 @@
 import aboutStoryImg from "../assets/images/ABOUT_US_01.webp";
 import aboutUsImg from "../assets/images/ABOUT_US_02.webp";
 import aboutBuildImg from "../assets/images/ABOUT_US_03.webp";
-import aboutCraftImg from "../assets/images/ABOUT_US_04.webp";
-import aboutSoftwareImg from "../assets/images/ABOUT_US_05.webp";
+import aboutCraftIdeaImg from "../assets/images/about_us_04_1_idea_hand.webp";
+import aboutCraftSecurityImg from "../assets/images/about_us_04_2_security.webp";
+import aboutCraftHeartImg from "../assets/images/about_us_04_3_heart.webp";
+import aboutSoftwareMonitorImg from "../assets/images/about_us_05_1_monitor.webp";
+import aboutSoftwareLaptopImg from "../assets/images/about_us_05_2_laptop.webp";
+import aboutSoftwarePhoneImg from "../assets/images/about_us_05_3_voice_phone.webp";
+import aboutSoftwareBoxImg from "../assets/images/about_us_05_4_question_box.webp";
 import aboutJourneyImg from "../assets/images/ABOUT_US_06.webp";
 import gproLogo from "../assets/images/gPro_LOGO-RED-TITLE-WEB-2026.webp";
 import demanderLogo from "../assets/images/DEMANDER LOGO-PNG.png";
@@ -178,11 +183,11 @@ export default function About() {
             <span className="about-craft__sep" aria-hidden="true">·</span>
             Our Passion
           </p>
-          <img
-            src={aboutCraftImg}
-            alt="Our craft, our integrity, our passion"
-            className="about-craft__image"
-          />
+          <div className="about-craft__image about-craft__images">
+            <img src={aboutCraftIdeaImg} alt="Our craft" className="about-craft__img--craft" />
+            <img src={aboutCraftSecurityImg} alt="Our integrity" className="about-craft__img--integrity" />
+            <img src={aboutCraftHeartImg} alt="Our passion" className="about-craft__img--passion" />
+          </div>
         </div>
       </section>
 
@@ -198,26 +203,63 @@ export default function About() {
         </div>
         <div className="about-software__showcase">
           <ul className="about-software__list">
-            <li>
-              <img src={gproLogo} alt="gPro" className="about-software__logo" />
+            <li className="about-software__item about-software__item--gpro">
+              <div className="about-software__art-wrap">
+                <img src={aboutSoftwareMonitorImg} alt="gPro business software on a desktop with billing printer" className="about-software__art" />
+              </div>
+              <div className="about-software__brand">
+                <img src={gproLogo} alt="gPro" className="about-software__logo" />
+              </div>
+              <p className="about-software__tag">Business Software</p>
+              <a
+                href="https://gprosoftware.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-software__link"
+                aria-label="Visit gPro website (opens in a new tab)"
+              />
             </li>
-            <li>
-              <img src={demanderLogo} alt="Demander" className="about-software__logo" />
+            <li className="about-software__item about-software__item--demander">
+              <div className="about-software__art-wrap">
+                <img src={aboutSoftwareLaptopImg} alt="Demander online ordering on a laptop" className="about-software__art" />
+              </div>
+              <div className="about-software__brand">
+                <img src={demanderLogo} alt="Demander" className="about-software__logo" />
+              </div>
+              <p className="about-software__tag">Smart Ordering, 24x7</p>
+              <a
+                href="https://demander.app/aptadmin/src/app/login.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-software__link"
+                aria-label="Open Demander (opens in a new tab)"
+              />
             </li>
-            <li>
-              <img src={voicebillLogo} alt="VoiceBill" className="about-software__logo" />
+            <li className="about-software__item about-software__item--voicebill">
+              <div className="about-software__art-wrap">
+                <img src={aboutSoftwarePhoneImg} alt="Voice Bill voice billing on a phone" className="about-software__art" />
+              </div>
+              <div className="about-software__brand">
+                <img src={voicebillLogo} alt="VoiceBill" className="about-software__logo" />
+              </div>
+              <p className="about-software__tag">Simply Speak, Simply Bill</p>
+              {/* TODO: replace "#" with the Voice Bill URL when available */}
+              <a
+                href="#"
+                className="about-software__link"
+                aria-label="Voice Bill"
+              />
             </li>
-            <li className="about-software__next-item">
-              <span className="about-software__next">The Next Build...</span>
+            <li className="about-software__item about-software__item--next">
+              <div className="about-software__art-wrap">
+                <img src={aboutSoftwareBoxImg} alt="The next product, coming soon" className="about-software__art" />
+              </div>
+              <div className="about-software__brand">
+                <span className="about-software__next">The Next Build...</span>
+              </div>
+              <p className="about-software__tag">Coming Soon</p>
             </li>
           </ul>
-
-          
-          <img
-            src={aboutSoftwareImg}
-            alt="Software products built by Daxin Technologies"
-            className="about-software__image"
-          />
           <div className="featured__cta">
             <Link to="/products" className="featured__explore">
               <span>Explore Products</span>
