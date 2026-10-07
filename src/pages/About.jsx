@@ -210,7 +210,14 @@ export default function About() {
               <div className="about-software__brand">
                 <img src={gproLogo} alt="gPro" className="about-software__logo" />
               </div>
-              <p className="about-software__tag">Business Management</p>
+              <p className="about-software__tag">Business Software</p>
+              <a
+                href="https://gprosoftware.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-software__link"
+                aria-label="Visit gPro website (opens in a new tab)"
+              />
             </li>
             <li className="about-software__item about-software__item--demander">
               <div className="about-software__art-wrap">
@@ -220,6 +227,13 @@ export default function About() {
                 <img src={demanderLogo} alt="Demander" className="about-software__logo" />
               </div>
               <p className="about-software__tag">Smart Ordering, 24x7</p>
+              <a
+                href="https://demander.app/aptadmin/src/app/login.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-software__link"
+                aria-label="Open Demander (opens in a new tab)"
+              />
             </li>
             <li className="about-software__item about-software__item--voicebill">
               <div className="about-software__art-wrap">
@@ -229,6 +243,12 @@ export default function About() {
                 <img src={voicebillLogo} alt="VoiceBill" className="about-software__logo" />
               </div>
               <p className="about-software__tag">Simply Speak, Simply Bill</p>
+              {/* TODO: replace "#" with the Voice Bill URL when available */}
+              <a
+                href="#"
+                className="about-software__link"
+                aria-label="Voice Bill"
+              />
             </li>
             <li className="about-software__item about-software__item--next">
               <div className="about-software__art-wrap">

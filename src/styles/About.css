@@ -302,7 +302,7 @@
 
 .about-craft__img--passion {
   top: 0px;
-  left: 210px;
+  left: 190px;
 }
 
 
@@ -323,6 +323,30 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* Row spans the phrase line; column centres (~10% / 47% / 86%) sit under
+     "Our Craft", "Our Integrity" and "Our Passion" */
+  .about-craft__images {
+    width: 100%;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 21% 52% 27%;
+    justify-items: center;
+    gap: 0;
+  }
+
+  .about-craft__images img {
+    width: 100%;
+    max-width: 140px;
+  }
+
+  /* drop the desktop nudges */
+  .about-craft__img--craft,
+  .about-craft__img--integrity,
+  .about-craft__img--passion {
+    top: 0;
+    left: 0;
+  }
 }
 
 @media (max-width: 960px) {
@@ -330,8 +354,10 @@
     padding-top: 48px;
   }
 
+  /* shrink-wrap to the phrase line so the icon row matches its width */
   .about-craft__showcase {
-    width: calc(100% - 40px);
+    width: max-content;
+    max-width: calc(100% - 40px);
   }
 
   .about-craft__sep {
@@ -347,6 +373,28 @@
     width: 100%;
     margin-top: 16px;
     margin-left: 0;
+  }
+
+  /* column centres (~10% / 47% / 86%) sit under each phrase */
+  .about-craft__images {
+    display: grid;
+    grid-template-columns: 21% 52% 27%;
+    justify-items: center;
+    gap: 0;
+  }
+
+  /* same size for all three, independent of the uneven column widths */
+  .about-craft__images img {
+    width: 22vw;
+    max-width: 110px;
+  }
+
+  /* drop the desktop nudges so nothing runs off-screen */
+  .about-craft__img--craft,
+  .about-craft__img--integrity,
+  .about-craft__img--passion {
+    top: 0;
+    left: 0;
   }
 }
 
@@ -416,6 +464,23 @@
   right: 0;
   height: 4px;
   background: var(--card-accent);
+}
+
+/* Invisible link stretched over the whole card, so the card is clickable */
+.about-software__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.about-software__link:focus-visible {
+  outline: 3px solid var(--card-accent);
+  outline-offset: 2px;
+}
+
+.about-software__item:has(.about-software__link) {
+  cursor: pointer;
 }
 
 .about-software__item:hover {
