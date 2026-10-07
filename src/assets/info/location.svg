@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" fill="none">
+  <defs>
+    <linearGradient id="lo-bg" x1="0" y1="0" x2="480" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FE"/><stop offset="1" stop-color="#DCE9FB"/>
+    </linearGradient>
+    <linearGradient id="lo-p" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#2E74E6"/><stop offset="1" stop-color="#1B5FCC"/>
+    </linearGradient>
+    <filter id="lo-f" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#15325C" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="480" height="340" rx="26" fill="url(#lo-bg)"/>
+  <g filter="url(#lo-f)">
+    <rect x="70" y="60" width="340" height="220" rx="18" fill="#fff"/>
+  </g>
+  <g opacity="0.5" stroke="#C9D9F0" stroke-width="3">
+    <path d="M70 130 H410 M70 200 H410 M160 60 V280 M300 60 V280"/>
+  </g>
+  <path d="M240 96 C202 96 176 124 176 160 C176 210 240 258 240 258 C240 258 304 210 304 160 C304 124 278 96 240 96 Z" fill="url(#lo-p)" filter="url(#lo-f)"/>
+  <circle cx="240" cy="158" r="24" fill="#fff"/>
+  <circle cx="240" cy="158" r="10" fill="#E01B22"/>
+  <ellipse cx="240" cy="286" rx="40" ry="9" fill="#1B5FCC" opacity="0.18"/>
+  <circle cx="398" cy="76" r="30" fill="#F5B301" opacity="0.4"/>
+</svg>

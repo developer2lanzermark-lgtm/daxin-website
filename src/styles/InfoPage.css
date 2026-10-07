@@ -1,0 +1,204 @@
+/* ===== Daxin Legal Info Pages (Privacy Policy & Terms & Conditions) =====
+   Design mirrors the gPro editorial layout exactly.
+   All classes are prefixed with "dxed-" / "dxinfo-" to avoid collision
+   with any existing daxin-website styles.
+   ======================================================================= */
+
+.dxed, .dxed h1, .dxed h2, .dxed h3, .dxed p, .dxed a, .dxed span, .dxed button {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.dxed {
+  background: #fff;
+  color: #10192B;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------- image component (from infoArt.jsx) ---------- */
+.dxinfo-media {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #F6F9FD 0%, #EEF4FB 100%);
+}
+.dxinfo-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.dxinfo-media-failed {
+  min-height: 120px;
+}
+.dxinfo-media-failed img {
+  display: none;
+}
+
+/* ---------- hero (pinned below the site navbar; body below scrolls) ---------- */
+.dxed-hero {
+  position: sticky;
+  top: 76px; /* daxin navbar height (.navbar__inner height: 76px) */
+  z-index: 90;
+  background: linear-gradient(135deg, #10408F 0%, #1B5FCC 58%, #3179E6 100%);
+  color: #fff;
+  padding: 30px 0 35px;
+}
+
+/* Aligns with the navbar's padding: 0 207px — same as .faq-container margin-left: 12% */
+.dxed-container {
+  padding: 0 207px;
+}
+
+.dxed-hero h1 {
+  color: #fff;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  max-width: 16ch;
+  font-weight: 400;
+}
+
+.dxed-lead {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0;
+}
+
+.dxed-hero-rule {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 140px;
+  height: 4px;
+  background: #F5B301;
+}
+
+/* ---------- body ---------- */
+.dxed-body {
+  padding: 20px 207px 24px;
+}
+
+.dxed-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+  padding: 36px 0;
+}
+.dxed-section + .dxed-section {
+  border-top: 1px solid #E7EBF2;
+}
+.dxed-section:nth-of-type(even) .dxed-figure {
+  order: -1;
+}
+
+/* Section heading & body — same style as gPro privacy/terms */
+.dxed-section-text h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #111827;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  position: relative;
+}
+.dxed-section-text h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 44px;
+  height: 3px;
+  border-radius: 3px;
+  background: #F5B301;
+}
+.dxed-section-text p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #64748B;
+  margin-bottom: 14px;
+}
+.dxed-section-text p:last-child {
+  margin-bottom: 0;
+}
+
+.dxed-figure {
+  margin: 0;
+  width: 100%;
+  max-width: 340px;
+  justify-self: center;
+  border: 1px solid #E7EBF2;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(16, 25, 43, 0.08);
+}
+.dxed-figure .dxinfo-media {
+  border-radius: 0;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F1F6FD 100%);
+}
+.dxed-figure .dxinfo-media img {
+  aspect-ratio: 4 / 3;
+  padding: 14px;
+}
+
+/* ---------- scroll-reveal ---------- */
+.dxed .info-fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.dxed .info-fade-up.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .dxed-container {
+    padding: 0 40px;
+  }
+  .dxed-body {
+    padding: 20px 40px 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .dxed-section {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 30px 0;
+  }
+  .dxed-section:nth-of-type(even) .dxed-figure {
+    order: 0;
+  }
+  .dxed-figure {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .dxed-container {
+    padding: 0 20px;
+  }
+  .dxed-body {
+    padding: 20px 20px 24px;
+  }
+  .dxed-hero {
+    padding: 36px 0 40px;
+    top: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dxed .info-fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

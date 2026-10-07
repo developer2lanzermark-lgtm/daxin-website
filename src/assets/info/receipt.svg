@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" fill="none">
+  <defs>
+    <linearGradient id="receipt-bg" x1="0" y1="0" x2="480" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FE"/><stop offset="1" stop-color="#DCE9FB"/>
+    </linearGradient>
+    <filter id="receipt-f" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#1B3A66" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="480" height="340" rx="26" fill="url(#receipt-bg)"/>
+  <circle cx="402" cy="256" r="50" fill="#F5B301" opacity="0.3"/>
+  <circle cx="64" cy="80" r="16" fill="#1B5FCC" opacity="0.22"/>
+  <g filter="url(#receipt-f)">
+    <path d="M150 60h180v222l-20-14-20 14-20-14-20 14-20-14-20 14-20-14-20 14-20-14z" fill="#fff"/>
+    <rect x="176" y="92" width="96" height="12" rx="6" fill="#DCE6F5"/>
+    <rect x="176" y="124" width="128" height="10" rx="5" fill="#EAF1FD"/><rect x="176" y="146" width="128" height="10" rx="5" fill="#EAF1FD"/><rect x="176" y="168" width="100" height="10" rx="5" fill="#EAF1FD"/>
+    <rect x="176" y="200" width="128" height="4" rx="2" fill="#DCE6F5"/>
+    <rect x="176" y="216" width="56" height="14" rx="7" fill="#1B5FCC"/><rect x="256" y="216" width="48" height="14" rx="7" fill="#1B5FCC"/>
+    <circle cx="352" cy="96" r="34" fill="#E01B22"/>
+    <text x="352" y="108" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#fff">%</text>
+  </g>
+</svg>
