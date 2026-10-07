@@ -264,10 +264,45 @@
 
 .about-craft__image {
   display: block;
-  width: 45%;
+  width: 23%;
   height: auto;
   margin-top: 24px;
-  margin-left: 520px;
+  margin-left: 620px;
+}
+
+.about-craft__images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.about-craft__images img {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 33%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+}
+
+/* Per-image position nudge: top (negative = up, positive = down),
+   left (negative = left, positive = right) */
+.about-craft__img--craft {
+  top: 0px;
+  left: -30px;
+  /* right: 30px; */
+}
+
+.about-craft__img--integrity {
+  top: 0px;
+  left: 60px;
+}
+
+.about-craft__img--passion {
+  top: 0px;
+  left: 210px;
 }
 
 
@@ -339,96 +374,135 @@
   margin: 0;
 }
 
-/* Logos and image share one width. The image has 4 equal panels, so a
-   4-column grid puts each logo above its panel (4th panel = The Next Build). */
+/* Section 5: product cards — tinted card per product, illustration on top,
+   logo + tagline below (distinct from section 4's plain image row) */
 .about-software__showcase {
-  width: min(100% - 40px, 1200px);
-  margin-top: 36px;
-  margin-left: 120px;
-}
-
-/* Laptop (MDPI 1280 / HDPI 1440): the 130px offset pushes the showcase past
-   the right edge, so centre it with equal side space instead. */
-@media (min-width: 961px) and (max-width: 1440px) {
-  .about-software__showcase {
-    width: min(100% - 80px, 1200px);
-    margin-left: 0;
-  }
+  width: min(100% - 40px, 1160px);
+  margin: 56px auto 0;
 }
 
 .about-software__list {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
   padding: 0;
   margin: 0;
 }
 
-.about-software__list li {
+.about-software__item {
+  --card-tint: #f3f6fb;
+  --card-accent: #2a7fe0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 20px 24px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, var(--card-tint) 0%, #ffffff 70%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 20px rgba(17, 24, 39, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Accent bar along the top edge of each card */
+.about-software__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-accent);
+}
+
+.about-software__item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(17, 24, 39, 0.12);
+}
+
+.about-software__item--gpro      { --card-tint: #fdecee; --card-accent: #e0262f; }
+.about-software__item--demander  { --card-tint: #fff1e3; --card-accent: #f28c28; }
+.about-software__item--voicebill { --card-tint: #e8f2fd; --card-accent: #1e6fd9; }
+.about-software__item--next      { --card-tint: #fff8e0; --card-accent: #f2b81c; }
+
+.about-software__art-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-software__art {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.about-software__item:hover .about-software__art {
+  transform: scale(1.05);
+}
+
+/* Fixed-height slot so every logo (and "The Next Build...") lines up */
+.about-software__brand {
+  height: 72px;
+  width: 100%;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px; /* space after the bullet */
-}
-
-.about-software__list li::before {
-  content: "";
-  flex: none;
-  width: 8px;
-  height: 8px;
-  margin-left: 44px; /* space before the bullet */
-  /* border-radius: 50%;
-  background: #2a7fe0; */
+  box-sizing: content-box;
 }
 
 .about-software__logo {
   display: block;
-  height: 110px;
+  max-height: 64px;
+  max-width: 90%;
   width: auto;
-  max-width: calc(100% - 76px); /* before gap + bullet + after gap */
   object-fit: contain;
 }
 
-.about-software__image {
-  display: block;
-  width: 90%;
-  height: auto;
-  margin-top: -28px;
-  margin-left: 90px !important;
-}
-
 .about-software .about-software__next {
-  margin: 16px 0 0;
-  padding: 0 20px;
-  text-align: center;
+  margin: 0;
   font-family: "Caveat", cursive;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 500;
   letter-spacing: 0;
-}
-
-/* "The Next Build..." sits in the 4th logo slot, above the question-mark panel */
-.about-software__next-item::before {
-  display: none;
-}
-
-.about-software__list .about-software__next {
-  margin: 0;
-  padding: 0;
   white-space: nowrap;
 }
 
-.about-software .about-software__next--below {
-  display: none;
+.about-software__tag {
+  margin: 10px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b7280;
 }
 
 .about-software .featured__cta {
   justify-content: center;
-  margin-top: -24px;
+  margin-top: 44px;
 }
 
 .about-software .featured__explore {
   font-size: 17px;
+}
+
+@media (max-width: 1100px) and (min-width: 961px) {
+  .about-software__list {
+    gap: 20px;
+  }
+
+  .about-software .about-software__next {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -436,52 +510,43 @@
     padding-top: 48px;
   }
 
-  .about-software__showcase {
-    margin-left: 0;
+  .about-software__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
-  /* "The Next Build..." gets its own full-width row under the logos */
-  .about-software__next-item {
-    grid-column: 1 / -1;
-    margin-top: 12px;
+  .about-software__item {
+    padding: 22px 14px 18px;
   }
 
-  .about-software__list .about-software__next {
-    font-size: 30px;
+  .about-software__art {
+    max-width: 170px;
   }
 
-  .about-software .about-software__next--below {
-    display: block;
+  .about-software__brand {
+    height: 52px;
+  }
+
+  .about-software__logo {
+    max-height: 46px;
+  }
+
+  .about-software .about-software__next {
+    font-size: 28px;
+  }
+
+  .about-software__tag {
+    font-size: 12px;
   }
 
   .about-software .featured__cta {
-    margin-top: 18px;
+    margin-top: 28px;
   }
+}
 
-  .about-software__image {
-    margin-top: 12px;
-  }
-
+@media (max-width: 480px) {
   .about-software__list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about-software__logo {
-    height: 40px;
-  }
-
-  .about-software__list li {
-    gap: 6px;
-  }
-
-  .about-software__list li::before {
-    width: 6px;
-    height: 6px;
-    margin-left: 0;
-  }
-
-  .about-software__logo {
-    max-width: calc(100% - 12px);
+    grid-template-columns: 1fr;
   }
 }
 
