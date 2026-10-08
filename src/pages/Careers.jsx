@@ -204,7 +204,7 @@ export default function Careers() {
               </p>
               <div className="careers-final-cta">
                 <p className="careers-final-cta-text">
-                  Your next opportunity could be the start of something
+                  Your next opportunity could be the start <br /> of something
                   bigger.
                 </p>
                 <a

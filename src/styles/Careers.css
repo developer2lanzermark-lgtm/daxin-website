@@ -140,7 +140,7 @@
 }
 
 .careers-stat-item strong {
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 600;
   color: #1c1c1c;
 }
@@ -283,10 +283,10 @@
   max-width: 1200px;
   margin: 32px auto 0;
   font-family: var(--font-family-base);
-  font-size: calc(var(--desc-font-size) + 3px);
-  font-weight: 500;
+  font-size: calc(var(--desc-font-size) + 1px);
+  font-weight: 400;
   color: #1d4ed8;
-  text-align: left;
+  text-align: center;
 }
 
 .careers-tagline-dot {
@@ -305,7 +305,7 @@
   margin: 24px auto 0;
   font-family: var(--font-family-base);
   font-size: 29px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 3px;
   color: #1c1c1c;
   text-align: center;
